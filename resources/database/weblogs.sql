@@ -113,4 +113,7 @@ INSERT into users(email, username, password, active, created_at, updated_at)
 	
 SELECT username, email, active, datetime(created_at), date(updated_at) from users limit 1;  
 
-select * from users;
+select * from users limit 1;
+
+-- 测试 SQLite3 是否支持 returning 关键字 
+update users set avatar="http://localhost:5000/assets/upload/xzz.png" where id=1 returning *;

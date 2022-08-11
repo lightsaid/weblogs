@@ -5,7 +5,7 @@ import (
 	"lightsaid.com/weblogs/cmd/web/middleware"
 )
 
-func New() *mux.Router{
+func New() *mux.Router {
 	r := mux.NewRouter().StrictSlash(true)
 	// TODO:
 	// r.Host("www.example.com")
@@ -22,8 +22,8 @@ func load() []Router {
 	return routes
 }
 
-func setupRoutes(r *mux.Router) *mux.Router{
-	for _, route := range load(){
+func setupRoutes(r *mux.Router) *mux.Router {
+	for _, route := range load() {
 		r.HandleFunc(route.Path, route.Handler).Methods(route.Method)
 	}
 	return r

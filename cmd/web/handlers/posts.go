@@ -2,22 +2,22 @@ package handlers
 
 import "net/http"
 
-func (app *AppHandler) GetPosts(w http.ResponseWriter, r *http.Request){
+func GetPosts(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func (app *AppHandler) CreatePost(w http.ResponseWriter, r *http.Request){
-	
+func CreatePost(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) GetPost(w http.ResponseWriter, r *http.Request){
-	
+func GetPost(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) UpdatePost(w http.ResponseWriter, r *http.Request){
-	
+func UpdatePost(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) DeletePost(w http.ResponseWriter, r *http.Request){
-	
+func DeletePost(w http.ResponseWriter, r *http.Request) {
+
 }

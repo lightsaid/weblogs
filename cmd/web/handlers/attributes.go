@@ -2,22 +2,22 @@ package handlers
 
 import "net/http"
 
-func (app *AppHandler) GetAttributes(w http.ResponseWriter, r *http.Request){
+func GetAttributes(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func (app *AppHandler) CreateAttribute(w http.ResponseWriter, r *http.Request){
-	
+func CreateAttribute(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) GetAttribute(w http.ResponseWriter, r *http.Request){
-	
+func GetAttribute(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) UpdateAttribute(w http.ResponseWriter, r *http.Request){
-	
+func UpdateAttribute(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) DeleteAttribute(w http.ResponseWriter, r *http.Request){
-	
+func DeleteAttribute(w http.ResponseWriter, r *http.Request) {
+
 }

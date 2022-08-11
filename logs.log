@@ -1,6 +1,12 @@
-2022-08-10T20:22:08.937+0800	INFO	middleware/middleware.go:30	GET/users
-2022-08-10T20:23:15.120+0800	ERROR	web/main.go:49	{1 zhangsan@qq.com 张三  <nil> 0 -1 2022-08-10 18:00:55 2022-08-10 18:00:55}
-main.main
-	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/main.go:49
-runtime.main
-	/usr/local/go/src/runtime/proc.go:250
+2022-08-11T15:58:58.837+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.845+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.852+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.861+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.868+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.877+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.886+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.893+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.901+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T15:58:58.909+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T16:13:52.009+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T16:14:57.119+0800	INFO	middleware/middleware.go:30	GET/users/1

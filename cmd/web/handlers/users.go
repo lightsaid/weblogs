@@ -5,22 +5,23 @@ import (
 	"net/http"
 )
 
-func (app *AppHandler) GetUsers(w http.ResponseWriter, r *http.Request){
+func GetUsers(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(fmt.Sprintf("Hello, %s", r.RemoteAddr)))
 }
 
-func (app *AppHandler) CreateUser(w http.ResponseWriter, r *http.Request){
-	
+func CreateUser(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) GetUser(w http.ResponseWriter, r *http.Request){
-	
+func GetUser(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(AppH.DB)
+	w.Write([]byte(fmt.Sprintf("GetUser, %s", r.RemoteAddr)))
 }
 
-func (app *AppHandler) UpdateUser(w http.ResponseWriter, r *http.Request){
-	
+func UpdateUser(w http.ResponseWriter, r *http.Request) {
+
 }
 
-func (app *AppHandler) DeleteUser(w http.ResponseWriter, r *http.Request){
-	
+func DeleteUser(w http.ResponseWriter, r *http.Request) {
+
 }

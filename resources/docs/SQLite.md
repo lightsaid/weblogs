@@ -45,3 +45,8 @@ services:
 ### 在Golang中使用 sqlite3
 如果报错 Sqlite3 stdlib.h: No such file or directory,
 则需要安装 sudo apt-get install g++
+
+-- 关于驱动
+// sqlx.Connect() 带有 ping 功能.
+// db, err = sqlx.Open("sqlite3", "./resources/database/weblogs.db")
+db, err = sqlx.Connect("sqlite3", "file:./resources/database/weblogs.db")
