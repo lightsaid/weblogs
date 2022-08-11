@@ -5,7 +5,7 @@ import "lightsaid.com/weblogs/internal/models"
 // Repository 定义 Database 操作，需要dbrepo包实现
 type Repository interface {
 	// User 模块
-	InsertUser(user models.User) (int, error)
+	InsertUser(email, username, password, avatar string) (models.User, error)
 	GetUser(id int) (models.User, error)
 	GetUsers() ([]models.User, error)
 	UpdateUser(models.User) error

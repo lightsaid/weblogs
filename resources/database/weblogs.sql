@@ -108,8 +108,8 @@ create table likes (
 );
 
 -- 插入也需要指定本地时间,不然会有时差问题
-INSERT into users(email, username, password, active, created_at, updated_at) 
-	values('zhangsan@qq.com','张三', 'abc123', -1, datetime('now', 'localtime'), datetime('now', 'localtime'));
+INSERT into users(email, username, password, created_at, updated_at) 
+	values('zhangsan@qq.com','张三', 'abc123', datetime('now', 'localtime'), datetime('now', 'localtime'));
 	
 SELECT username, email, active, datetime(created_at), date(updated_at) from users limit 1;  
 
@@ -117,3 +117,7 @@ select * from users limit 1;
 
 -- 测试 SQLite3 是否支持 returning 关键字 
 update users set avatar="http://localhost:5000/assets/upload/xzz.png" where id=1 returning *;
+
+INSERT into users(email, username, password, created_at, updated_at) 
+	values('xzz@qq.com','xzz', 'abc123', datetime('now', 'localtime'), datetime('now', 'localtime')) 
+    returning *;

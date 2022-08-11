@@ -10,3 +10,5 @@
 2022-08-11T15:58:58.909+0800	INFO	middleware/middleware.go:30	GET/users/1
 2022-08-11T16:13:52.009+0800	INFO	middleware/middleware.go:30	GET/users/1
 2022-08-11T16:14:57.119+0800	INFO	middleware/middleware.go:30	GET/users/1
+2022-08-11T21:47:10.630+0800	INFO	middleware/middleware.go:30	POST/users
+2022-08-11T21:47:23.260+0800	INFO	middleware/middleware.go:30	POST/users

@@ -1,8 +1,11 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
+
+	"lightsaid.com/weblogs/internal/service"
 )
 
 func GetUsers(w http.ResponseWriter, r *http.Request) {
@@ -10,7 +13,23 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 }
 
 func CreateUser(w http.ResponseWriter, r *http.Request) {
+	var req service.CreateUserRequest
+	err := AppH.readJSON(w, r, &req)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte("请求参数错误."))
+		return
+	}
+	user, err := AppH.Repo.InsertUser(req.Email, req.Username, req.Password, req.Avatar)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte("请求发生错误."))
+		return
+	}
 
+	w.WriteHeader(http.StatusOK)
+	b, _ := json.MarshalIndent(&user, "", "\t")
+	w.Write(b)
 }
 
 func GetUser(w http.ResponseWriter, r *http.Request) {

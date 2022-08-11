@@ -11,12 +11,8 @@ type databaseRepo struct {
 }
 
 // NewDatabaseRepo
-func NewDatabaseRepo(db *sqlx.DB) repository.Repository{
+func NewDatabaseRepo(db *sqlx.DB) repository.Repository {
 	return &databaseRepo{
 		DB: db,
 	}
 }
-
-
-
- 

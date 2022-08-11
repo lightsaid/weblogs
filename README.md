@@ -19,7 +19,8 @@ weblogs
 	internal
 		models
 			models.go // 定义所有 model
-		service // 服务, 与handlers对接，调用crud方法处理业务返回给handlers层
+		// 服务, 与handlers对接，调用crud方法处理业务返回给handlers层, ->>> 弱化 (只有再特别复杂的情况才在service层处理)
+		service 
 			request.go // 请求入参定义
 			response.go // 请求出参定义 
 			// ...
