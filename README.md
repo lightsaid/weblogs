@@ -4,7 +4,7 @@
 ### 目录结构设计
 ``` js
 weblogs
-	cmd/api
+	cmd/web
 		routes
 			router.go // 定义路由
 			routes.go // 实现路由

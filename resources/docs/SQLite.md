@@ -42,3 +42,6 @@ services:
       - "1024:1024"
 ```
 
+### 在Golang中使用 sqlite3
+如果报错 Sqlite3 stdlib.h: No such file or directory,
+则需要安装 sudo apt-get install g++

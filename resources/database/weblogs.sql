@@ -6,10 +6,10 @@ create table users (
     username text not null,
     password varchar(16) not null,
     avatar text,
-    if_admin int default 0,  -- 是否管理员(0:是|1:否)
+    if_admin int not null default 0,  -- 是否管理员(0:是|1:否)
     -- check 约束
     -- active int check(active > -2) default 0, -- 状态 (0:正常|-1:删除)
-    active int check(active in (-1, 0, 1)), -- 状态 (-1:删除0:正常|1:活跃)
+    active int not null check(active in (-1, 0, 1)) default 0, -- 状态 (-1:删除0:正常|1:活跃)
     -- 此处语法 default (xxx(yyy))
     -- 时间需要使用 localtime, 不然可能存在8个小时时差
     created_at text not null default (datetime('now', 'localtime')),
@@ -27,10 +27,10 @@ create table posts(
     title varchar(255) not null,
     content text not null,
     thumb text, --缩略图
-    readings int default 0, -- 查看人数
-    comments int default 0, -- 评论数
-    likes int default 0, -- 喜欢数
-    active int check(active in (-1, 0)) default 0, -- 状态 (-1:删除 | 0:正常)
+    readings int not null default 0, -- 查看人数
+    comments int not null default 0, -- 评论数
+    likes int not null default 0, -- 喜欢数
+    active int not null check(active in (-1, 0)) default 0, -- 状态 (-1:删除 | 0:正常)
     created_at text not null default (datetime('now', 'localtime')),
     updated_at text not null default (datetime('now', 'localtime')),
     foreign key(user_id) references users(id),
@@ -43,7 +43,7 @@ create table categories(
     id integer not null primary key autoincrement,
     user_id integer not null,
     parent_id integer,
-    if_parent integer check(if_parent in (0, 1)) default 0, -- (自身是否是父类)是否含有子级 0 没有, 1有
+    if_parent integer not null check(if_parent in (0, 1)) default 0, -- (自身是否是父类)是否含有子级 0 没有, 1有
     name varchar(20) not null,
     thumb text, --icon/缩略图
     foreign key (user_id) references users(id)
@@ -90,9 +90,9 @@ create table comments(
     nickename varchar(20) not null,
     content text not null,
     parent_id integer,
-    likes int default 0, -- 点赞数
-    replynum int default 0, --回复数
-    active int check(active in (-1, 0)) default 0, -- 状态 (-1:删除 | 0:正常)
+    likes int not null default 0, -- 点赞数
+    replynum int not null default 0, --回复数
+    active int not null check(active in (-1, 0)) default 0, -- 状态 (-1:删除 | 0:正常)
     created_at text not null default (datetime('now', 'localtime')),
     updated_at text not null default (datetime('now', 'localtime'))
 );
@@ -111,6 +111,6 @@ create table likes (
 INSERT into users(email, username, password, active, created_at, updated_at) 
 	values('zhangsan@qq.com','张三', 'abc123', -1, datetime('now', 'localtime'), datetime('now', 'localtime'));
 	
-SELECT username, email, active, datetime(created_at), date(updated_at) from users;  
+SELECT username, email, active, datetime(created_at), date(updated_at) from users limit 1;  
 
 select * from users;
