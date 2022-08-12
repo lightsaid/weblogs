@@ -14,13 +14,13 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 
 func CreateUser(w http.ResponseWriter, r *http.Request) {
 	var req service.CreateUserRequest
-	err := AppH.readJSON(w, r, &req)
+	err := H.readJSON(w, r, &req)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		w.Write([]byte("请求参数错误."))
 		return
 	}
-	user, err := AppH.Repo.InsertUser(req.Email, req.Username, req.Password, req.Avatar)
+	user, err := H.Repo.InsertUser(req.Email, req.Username, req.Password, req.Avatar)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		w.Write([]byte("请求发生错误."))
@@ -33,7 +33,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(AppH.DB)
+	fmt.Println(H.DB)
 	w.Write([]byte(fmt.Sprintf("GetUser, %s", r.RemoteAddr)))
 }
 

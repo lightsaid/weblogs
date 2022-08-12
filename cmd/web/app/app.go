@@ -10,22 +10,24 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"go.uber.org/zap"
 
+	"lightsaid.com/weblogs/cmd/web/config"
 	"lightsaid.com/weblogs/cmd/web/handlers"
 	"lightsaid.com/weblogs/cmd/web/routes"
 	"lightsaid.com/weblogs/pkg/logger"
 )
 
-type AppConfig struct {
-	DB     *sqlx.DB
-	AppH   *handlers.AppHandler
-	Looger *zap.Logger
-}
+var app config.AppConfig
 
-func New() *AppConfig {
+func initial() {
 	setupEnv()
-	return &AppConfig{
-		DB:     setupDB(),
-		Looger: setupLogger(),
+	cfg := &config.AppConfig{
+		DB:       setupDB(),
+		Looger:   setupLogger(),
+		UseCache: false,
+	}
+	useStr := os.Getenv("USE_CACHE")
+	if useStr == "true" {
+		cfg.UseCache = true
 	}
 }
 
@@ -56,12 +58,14 @@ func setupLogger() *zap.Logger {
 	return l
 }
 
-func (app *AppConfig) Serve() {
+func Serve() {
+	initial()
+
 	// 刷新日志缓存
 	defer app.Looger.Sync()
 
 	// 先实例化 handlers.AppHandler 再创建路由
-	app.AppH = handlers.New(app.DB)
+	_ = handlers.New(app.DB, &app)
 
 	// 创建路由
 	r := routes.New()

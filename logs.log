@@ -103,3 +103,121 @@ net/http.(*conn).serve
 2022-08-12T08:49:16.337+0800	INFO	middleware/middleware.go:30	GET/admin/index
 2022-08-12T08:49:16.513+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
 2022-08-12T08:49:25.657+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:54:13.680+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:54:14.908+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:54:14.909+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:54:55.279+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:55:51.958+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:57:06.530+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:57:06.793+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:57:08.613+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:57:08.862+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:57:23.215+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:57:23.495+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:57:24.802+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:57:25.034+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:57:49.856+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:57:50.054+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:57:52.264+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:57:52.439+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:58:40.825+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:58:41.091+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:58:50.440+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:58:50.677+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:59:00.870+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:59:01.116+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T11:13:35.786+0800	INFO	render/render.go:61	matchs=>> []
+2022-08-12T11:13:35.786+0800	PANIC	render/render.go:24	没有匹配到模板文件
+lightsaid.com/weblogs/internal/render.New
+	/home/xzz/go/src/lightsaid.com/weblogs/internal/render/render.go:24
+lightsaid.com/weblogs/cmd/web/app.init.0
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:33
+runtime.doInit
+	/usr/local/go/src/runtime/proc.go:6222
+runtime.doInit
+	/usr/local/go/src/runtime/proc.go:6199
+runtime.main
+	/usr/local/go/src/runtime/proc.go:233
+2022-08-12T11:14:03.697+0800	INFO	render/render.go:61	matchs=>> []
+2022-08-12T11:14:03.697+0800	PANIC	render/render.go:24	没有匹配到模板文件
+lightsaid.com/weblogs/internal/render.New
+	/home/xzz/go/src/lightsaid.com/weblogs/internal/render/render.go:24
+lightsaid.com/weblogs/cmd/web/app.init.0
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:33
+runtime.doInit
+	/usr/local/go/src/runtime/proc.go:6222
+runtime.doInit
+	/usr/local/go/src/runtime/proc.go:6199
+runtime.main
+	/usr/local/go/src/runtime/proc.go:233
+2022-08-12T11:15:08.864+0800	INFO	render/render.go:61	matchs=>> []
+2022-08-12T11:15:08.864+0800	PANIC	render/render.go:24	没有匹配到模板文件
+lightsaid.com/weblogs/internal/render.New
+	/home/xzz/go/src/lightsaid.com/weblogs/internal/render/render.go:24
+lightsaid.com/weblogs/cmd/web/app.initial
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:33
+lightsaid.com/weblogs/cmd/web/app.Serve
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:64
+main.main
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/main.go:9
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-08-12T11:16:16.899+0800	INFO	render/render.go:61	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T11:16:16.900+0800	PANIC	render/render.go:24	html/template: no files named in call to ParseFiles
+lightsaid.com/weblogs/internal/render.New
+	/home/xzz/go/src/lightsaid.com/weblogs/internal/render/render.go:24
+lightsaid.com/weblogs/cmd/web/app.initial
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:33
+lightsaid.com/weblogs/cmd/web/app.Serve
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:64
+main.main
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/main.go:9
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-08-12T11:21:01.128+0800	INFO	render/render.go:61	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T11:21:01.128+0800	PANIC	render/render.go:89	html/template: no files named in call to ParseFiles
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xzz/go/src/lightsaid.com/weblogs/internal/render/render.go:89
+lightsaid.com/weblogs/internal/render.New
+	/home/xzz/go/src/lightsaid.com/weblogs/internal/render/render.go:22
+lightsaid.com/weblogs/cmd/web/app.initial
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:33
+lightsaid.com/weblogs/cmd/web/app.Serve
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/app/app.go:64
+main.main
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/main.go:9
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-08-12T11:23:38.604+0800	INFO	render/render.go:61	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T11:32:43.386+0800	INFO	render/render.go:61	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T11:36:49.493+0800	INFO	render/render.go:61	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T11:37:17.400+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T11:37:17.439+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css
+2022-08-12T11:37:19.657+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T11:37:38.557+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T11:37:38.582+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css
+2022-08-12T11:37:41.784+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T11:37:42.630+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T11:37:42.694+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T13:08:20.014+0800	INFO	render/render.go:61	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T13:08:24.757+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:08:24.769+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css
+2022-08-12T13:08:24.823+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T13:08:27.775+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:08:27.836+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T13:08:32.549+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:08:35.476+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T13:10:01.381+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:11:14.293+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:11:19.948+0800	INFO	render/render.go:61	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T13:11:22.608+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:11:22.618+0800	INFO	middleware/middleware.go:30	GET/static/js/bootstrap.bundle.min.js
+2022-08-12T13:12:07.709+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:12:10.004+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:18:13.161+0800	INFO	render/render.go:70	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T13:18:15.160+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:18:15.160+0800	INFO	render/render.go:70	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T13:18:25.604+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:18:25.604+0800	INFO	render/render.go:70	matchs=>> [templates/admin.page.tmpl]
+2022-08-12T13:21:22.203+0800	INFO	middleware/middleware.go:30	GET/admin/users
+2022-08-12T13:21:22.203+0800	INFO	render/render.go:70	matchs=>> [templates/admin.page.tmpl]

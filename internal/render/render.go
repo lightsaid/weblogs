@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
+	"net/http"
 	"path/filepath"
 
 	"go.uber.org/zap"
@@ -12,24 +13,47 @@ import (
 const tplPath = "./templates"
 
 type TemplateData struct {
-	Cache map[string]*template.Template
+	Cache    map[string]*template.Template
+	UseCache bool // 是否使用缓存
 }
 
 // New 实例化TemplateData，里面包含 模板缓存，提供给handlers包使用
-func New() *TemplateData {
+func New(use bool) *TemplateData {
 	cache, err := CreateTemplateCache()
 	if err != nil {
-		zap.S().Panic(err)
 		return nil
 	}
 
 	return &TemplateData{
-		Cache: cache,
+		Cache:    cache,
+		UseCache: use,
 	}
 }
 
-func Render() {
+// Render 获取模板并渲染
+func (t *TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl string) error {
+	var err error
+	cache := t.Cache
+	if !t.UseCache {
+		cache, err = CreateTemplateCache()
+		if err != nil {
+			return err
+		}
+	}
 
+	tt, ok := cache[tmpl]
+	if !ok {
+		return fmt.Errorf("模板名字不存在：%s", tmpl)
+	}
+
+	w.Header().Add("Content-Type", "text/html; charset=utf-8")
+
+	err = tt.Execute(w, nil)
+	if err != nil {
+		zap.S().Error("解析模板发生错误", err)
+	}
+
+	return nil
 }
 
 // CreateTemplateCache 创建所有模板缓存
@@ -37,15 +61,18 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 
 	cache := make(map[string]*template.Template)
 
-	matches, err := filepath.Glob(fmt.Sprintf("%s/*.page.html", tplPath))
+	matches, err := filepath.Glob(fmt.Sprintf("%s/*.page.tmpl", tplPath))
 	if err != nil {
+		zap.S().Panic(err)
 		return nil, err
 	}
 
 	zap.S().Info("matchs=>> ", matches)
 
 	if len(matches) <= 0 {
-		return nil, errors.New("没有匹配到模板文件")
+		err = errors.New("没有匹配到模板文件")
+		zap.S().Panic(err)
+		return nil, err
 	}
 
 	for _, page := range matches {
@@ -54,18 +81,21 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 		// 使用 ParseGlob 创建模板，它可能包含其他组件（比如：布局layout组件）
 		t, err := template.New(name).ParseGlob(page)
 		if err != nil {
+			zap.S().Panic(err)
 			return nil, err
 		}
 
 		// 匹配布局模板，添加到name模板上
-		layouts, err := filepath.Glob(fmt.Sprintf("%s/*.layout.html", tplPath))
+		layouts, err := filepath.Glob(fmt.Sprintf("%s/*.layout.tmpl", tplPath))
 		if err != nil {
+			zap.S().Panic(err)
 			return nil, err
 		}
 
 		// 将组件添加到 page 模板上
 		t, err = t.ParseFiles(layouts...)
 		if err != nil {
+			zap.S().Panic(err)
 			return nil, err
 		}
 

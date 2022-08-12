@@ -21,7 +21,7 @@ func ShowAdminIndex(w http.ResponseWriter, r *http.Request) {
 }
 
 func ShowAdminUsers(w http.ResponseWriter, r *http.Request) {
-
+	H.Template.Render(w, r, "admin.page.tmpl")
 }
 
 func ShowAdminPosts(w http.ResponseWriter, r *http.Request) {
