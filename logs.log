@@ -1,14 +1,105 @@
-2022-08-11T15:58:58.837+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.845+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.852+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.861+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.868+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.877+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.886+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.893+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.901+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T15:58:58.909+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T16:13:52.009+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T16:14:57.119+0800	INFO	middleware/middleware.go:30	GET/users/1
-2022-08-11T21:47:10.630+0800	INFO	middleware/middleware.go:30	POST/users
-2022-08-11T21:47:23.260+0800	INFO	middleware/middleware.go:30	POST/users
+2022-08-12T08:21:09.416+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:21:09.416+0800	ERROR	handlers/adminPages.go:18	解析模板发生错误template: "admin" is an incomplete or empty template
+lightsaid.com/weblogs/cmd/web/handlers.ShowAdminIndex
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/handlers/adminPages.go:18
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:32
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xzz/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-08-12T08:23:19.772+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:24:29.722+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:24:29.722+0800	ERROR	handlers/adminPages.go:18	解析模板发生错误template: "admin" is an incomplete or empty template
+lightsaid.com/weblogs/cmd/web/handlers.ShowAdminIndex
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/handlers/adminPages.go:18
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:32
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xzz/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-08-12T08:25:12.028+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:25:12.028+0800	ERROR	handlers/adminPages.go:18	解析模板发生错误template: "./templates/admin.page.tmpl" is an incomplete or empty template
+lightsaid.com/weblogs/cmd/web/handlers.ShowAdminIndex
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/handlers/adminPages.go:18
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:32
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xzz/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-08-12T08:27:09.049+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:27:32.110+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:31:36.277+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:32:50.999+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:32:50.999+0800	ERROR	handlers/adminPages.go:19	解析模板发生错误template: admin.page.tmpl:83:34: executing "admin.page.tmpl" at <.pageTitle>: can't evaluate field pageTitle in type string
+lightsaid.com/weblogs/cmd/web/handlers.ShowAdminIndex
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/handlers/adminPages.go:19
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:32
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xzz/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-08-12T08:33:53.838+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:33:53.838+0800	ERROR	handlers/adminPages.go:19	解析模板发生错误template: admin.page.tmpl:83:34: executing "admin.page.tmpl" at <.PageTitle>: can't evaluate field PageTitle in type string
+lightsaid.com/weblogs/cmd/web/handlers.ShowAdminIndex
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/handlers/adminPages.go:19
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xzz/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:32
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xzz/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-08-12T08:34:08.597+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:39:19.794+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:44:33.964+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:44:52.933+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:45:06.822+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:45:29.005+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:45:40.881+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:45:42.295+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:45:43.141+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:46:59.284+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:46:59.312+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css
+2022-08-12T08:47:01.514+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:48:39.290+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:48:41.109+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:48:46.558+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:48:46.820+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:49:00.375+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:49:00.560+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:49:16.337+0800	INFO	middleware/middleware.go:30	GET/admin/index
+2022-08-12T08:49:16.513+0800	INFO	middleware/middleware.go:30	GET/static/css/bootstrap.min.css.map
+2022-08-12T08:49:25.657+0800	INFO	middleware/middleware.go:30	GET/admin/index
