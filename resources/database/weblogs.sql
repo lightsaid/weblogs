@@ -116,8 +116,10 @@ SELECT username, email, active, datetime(created_at), date(updated_at) from user
 select * from users limit 1;
 
 -- 测试 SQLite3 是否支持 returning 关键字 
-update users set avatar="http://localhost:5000/assets/upload/xzz.png" where id=1 returning *;
+update users set avatar="http://localhost:5000/assets/upload/xzz.png", active=1 where id=1 returning *;
 
 INSERT into users(email, username, password, created_at, updated_at) 
 	values('xzz@qq.com','xzz', 'abc123', datetime('now', 'localtime'), datetime('now', 'localtime')) 
     returning *;
+
+select id, email, username, avatar, if_admin, active from users order by created_at, active desc limit 10 offset 0;

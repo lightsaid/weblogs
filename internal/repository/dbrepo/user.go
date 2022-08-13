@@ -1,6 +1,8 @@
 package dbrepo
 
-import "lightsaid.com/weblogs/internal/models"
+import (
+	"lightsaid.com/weblogs/internal/models"
+)
 
 // users 表CRUD操作
 
@@ -19,7 +21,12 @@ func (repo *databaseRepo) GetUser(id int) (models.User, error) {
 
 func (repo *databaseRepo) GetUsers() ([]models.User, error) {
 	var users []models.User
-	return users, nil
+	query := `select id, email, username, avatar, if_admin, active from users 
+		order by created_at, active desc limit 10 offset 0;`
+
+	err := repo.DB.Select(&users, query)
+
+	return users, err
 }
 
 func (repo *databaseRepo) UpdateUser(models.User) error {

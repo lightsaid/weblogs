@@ -20,15 +20,17 @@ var app config.AppConfig
 
 func initial() {
 	setupEnv()
-	cfg := &config.AppConfig{
-		DB:       setupDB(),
+	db := setupDB()
+	app = config.AppConfig{
+		DB:       db,
 		Looger:   setupLogger(),
 		UseCache: false,
 	}
 	useStr := os.Getenv("USE_CACHE")
 	if useStr == "true" {
-		cfg.UseCache = true
+		app.UseCache = true
 	}
+
 }
 
 func handleError(err error) {
@@ -43,12 +45,9 @@ func setupEnv() {
 }
 
 func setupDB() *sqlx.DB {
-	var err error
-	err = godotenv.Load(".env")
-	handleError(err)
-
 	db, err := sqlx.Connect("sqlite3", "file:./resources/database/weblogs.db")
 	handleError(err)
+	log.Println("setupDB>> ", db, err)
 	return db
 }
 
@@ -64,8 +63,11 @@ func Serve() {
 	// 刷新日志缓存
 	defer app.Looger.Sync()
 
+	// defer app.DB.Close()
+
+	zap.S().Info("Serve>> ", app.DB)
 	// 先实例化 handlers.AppHandler 再创建路由
-	_ = handlers.New(app.DB, &app)
+	handlers.New(app.DB, &app)
 
 	// 创建路由
 	r := routes.New()

@@ -1,6 +1,7 @@
 package render
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	"html/template"
@@ -31,7 +32,7 @@ func New(use bool) *TemplateData {
 }
 
 // Render 获取模板并渲染
-func (t *TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl string) error {
+func (t *TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl string, data interface{}) error {
 	var err error
 	cache := t.Cache
 	if !t.UseCache {
@@ -48,9 +49,24 @@ func (t *TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl strin
 
 	w.Header().Add("Content-Type", "text/html; charset=utf-8")
 
-	err = tt.Execute(w, nil)
+	// Execute 如果内存存在错误（例如：一个页面由header和content组成，加入header加载正确，而content错误）也会渲染到页面上了。
+	// 因此需要中转一下
+	// err = tt.Execute(w, nil)
+	// if err != nil {
+	// 	zap.S().Error("解析模板发生错误", err)
+	// }
+
+	buf := new(bytes.Buffer)
+	err = tt.Execute(buf, data)
 	if err != nil {
 		zap.S().Error("解析模板发生错误", err)
+		return err
+	}
+
+	_, err = buf.WriteTo(w)
+	if err != nil {
+		zap.S().Error("写入模板发生错误", err)
+		return err
 	}
 
 	return nil
@@ -103,5 +119,4 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 	}
 
 	return cache, nil
-
 }

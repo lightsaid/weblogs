@@ -6,5 +6,7 @@ import (
 )
 
 func main() {
+	// db, err := sqlx.Connect("sqlite3", "file:./resources/database/weblogs.db")
+	// log.Println("amin.go>> ", db, err)
 	app.Serve()
 }
