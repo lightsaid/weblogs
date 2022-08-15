@@ -13,8 +13,20 @@ type Router struct {
 	AuthRequired bool
 }
 
-// 访问模板文件路由
+// 访问管理员模板文件路由
 var adminPageRoutes = []Router{
+	{
+		Path:         "/admin/login",
+		Handler:      handlers.ShowAdminLogin,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/login",
+		Handler:      handlers.LoginWithRegister,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
 	{
 		Path:         "/admin/index",
 		Handler:      handlers.ShowAdminIndex,

@@ -5,7 +5,14 @@ import (
 	"net/http"
 
 	"go.uber.org/zap"
+	"lightsaid.com/weblogs/internal/models"
 )
+
+func ShowAdminLogin(w http.ResponseWriter, r *http.Request) {
+	data := models.NewTemplateData()
+	data.Title = "登录"
+	H.Template.Render(w, r, "login.page.tmpl", &data)
+}
 
 func ShowAdminIndex(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("./templates/admin.page.tmpl")
@@ -21,15 +28,13 @@ func ShowAdminIndex(w http.ResponseWriter, r *http.Request) {
 }
 
 func ShowAdminUsers(w http.ResponseWriter, r *http.Request) {
-	var data = make(map[string]interface{})
+	var data = models.NewTemplateData()
 	users, err := H.Repo.GetUsers()
-
 	if err != nil {
-		data["Error"] = err
+		data.Error = err.Error()
 	}
-	data["Users"] = users
-	zap.S().Info("Users>>>", data)
-	H.Template.Render(w, r, "users.page.tmpl", data)
+	data.Data["Users"] = users
+	H.Template.Render(w, r, "users.page.tmpl", &data)
 }
 
 func ShowAdminPosts(w http.ResponseWriter, r *http.Request) {

@@ -5,11 +5,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="lightsaid" content="weblogs">
+    <meta name="description" content="轻言博客">
+    <meta name="author" content="Lightsaid">
+    <meta name="generator" content="Lightsaid">
+    <title>轻言博客</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bi {
+            width: 1em;
+            height: 1em;
+            fill: currentcolor;
+        }
+
+        .alert-container {
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
 
     {{block "css" .}}
 
@@ -22,9 +39,31 @@
 
     {{end}}
 
+    <!-- alert 容器 -->
+    <div class="alert-container">
+
+    </div>
+
     <!-- Bootstrap core JS -->
     <script src="/static/js/bootstrap.bundle.min.js"></script>
-    {{block "js" .}} {{end}}
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/request.js"></script>
+
+    <script>
+        const $$ = window
+        // 配置
+        $$.RunMode = "{{.RunMode}}"
+
+        // $$.showMsg('成功', 'error')
+        // $$.showMsg('成功', 'warning')
+        // $$.showMsg('成功', 'success')
+
+    </script>
+
+
+    {{block "js" .}}
+
+    {{end}}
 </body>
 
 </html>

@@ -3,8 +3,10 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
+	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/service"
 )
 
@@ -43,4 +45,18 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 
 func DeleteUser(w http.ResponseWriter, r *http.Request) {
 
+}
+
+func LoginWithRegister(w http.ResponseWriter, r *http.Request) {
+	var req = struct {
+		Email       string `json:"email"`
+		Password    string `json:"password"`
+		AckPassword string `json:"ack_password"`
+		Remember    bool   `josn:"remember"`
+	}{}
+	err := H.readJSON(w, r, &req)
+	if err != nil {
+		zap.S().Error(err)
+	}
+	log.Println(req)
 }

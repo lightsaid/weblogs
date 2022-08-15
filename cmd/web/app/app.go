@@ -26,8 +26,8 @@ func initial() {
 		Looger:   setupLogger(),
 		UseCache: false,
 	}
-	useStr := os.Getenv("USE_CACHE")
-	if useStr == "true" {
+	mode := os.Getenv("RUNMODE")
+	if mode == "prod" {
 		app.UseCache = true
 	}
 

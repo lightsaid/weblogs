@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"os"
 	"path/filepath"
 
 	"go.uber.org/zap"
+	"lightsaid.com/weblogs/internal/models"
 )
 
 const tplPath = "./templates"
@@ -24,15 +26,22 @@ func New(use bool) *TemplateData {
 	if err != nil {
 		return nil
 	}
-
 	return &TemplateData{
 		Cache:    cache,
 		UseCache: use,
 	}
 }
 
+func AddBaseData(data *models.TemplateData, r *http.Request) *models.TemplateData {
+	data.Flash = "成功提示"
+	data.Error = "错误提示"
+	data.Warning = "警告提示"
+	data.RunMode = os.Getenv("RUNMODE")
+	return data
+}
+
 // Render 获取模板并渲染
-func (t *TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl string, data interface{}) error {
+func (t TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl string, data *models.TemplateData) error {
 	var err error
 	cache := t.Cache
 	if !t.UseCache {
@@ -55,6 +64,8 @@ func (t *TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl strin
 	// if err != nil {
 	// 	zap.S().Error("解析模板发生错误", err)
 	// }
+
+	data = AddBaseData(data, r)
 
 	buf := new(bytes.Buffer)
 	err = tt.Execute(buf, data)
