@@ -1,39 +1,15 @@
 {{template "admin" .}}
 
 {{define "css"}}
+<link rel="stylesheet" href="/static/css/card-layout.css">
 <style>
-    .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        flex-wrap: wrap;
-        min-height: 70px;
-        padding: 0 2.25rem;
-        background-color: transparent;
-        border-bottom: 1px solid #eff2f5;
-    }
 
-    .card-title {
-        margin-bottom: -0.5em;
-    }
-
-    .card-toolbar {
-        display: flex;
-        align-items: center;
-        margin: 0.5rem 0;
-        flex-wrap: wrap;
-    }
-
-    .table>thead>tr>th,
-    .table>tbody>tr>td {
-        text-align: center;
-        vertical-align: middle;
-    }
 </style>
 
 {{end}}
 
 {{define "content"}}
+{{$users := index .Data "users" }}
 <div class="container">
     <div class="card mb-5 mb-lg-10">
         <div class="card-header">
@@ -41,7 +17,7 @@
                 <h4>用户管理</h4>
             </div>
             <div class="card-toolbar">
-                <a href="#" class="btn btn-sm btn-primary my-1">添加</a>
+                <!-- <a href="#" class="btn btn-sm btn-primary my-1">添加</a> -->
             </div>
         </div>
         <div class="card-body p-0">
@@ -59,7 +35,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{range .Users}}
+                        {{range $users}}
                         <tr>
                             <td>{{.ID}}</td>
                             <td>{{.Username}}</td>
@@ -68,7 +44,8 @@
                             <td>{{.IfAdmin}}</td>
                             <td>{{.Active}}</td>
                             <td>
-                                <button type="button" class="btn btn-link">删除</button>
+                                <button type="button" class="btn btn-link">编辑</button>
+                                <button type="button" class="btn btn-link text-danger">删除</button>
                             </td>
                         </tr>
                         {{end}}

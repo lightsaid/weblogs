@@ -19,6 +19,13 @@ func (repo *databaseRepo) GetUser(id int) (models.User, error) {
 	return user, nil
 }
 
+func (repo *databaseRepo) GetUserByEmial(email string) (models.User, error) {
+	query := `select id, email, password, username, avatar, if_admin, active from users where email=$1 limit 1;`
+	user := models.User{}
+	err := repo.DB.Get(&user, query, email)
+	return user, err
+}
+
 func (repo *databaseRepo) GetUsers() ([]models.User, error) {
 	var users []models.User
 	query := `select id, email, username, avatar, if_admin, active from users 

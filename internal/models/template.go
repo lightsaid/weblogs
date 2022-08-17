@@ -1,14 +1,18 @@
 package models
 
+import "lightsaid.com/weblogs/internal/validator"
+
 // TemplateData 定义模板数据结构
 type TemplateData struct {
-	StringMap map[string]string
-	Data      map[string]interface{} // 数据
-	RunMode   string                 // 环境
-	Title     string                 // 页面标题
-	Flash     string                 // info 消息
-	Warning   string                 // 警告
-	Error     string                 // 错误提示
+	StringMap     map[string]string
+	Data          map[string]interface{} // 数据
+	RunMode       string                 // 环境
+	Title         string                 // 页面标题
+	Flash         string                 // info 消息
+	Warning       string                 // 警告
+	Error         string                 // 错误提示
+	JsonValidator *validator.JsonValidator
+	FormValidator *validator.FormValidator
 }
 
 // NewTemplateData 初始化一个TemplateData, 提供模板数据

@@ -123,3 +123,7 @@ INSERT into users(email, username, password, created_at, updated_at)
     returning *;
 
 select id, email, username, avatar, if_admin, active from users order by created_at, active desc limit 10 offset 0;
+
+select * from users;
+
+delete from users;

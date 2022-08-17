@@ -60,29 +60,44 @@
         <div class="row row-cols-1 row-cols-md-2 g-3">
             <div class="col d-flex flex-column justify-content-center p-left-15">
                 <h1 class="">轻言博客</h1>
-                <h4>学以致用，坚持学习一百年不动摇 {{.RunMode}} {{.Flash}}</h4>
+                <h4>学以致用，坚持学习一百年不动摇</h4>
+
+                <!-- 测试数据地方 -->
+                <!-- <h5 style="color: red;"></h5> -->
+
             </div>
             <div class="col" style="min-height: 400px;">
                 <form action="#" class="form-signin border rounded shadow" @submit.prevent="onSubmit" novalidate>
                     <div class="mb-3">
                         <label for="email" class="form-label mb-1 small">邮 箱:</label>
-                        <input type="email" class="form-control" id="email" v-model="formFileds.email"
+                        <input type="email" id="email" class='form-control 
+                        {{with .JsonValidator.Errors.Get "email"}} is-invalid {{end}}' v-model="formFileds.email"
                             placeholder="请输入邮箱">
-                        <span class="text-danger">错误提示</span>
+                        {{with .JsonValidator.Errors.Get "email"}}
+                        <span class="text-danger">{{.}}</span>
+                        {{end}}
 
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label mb-1 small">密 码:</label>
 
-                        <input type="password" class="form-control is-invalid" id="password"
+                        <input type="password" id="password" class='form-control 
+                         {{with .JsonValidator.Errors.Get "password"}} is-invalid {{end}}'
                             v-model="formFileds.password" placeholder="请输入密码">
-                        <span class="text-danger">错误提示</span>
+                        {{with .JsonValidator.Errors.Get "password"}}
+                        <span class="text-danger">{{.}}</span>
+                        {{end}}
+
                     </div>
 
                     <div class="mb-3" v-if="formFileds.formType==formTypeEnum.register">
                         <label for="ack_password" class="form-label mb-1 small">确认密码:</label>
-                        <input type="password" class="form-control" id="ack_password" v-model="formFileds.ack_password"
-                            placeholder="请输入密码">
+                        <input type="password" class='form-control
+                        {{with .JsonValidator.Errors.Get "ack_password" }} is-invalid {{end}}' id="ack_password"
+                            v-model="formFileds.ack_password" placeholder="请输入密码">
+                        {{with .JsonValidator.Errors.Get "ack_password"}}
+                        <span class="text-danger">{{.}}</span>
+                        {{end}}
                     </div>
 
                     <div class="checkbox mb-3 d-flex justify-content-between"
@@ -122,43 +137,52 @@
 {{define "js"}}
 <script src="/static/js/vue.global.prod.3.2.js"></script>
 
+{{$user := index .Data "user"}}
 <script>
-    const { createApp } = Vue
+
+
+    console.log("$user>>> ", "{{$user}}")
+
+    var { createApp } = Vue
     // 表单类型: "Login"、"Register"
-    const formTypeOptions = {
+    var formTypeOptions = {
         "login": "Login",
         "register": "Register"
     }
 
     // 登录/注册
-    const submitHandler = {
+    var submitHandler = {
         "Login": function (forms) {
-            const options = {
+            var options = {
                 method: "POST",
+                headers: new Headers().append("Content-Type", "text/html; charset=utf-8"),
                 body: forms
             }
             $$.request("/admin/login", options)
         },
+
         "Register": function (forms) {
-            const options = {
+            var options = {
                 method: "POST",
+                headers: new Headers().append("Content-Type", "text/html; charset=utf-8"),
                 body: forms
             }
             $$.request("/admin/login", options)
         }
     }
 
+
     // 使用Vue创建App, 响应式数据
     createApp({
         data() {
             return {
                 formTypeEnum: Object.assign({}, formTypeOptions),
-                formFileds: {
-                    formType: formTypeOptions.login,
-                    email: "",
-                    password: "",
-                    ack_password: "",
-                    remember: false,
+                formFileds: { // 如果 "{{with $user.FormType}} {{.}} {{end}}" 存在空格则渲染为" Register ",也存在空格
+                    formType: "{{with $user.FormType}}{{.}}{{end}}" || formTypeOptions.register,
+                    email: "{{with $user.Email}}{{.}}{{end}}",
+                    password: "{{with $user.Password}}{{.}}{{end}}",
+                    ack_password: "{{with $user.AckPassword}}{{.}}{{end}}",
+                    remember: "{{with $user.Remember}}{{.}}{{end}}" || false,
                 }
             }
         },
@@ -168,7 +192,6 @@
             }
         },
     }).mount("#app")
-
 
 </script>
 

@@ -1,0 +1,31 @@
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-height: 70px;
+    padding: 0 2.25rem;
+    background-color: transparent;
+    border-bottom: 1px solid #eff2f5;
+}
+
+.card-title {
+    margin-bottom: -0.5em;
+}
+
+.card-body {
+    min-height: 300px;
+}
+
+.card-toolbar {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>td {
+    text-align: center;
+    vertical-align: middle;
+}

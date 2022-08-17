@@ -1,30 +1,22 @@
 package handlers
 
 import (
-	"html/template"
 	"net/http"
 
-	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
+	"lightsaid.com/weblogs/internal/validator"
 )
 
 func ShowAdminLogin(w http.ResponseWriter, r *http.Request) {
 	data := models.NewTemplateData()
+	data.JsonValidator, _ = validator.NewJsonValidator(nil)
 	data.Title = "登录"
 	H.Template.Render(w, r, "login.page.tmpl", &data)
 }
 
 func ShowAdminIndex(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("./templates/admin.page.tmpl")
-	if err != nil {
-		zap.S().Error("解析模板发生错误", err)
-	}
-	w.Header().Add("Content-Type", "text/html; charset=utf-8")
-	PageTitle := "Admin"
-	err = t.Execute(w, PageTitle)
-	if err != nil {
-		zap.S().Error("解析模板发生错误", err)
-	}
+	data := models.NewTemplateData()
+	H.Template.Render(w, r, "dashboard.page.tmpl", &data)
 }
 
 func ShowAdminUsers(w http.ResponseWriter, r *http.Request) {
@@ -33,7 +25,7 @@ func ShowAdminUsers(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		data.Error = err.Error()
 	}
-	data.Data["Users"] = users
+	data.Data["users"] = users
 	H.Template.Render(w, r, "users.page.tmpl", &data)
 }
 

@@ -1,11 +1,11 @@
 ~function ($$) {
     // 处理alert
-    const alertPlaceholder = document.querySelector('.alert-container')
-    const alert = (message, type) => {
+    var alertPlaceholder = document.querySelector('.alert-container')
+    var alert = (message, type) => {
         if (type == 'error') {
             type = 'danger'
         }
-        const wrapper = document.createElement('div')
+        var wrapper = document.createElement('div')
         wrapper.innerHTML = [
             `<div class="alert alert-${type} alert-dismissible" role="alert">`,
             `   <div class="text-center">${message}</div>`,

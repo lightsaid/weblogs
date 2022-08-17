@@ -1,8 +1,11 @@
 package service
 
-type LoginRequest struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
+type LoginWithRegisterRequest struct {
+	FormType    string `json:"formType"`
+	Email       string `json:"email"`
+	Password    string `json:"password"`
+	AckPassword string `json:"ack_password"`
+	Remember    bool   `josn:"remember"`
 }
 
 type CreateUserRequest struct {

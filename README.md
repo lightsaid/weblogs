@@ -1,5 +1,6 @@
 # 博客
 
+开发环境， window10 + wsl2 + docker
 
 ### 目录结构设计
 ``` js

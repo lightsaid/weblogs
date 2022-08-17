@@ -17,5 +17,3 @@ func New(db *sqlx.DB) *Service {
 		dbrepo.NewDatabaseRepo(db),
 	}
 }
-
-func (s *Service) Login() {}

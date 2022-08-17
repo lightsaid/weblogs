@@ -1,0 +1,29 @@
+{{template "admin" .}}
+
+{{define "css"}}
+<link rel="stylesheet" href="/static/css/card-layout.css">
+<style>
+
+</style>
+
+{{end}}
+
+{{define "content"}}
+{{$users := index .Data "users" }}
+<div class="container">
+    <div class="card mb-5 mb-lg-10">
+        <div class="card-header">
+            <div class="card-title d-flex flex-column justify-content-center">
+                <h4>Dashboard</h4>
+            </div>
+            <div class="card-toolbar">
+                <!-- <a href="#" class="btn btn-sm btn-primary my-1">添加</a> -->
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <div>欢迎 XZZ 登录！</div>
+        </div>
+    </div>
+</div>
+
+{{end}}

@@ -33,9 +33,10 @@ func New(use bool) *TemplateData {
 }
 
 func AddBaseData(data *models.TemplateData, r *http.Request) *models.TemplateData {
-	data.Flash = "成功提示"
-	data.Error = "错误提示"
-	data.Warning = "警告提示"
+
+	// data.Flash = "成功提示"
+	// data.Error = "错误提示"
+	// data.Warning = "警告提示"
 	data.RunMode = os.Getenv("RUNMODE")
 	return data
 }

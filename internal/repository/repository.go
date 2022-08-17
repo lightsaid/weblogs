@@ -8,6 +8,7 @@ type Repository interface {
 	InsertUser(email, username, password, avatar string) (models.User, error)
 	GetUser(id int) (models.User, error)
 	GetUsers() ([]models.User, error)
+	GetUserByEmial(email string) (models.User, error)
 	UpdateUser(models.User) error
 	DeleteUser(id int) error
 
