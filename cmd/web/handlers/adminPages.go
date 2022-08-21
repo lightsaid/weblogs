@@ -10,7 +10,6 @@ import (
 func ShowAdminLogin(w http.ResponseWriter, r *http.Request) {
 	data := models.NewTemplateData()
 	data.JsonValidator, _ = validator.NewJsonValidator(nil)
-	data.Title = "登录"
 	H.Template.Render(w, r, "login.page.tmpl", &data)
 }
 

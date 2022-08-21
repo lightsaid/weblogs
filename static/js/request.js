@@ -1,28 +1,23 @@
 ~function ($$) {
     var request = (url, options) => {
         let headers = new Headers()
+        let csrfToken = document.getElementsByName("gorilla.csrf.Token")[0].value
         headers.append('Content-Type', 'application/json')
+        headers.append('X-CSRF-Token', csrfToken)
+
         var param = {
             method: options.method ? options.method : "POST",
             headers: Object.assign(headers, options.headers),
             body: JSON.stringify(options.body)
         }
-
         return fetch(url, param)
+            // .then(response => {
+            //     debugger
+            //     // if (options.body && options.body.formType === ){}
+            //     return response.json()
+            // })
             .then(response => {
-                let flag = false
-                Object.values(response.headers).forEach(val => {
-                    if (typeof val == "string") {
-                        if (val.toLowerCase() == "application/json") {
-                            flag = true
-                        }
-                    }
-                })
-                if (flag) {
-                    return response.json()
-                } else {
-                    return response.text()
-                }
+                return response.text()
             })
             .then(data => {
                 if ($$.isProd !== "prod") {

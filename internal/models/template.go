@@ -8,7 +8,7 @@ type TemplateData struct {
 	Data          map[string]interface{} // 数据
 	RunMode       string                 // 环境
 	Title         string                 // 页面标题
-	Flash         string                 // info 消息
+	Success       string                 // 成功消息
 	Warning       string                 // 警告
 	Error         string                 // 错误提示
 	JsonValidator *validator.JsonValidator

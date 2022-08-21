@@ -6,7 +6,7 @@ create table users (
     username text not null,
     password varchar(16) not null,
     avatar text,
-    if_admin int not null default 0,  -- 是否管理员(0:是|1:否)
+    if_admin int not null default 0,  -- 是否管理员(0:否|1:是)
     -- check 约束
     -- active int check(active > -2) default 0, -- 状态 (0:正常|-1:删除)
     active int not null check(active in (-1, 0, 1)) default 0, -- 状态 (-1:删除0:正常|1:活跃)
@@ -116,7 +116,7 @@ SELECT username, email, active, datetime(created_at), date(updated_at) from user
 select * from users limit 1;
 
 -- 测试 SQLite3 是否支持 returning 关键字 
-update users set avatar="http://localhost:5000/assets/upload/xzz.png", active=1 where id=1 returning *;
+update users set if_admin=1, active=1 where id=8 returning *;
 
 INSERT into users(email, username, password, created_at, updated_at) 
 	values('xzz@qq.com','xzz', 'abc123', datetime('now', 'localtime'), datetime('now', 'localtime')) 
@@ -125,5 +125,3 @@ INSERT into users(email, username, password, created_at, updated_at)
 select id, email, username, avatar, if_admin, active from users order by created_at, active desc limit 10 offset 0;
 
 select * from users;
-
-delete from users;

@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/gorilla/sessions"
 	"github.com/jmoiron/sqlx"
 	"github.com/joho/godotenv"
 	_ "github.com/mattn/go-sqlite3"
@@ -26,6 +27,8 @@ func initial() {
 		Looger:   setupLogger(),
 		UseCache: false,
 	}
+	app.CookieStore = setupSession()
+
 	mode := os.Getenv("RUNMODE")
 	if mode == "prod" {
 		app.UseCache = true
@@ -55,6 +58,24 @@ func setupLogger() *zap.Logger {
 	l, err := logger.New("./logs.log", "stderr")
 	handleError(err)
 	return l
+}
+
+func setupSession() *sessions.CookieStore {
+	store := sessions.NewCookieStore([]byte(os.Getenv("SESSION_KEY)")))
+	// NOTE: CSRF 的本质实际上是利用了 Cookie 会自动在请求中携带的特性，诱使用户在第三方站点发起请求的行为。
+	// 因此 Cookie 增加了 SameSite 属性，用来规避该问题。
+	// SameSite=None：无论是否跨站都会发送 Cookie
+	// SameSite=Lax：允许部分第三方请求携带 Cookie
+	// SameSite=Strict：仅允许同站请求携带 Cookie，即当前网页 URL 与请求目标 URL 完全一致
+	var secure bool
+	if os.Getenv("RUNMODE") == "prod" {
+		secure = true
+	}
+	store.Options.SameSite = http.SameSiteLaxMode
+	// Secure cookie 仅通过 HTTPS 协议加密发送到服务器。请注意，不安全站点（http:）无法使用 Secure 指令设置 cookies。
+	store.Options.Secure = secure
+	store.Options.MaxAge = 24 * 60 * 60 // 最长时间24小时
+	return store
 }
 
 func Serve() {

@@ -26,3 +26,13 @@ func (app *AppHandler) readJSON(w http.ResponseWriter, r *http.Request, data int
 
 	return nil
 }
+
+func (app *AppHandler) errorResponse(w http.ResponseWriter, msg ...string) {
+	w.WriteHeader(http.StatusInternalServerError)
+	message := "服务内部错误"
+	if len(msg) > 0 {
+		message = msg[0]
+	}
+	w.Write([]byte(message))
+
+}

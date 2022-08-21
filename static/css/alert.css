@@ -1,0 +1,12 @@
+.bi {
+    width: 1em;
+    height: 1em;
+    fill: currentcolor;
+}
+
+.alert-container {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

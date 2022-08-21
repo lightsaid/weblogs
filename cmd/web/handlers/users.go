@@ -5,14 +5,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 	"strings"
 
+	"github.com/gorilla/csrf"
+	"github.com/gorilla/sessions"
 	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
 	"lightsaid.com/weblogs/internal/security"
 	"lightsaid.com/weblogs/internal/service"
 	"lightsaid.com/weblogs/internal/validator"
 )
+
+var session *sessions.Session
 
 func GetUsers(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(fmt.Sprintf("Hello, %s", r.RemoteAddr)))
@@ -55,6 +60,8 @@ func DeleteUser(w http.ResponseWriter, r *http.Request) {
 func LoginWithRegister(w http.ResponseWriter, r *http.Request) {
 	var req = service.LoginWithRegisterRequest{}
 	var td = models.NewTemplateData()
+	w.Header().Set("X-CSRF-Token", csrf.Token(r))
+
 	err := H.readJSON(w, r, &req)
 	if err != nil {
 		zap.S().Error(err)
@@ -149,12 +156,13 @@ func Register(w http.ResponseWriter, r *http.Request, req service.LoginWithRegis
 	req.Password = ""
 	req.AckPassword = ""
 	td.Data["user"] = req
-	td.Flash = "注册成功，转到登录"
+	td.Success = "注册成功，转到登录"
 	H.Template.Render(w, r, "login.page.tmpl", td)
 }
 
 func Login(w http.ResponseWriter, r *http.Request, req service.LoginWithRegisterRequest,
 	jvalid *validator.JsonValidator, td *models.TemplateData) {
+
 	// 验证参数
 	jvalid.Required("email", "password")
 
@@ -186,6 +194,29 @@ func Login(w http.ResponseWriter, r *http.Request, req service.LoginWithRegister
 		return
 	}
 
-	// 登录成功
-	http.Redirect(w, r, "/admin/index", http.StatusSeeOther)
+	// 登录成功  TODO: 区分管理员和非管理员
+	if session, err = H.CookieStore.Get(r, os.Getenv("SESSION")); err != nil {
+		H.errorResponse(w)
+		return
+	}
+	// session.Values["Flash"] = "登录成功"
+	session.AddFlash("登录成功！", "Success")
+	if err = session.Save(r, w); err != nil {
+		H.errorResponse(w)
+		return
+	}
+
+	// NOTE: 此处不合理，不应该是后台重定向，而是前端做跳转
+	if user.IfAdmin == 1 {
+		http.Redirect(w, r, "/admin/index", http.StatusSeeOther)
+	} else {
+
+	}
+	// resp := service.LoginWithRegisterResponse{
+	// 	IfAdmin: user.IfAdmin,
+	// }
+	// w.Header().Set("Content-Type", "application/json")
+	// w.WriteHeader(http.StatusOK)
+	// _ = json.NewEncoder(w).Encode(&resp)
+
 }

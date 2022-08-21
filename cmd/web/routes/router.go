@@ -47,6 +47,15 @@ var adminPageRoutes = []Router{
 	},
 }
 
+var blogRoutes = []Router{
+	{
+		Path:         "/",
+		Handler:      handlers.ShowBlogFront,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+}
+
 // 用户路由
 var userRoutes = []Router{
 	{

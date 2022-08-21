@@ -12,21 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        .bi {
-            width: 1em;
-            height: 1em;
-            fill: currentcolor;
-        }
-
-        .alert-container {
-            width: 100vw;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/alert.css">
 
     {{block "css" .}}
 
@@ -54,7 +40,11 @@
         // 配置
         $$.RunMode = "{{.RunMode}}"
 
-        "{{with .Flash}}"
+        // $$.showMsg('成功', 'error')
+        // $$.showMsg('成功', 'warning')
+        // $$.showMsg('成功', 'success')
+
+        "{{with .Success}}"
         $$.showMsg("{{.}}", 'success')
         "{{end}}"
 

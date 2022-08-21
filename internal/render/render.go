@@ -9,36 +9,55 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/gorilla/csrf"
+	"github.com/gorilla/sessions"
 	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
 )
 
 const tplPath = "./templates"
 
+var session *sessions.Session
+
 type TemplateData struct {
-	Cache    map[string]*template.Template
-	UseCache bool // 是否使用缓存
+	Cache       map[string]*template.Template
+	UseCache    bool // 是否使用缓存
+	CookieStore *sessions.CookieStore
 }
 
 // New 实例化TemplateData，里面包含 模板缓存，提供给handlers包使用
-func New(use bool) *TemplateData {
+func New(use bool, store *sessions.CookieStore) *TemplateData {
 	cache, err := CreateTemplateCache()
 	if err != nil {
 		return nil
 	}
 	return &TemplateData{
-		Cache:    cache,
-		UseCache: use,
+		Cache:       cache,
+		UseCache:    use,
+		CookieStore: store,
 	}
 }
 
-func AddBaseData(data *models.TemplateData, r *http.Request) *models.TemplateData {
+func (t TemplateData) AddBaseData(td *models.TemplateData, r *http.Request, w http.ResponseWriter) *models.TemplateData {
 
 	// data.Flash = "成功提示"
 	// data.Error = "错误提示"
 	// data.Warning = "警告提示"
-	data.RunMode = os.Getenv("RUNMODE")
-	return data
+	td.RunMode = os.Getenv("RUNMODE")
+
+	// csrfField 字段是 csrf.TemplateTag 提供，约定名字
+	td.Data["csrfField"] = csrf.TemplateField(r)
+
+	session, _ = t.CookieStore.Get(r, os.Getenv("SESSION"))
+	fmt.Println(">>>>>>>>>>>>>>>>>>>>before", session)
+	msgs := session.Flashes("Success")
+	if len(msgs) > 0 {
+		td.Success = fmt.Sprint(msgs[0])
+	}
+	session.Save(r, w)
+	fmt.Println(">>>>>>>>>>>>>>>>>>>>after", session)
+
+	return td
 }
 
 // Render 获取模板并渲染
@@ -57,7 +76,7 @@ func (t TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl string
 		return fmt.Errorf("模板名字不存在：%s", tmpl)
 	}
 
-	w.Header().Add("Content-Type", "text/html; charset=utf-8")
+	// w.Header().Add("Content-Type", "text/html; charset=utf-8")
 
 	// Execute 如果内存存在错误（例如：一个页面由header和content组成，加入header加载正确，而content错误）也会渲染到页面上了。
 	// 因此需要中转一下
@@ -66,7 +85,7 @@ func (t TemplateData) Render(w http.ResponseWriter, r *http.Request, tmpl string
 	// 	zap.S().Error("解析模板发生错误", err)
 	// }
 
-	data = AddBaseData(data, r)
+	data = t.AddBaseData(data, r, w)
 
 	buf := new(bytes.Buffer)
 	err = tt.Execute(buf, data)
