@@ -38,7 +38,11 @@ func load() []Router {
 
 func setupRoutes(r *mux.Router) *mux.Router {
 	for _, route := range load() {
-		r.HandleFunc(route.Path, route.Handler).Methods(route.Method)
+		if route.AuthRequired {
+			r.HandleFunc(route.Path, middleware.MultipleMiddleware(route.Handler, middleware.AuthMiddleware)).Methods(route.Method)
+		} else {
+			r.HandleFunc(route.Path, route.Handler).Methods(route.Method)
+		}
 	}
 	return r
 }

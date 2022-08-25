@@ -20,8 +20,9 @@
 
 </head>
 
-<body>
+{{$userinfo := index .Data "userinfo" }}
 
+<body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="bootstrap" viewBox="0 0 118 94">
             <title>Bootstrap</title>
@@ -113,43 +114,44 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">
+                    <a href="/admin/index" class="nav-link link-dark {{with .Menubar.Home}}active{{end}}"
+                        aria-current="page">
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#home" />
                         </svg>
-                        Home
+                        欢迎页
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#" class="nav-link link-dark">
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#speedometer2" />
                         </svg>
                         Dashboard
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="/admin/attrs" class="nav-link link-dark  {{with .Menubar.AttributeList}}active{{end}}">
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#table" />
                         </svg>
-                        Orders
+                        博文属性
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="/admin/posts" class="nav-link link-dark {{with .Menubar.PostList}}active{{end}}">
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#grid" />
                         </svg>
-                        Products
+                        博文列表
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="/admin/users" class="nav-link link-dark {{with .Menubar.UserList}}active{{end}}">
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#people-circle" />
                         </svg>
-                        Customers
+                        用户列表
                     </a>
                 </li>
             </ul>
@@ -157,17 +159,16 @@
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
                     id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>mdo</strong>
+                    <img src="{{imageURL $userinfo.Avatar}}" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>{{$userinfo.Username}}</strong>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">创建博文</a></li>
+                    <li><a class="dropdown-item" href="#">个人信息</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item" href="/admin/logout">注销</a></li>
                 </ul>
             </div>
         </div>

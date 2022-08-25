@@ -16,15 +16,33 @@ type Router struct {
 // 访问管理员模板文件路由
 var adminPageRoutes = []Router{
 	{
-		Path:         "/admin/login",
-		Handler:      handlers.ShowAdminLogin,
+		Path:         "/admin/register",
+		Handler:      handlers.ShowAdminRegister,
 		Method:       http.MethodGet,
-		AuthRequired: true,
+		AuthRequired: false,
+	},
+	{
+		Path:         "/admin/register",
+		Handler:      handlers.PostAdminRegister,
+		Method:       http.MethodPost,
+		AuthRequired: false,
 	},
 	{
 		Path:         "/admin/login",
-		Handler:      handlers.LoginWithRegister,
+		Handler:      handlers.ShowAdminLogin,
+		Method:       http.MethodGet,
+		AuthRequired: false,
+	},
+	{
+		Path:         "/admin/login",
+		Handler:      handlers.PostLogin,
 		Method:       http.MethodPost,
+		AuthRequired: false,
+	},
+	{
+		Path:         "/admin/logout",
+		Handler:      handlers.Logout,
+		Method:       http.MethodGet,
 		AuthRequired: true,
 	},
 	{
@@ -40,8 +58,26 @@ var adminPageRoutes = []Router{
 		AuthRequired: true,
 	},
 	{
+		Path:         "/admin/users/{id:[0-9]+}",
+		Handler:      handlers.UpdateUser,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/users/{id:[0-9]+}",
+		Handler:      handlers.DeleteUser,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
 		Path:         "/admin/posts",
 		Handler:      handlers.ShowAdminPosts,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/attrs",
+		Handler:      handlers.ShowAdminAttrs,
 		Method:       http.MethodGet,
 		AuthRequired: true,
 	},
@@ -57,38 +93,7 @@ var blogRoutes = []Router{
 }
 
 // 用户路由
-var userRoutes = []Router{
-	{
-		Path:         "/users",
-		Handler:      handlers.GetUsers,
-		Method:       http.MethodGet,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/users",
-		Handler:      handlers.CreateUser,
-		Method:       http.MethodPost,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/users/{id:[0-9]+}",
-		Handler:      handlers.GetUser,
-		Method:       http.MethodGet,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/users/{id:[0-9]+}",
-		Handler:      handlers.UpdateUser,
-		Method:       http.MethodPut,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/users/{id:[0-9]+}",
-		Handler:      handlers.DeleteUser,
-		Method:       http.MethodDelete,
-		AuthRequired: true,
-	},
-}
+var userRoutes = []Router{}
 
 // 文章路由
 var postRoutes = []Router{

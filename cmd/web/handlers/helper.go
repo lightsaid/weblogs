@@ -3,8 +3,13 @@ package handlers
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"net/http"
+	"runtime/debug"
+
+	"github.com/gorilla/sessions"
+	"go.uber.org/zap"
 )
 
 func (app *AppHandler) readJSON(w http.ResponseWriter, r *http.Request, data interface{}) error {
@@ -34,5 +39,20 @@ func (app *AppHandler) errorResponse(w http.ResponseWriter, msg ...string) {
 		message = msg[0]
 	}
 	w.Write([]byte(message))
+}
 
+func ServerError(w http.ResponseWriter, err error) {
+	trace := fmt.Sprintf("%s\n%s", err.Error(), debug.Stack())
+	zap.S().Info(trace)
+	http.Error(
+		w,
+		http.StatusText(http.StatusInternalServerError),
+		http.StatusInternalServerError,
+	)
+}
+
+func SaveSession(session *sessions.Session, w http.ResponseWriter, r *http.Request) {
+	if err := session.Save(r, w); err != nil {
+		ServerError(w, err)
+	}
 }

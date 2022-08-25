@@ -1,6 +1,16 @@
 package handlers
 
-import "net/http"
+import (
+	"net/http"
+
+	"lightsaid.com/weblogs/internal/models"
+)
+
+func ShowAdminAttrs(w http.ResponseWriter, r *http.Request) {
+	td := models.NewTemplateData()
+	td.Menubar.AttributeList = true
+	H.Template.Render(w, r, "attrs.page.tmpl", &td)
+}
 
 func GetAttributes(w http.ResponseWriter, r *http.Request) {
 

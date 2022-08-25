@@ -9,7 +9,7 @@
 {{end}}
 
 {{define "content"}}
-{{$users := index .Data "users" }}
+{{$userinfo := index .Data "userinfo" }}
 <div class="container">
     <div class="card mb-5 mb-lg-10">
         <div class="card-header">
@@ -21,7 +21,9 @@
             </div>
         </div>
         <div class="card-body p-0">
-            <div>欢迎 XZZ 登录！</div>
+            <div class="m-5">欢迎 <span class="text-primary">{{$userinfo.Username}}</span> 登录！</div>
+
+            <!-- <div style="color: red;">{{.}}</div> -->
         </div>
     </div>
 </div>

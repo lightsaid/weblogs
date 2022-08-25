@@ -13,6 +13,15 @@ type TemplateData struct {
 	Error         string                 // 错误提示
 	JsonValidator *validator.JsonValidator
 	FormValidator *validator.FormValidator
+	Menubar       *Menubar
+}
+
+// Menubar 菜单
+type Menubar struct {
+	Home          bool
+	AttributeList bool
+	PostList      bool
+	UserList      bool
 }
 
 // NewTemplateData 初始化一个TemplateData, 提供模板数据
@@ -25,5 +34,6 @@ func NewTemplateData() TemplateData {
 		Title:     "",
 		Warning:   "",
 		Error:     "",
+		Menubar:   &Menubar{},
 	}
 }

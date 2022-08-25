@@ -67,11 +67,11 @@
 
             </div>
             <div class="col">
-                <form action="/admin/login" method="POST" class="form-signin border rounded shadow" novalidate>
+                <form action="/admin/register" method="POST" class="form-signin border rounded shadow" novalidate>
                     {{.Data.csrfField}}
                     <div class="mb-3">
                         <label for="email" class="form-label mb-1 small">邮 箱:</label>
-                        <input type="email" name="email" id="email" class='form-control 
+                        <input type="email" id="email" name="email" class='form-control 
                         {{with .FormValidator.Errors.Get "email"}} is-invalid {{end}}' v-model="formFileds.email"
                             placeholder="请输入邮箱">
                         {{with .FormValidator.Errors.Get "email"}}
@@ -81,28 +81,30 @@
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label mb-1 small">密 码:</label>
-                        <input type="password" name="password" id="password" class='form-control 
+
+                        <input type="password" id="password" name="password" class='form-control 
                          {{with .FormValidator.Errors.Get "password"}} is-invalid {{end}}'
                             v-model="formFileds.password" placeholder="请输入密码">
                         {{with .FormValidator.Errors.Get "password"}}
                         <span class="text-danger">{{.}}</span>
                         {{end}}
+
                     </div>
 
-                    <div class="checkbox mb-3 d-flex justify-content-between">
-                        <label>
-                            <input type="checkbox" name="remember" v-model="formFileds.remember"> 记住我
-                        </label>
-                        <a class="btn btn-link">
-                            忘记密码？
-                        </a>
+                    <div class="mb-3">
+                        <label for="ack_password" class="form-label mb-1 small">确认密码:</label>
+                        <input type="password" name="ack_password" class='form-control 
+                        {{with .FormValidator.Errors.Get "ack_password" }} is-invalid {{end}}' id="ack_password"
+                            v-model="formFileds.ack_password" placeholder="请输入密码">
+                        {{with .FormValidator.Errors.Get "ack_password"}}
+                        <span class="text-danger">{{.}}</span>
+                        {{end}}
                     </div>
-                    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">登&nbsp;录</button>
+
+                    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">注&nbsp;册</button>
 
                     <div class="text-center">
-                        <div class="text-center">
-                            <a class="btn btn-sm  btn-outline-success" href="/admin/register" type="button">去注册</a>
-                        </div>
+                        <a class="btn btn-sm  btn-outline-success" href="/admin/login" type="button">去登录</a>
                     </div>
                 </form>
             </div>
@@ -125,17 +127,16 @@
 
 {{$req := index .Data "request"}}
 <script>
-    // 使用Vue创建App, 响应式数据
-
     var { createApp } = Vue
 
+    // 使用Vue创建App, 响应式数据
     createApp({
         data() {
             return {
                 formFileds: {
                     email: "{{with $req.Email}}{{.}}{{end}}",
                     password: "{{with $req.Password}}{{.}}{{end}}",
-                    remember: "{{with $req.Remember}}{{.}}{{end}}" || false,
+                    ack_password: "{{with $req.AckPassword}}{{.}}{{end}}",
                 }
             }
         },

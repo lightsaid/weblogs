@@ -1,6 +1,16 @@
 package handlers
 
-import "net/http"
+import (
+	"net/http"
+
+	"lightsaid.com/weblogs/internal/models"
+)
+
+func ShowAdminPosts(w http.ResponseWriter, r *http.Request) {
+	td := models.NewTemplateData()
+	td.Menubar.PostList = true
+	H.Template.Render(w, r, "posts.page.tmpl", &td)
+}
 
 func GetPosts(w http.ResponseWriter, r *http.Request) {
 

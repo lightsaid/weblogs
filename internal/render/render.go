@@ -13,6 +13,7 @@ import (
 	"github.com/gorilla/sessions"
 	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
+	"lightsaid.com/weblogs/internal/service"
 )
 
 const tplPath = "./templates"
@@ -38,24 +39,69 @@ func New(use bool, store *sessions.CookieStore) *TemplateData {
 	}
 }
 
+var functions = template.FuncMap{
+	"imageURL":  imageURL,
+	"ifAdminF":  ifAdminF,
+	"getActive": getActive,
+}
+
+func imageURL(url string) string {
+	if len(url) > 2 && url[0] == '.' {
+		prefix := os.Getenv("ASSETS_PREFIX")
+		return fmt.Sprintf("%s%s", prefix, url[1:])
+	}
+	return url
+}
+
+func ifAdminF(status int) string {
+	if status == 1 {
+		return "是"
+	}
+	return "否"
+}
+
+func getActive(active int) string {
+	// 状态 (-1:删除0:正常|1:活跃)
+	switch active {
+	case -1:
+		return "已删除"
+	case 0:
+		return "正常"
+	case 1:
+		return "活跃"
+	default:
+		return fmt.Sprintf("未知%d", active)
+	}
+}
+
 func (t TemplateData) AddBaseData(td *models.TemplateData, r *http.Request, w http.ResponseWriter) *models.TemplateData {
 
-	// data.Flash = "成功提示"
-	// data.Error = "错误提示"
-	// data.Warning = "警告提示"
 	td.RunMode = os.Getenv("RUNMODE")
+
+	userinfo := r.Context().Value("userinfo")
+	if info, ok := userinfo.(service.SessionUser); ok {
+		td.Data["userinfo"] = info
+	}
 
 	// csrfField 字段是 csrf.TemplateTag 提供，约定名字
 	td.Data["csrfField"] = csrf.TemplateField(r)
-
 	session, _ = t.CookieStore.Get(r, os.Getenv("SESSION"))
-	fmt.Println(">>>>>>>>>>>>>>>>>>>>before", session)
 	msgs := session.Flashes("Success")
 	if len(msgs) > 0 {
 		td.Success = fmt.Sprint(msgs[0])
 	}
+
+	errs := session.Flashes("Error")
+	if len(errs) > 0 {
+		td.Error = fmt.Sprint(errs[0])
+	}
+
+	warns := session.Flashes("Warning")
+	if len(warns) > 0 {
+		td.Warning = fmt.Sprint(warns[0])
+	}
+
 	session.Save(r, w)
-	fmt.Println(">>>>>>>>>>>>>>>>>>>>after", session)
 
 	return td
 }
@@ -126,7 +172,7 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 		name := filepath.Base(page)
 
 		// 使用 ParseGlob 创建模板，它可能包含其他组件（比如：布局layout组件）
-		t, err := template.New(name).ParseGlob(page)
+		t, err := template.New(name).Funcs(functions).ParseGlob(page)
 		if err != nil {
 			zap.S().Panic(err)
 			return nil, err

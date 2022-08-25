@@ -1,6 +1,9 @@
 package dbrepo
 
 import (
+	"fmt"
+	"time"
+
 	"lightsaid.com/weblogs/internal/models"
 )
 
@@ -36,10 +39,40 @@ func (repo *databaseRepo) GetUsers() ([]models.User, error) {
 	return users, err
 }
 
-func (repo *databaseRepo) UpdateUser(models.User) error {
+var ErrUpdateNoRows = fmt.Errorf("影响 0 行数据")
+
+func (repo *databaseRepo) UpdateUser(user models.User) error {
+
+	query := `update users set username=$1, avatar=$2, if_admin=$3, updated_at=$4 where id=$5;`
+
+	result, err := repo.DB.Exec(query, user.Username, user.Avatar, user.IfAdmin, time.Now(), user.ID)
+	if err != nil {
+		return err
+	}
+
+	var n int64
+	if n, err = result.RowsAffected(); err != nil {
+		return err
+	}
+
+	if n <= 0 {
+		return ErrUpdateNoRows
+	}
 	return nil
 }
 
 func (repo *databaseRepo) DeleteUser(id int) error {
+	query := "delete from users where id = $1"
+	ret, err := repo.DB.Exec(query, id)
+	if err != nil {
+		return err
+	}
+	n, err := ret.RowsAffected() // 操作影响的行数
+	if err != nil {
+		return err
+	}
+	if n <= 0 {
+		return ErrUpdateNoRows
+	}
 	return nil
 }
