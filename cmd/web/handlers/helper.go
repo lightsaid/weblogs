@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"runtime/debug"
 
 	"github.com/gorilla/sessions"
@@ -49,6 +50,19 @@ func ServerError(w http.ResponseWriter, err error) {
 		http.StatusText(http.StatusInternalServerError),
 		http.StatusInternalServerError,
 	)
+}
+
+func GetSession(w http.ResponseWriter, r *http.Request, name ...string) *sessions.Session {
+	var sn = os.Getenv("SESSION")
+	if len(name) > 0 {
+		sn = name[0]
+	}
+	session, err := H.CookieStore.Get(r, sn)
+	if err != nil {
+		ServerError(w, err)
+		return nil
+	}
+	return session
 }
 
 func SaveSession(session *sessions.Session, w http.ResponseWriter, r *http.Request) {

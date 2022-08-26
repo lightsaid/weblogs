@@ -139,6 +139,14 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/admin/categories/0" class="nav-link link-dark  {{with .Menubar.Categories}}active{{end}}">
+                        <svg class="bi me-2" width="16" height="16">
+                            <use xlink:href="#table" />
+                        </svg>
+                        博文分类
+                    </a>
+                </li>
+                <li>
                     <a href="/admin/posts" class="nav-link link-dark {{with .Menubar.PostList}}active{{end}}">
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#grid" />
@@ -189,6 +197,7 @@
     <script src="/static/js/bootstrap.bundle.min.js"></script>
     <script src="/static/js/common.js"></script>
     <script src="/static/js/request.js"></script>
+    <script src="/static/js/sweetalert2.minjs"></script>
 
     <script>
         var $$ = window

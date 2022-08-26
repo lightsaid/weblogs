@@ -271,12 +271,22 @@ func ShowAdminUsers(w http.ResponseWriter, r *http.Request) {
 // }
 
 func UpdateUser(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
 	session, err := H.CookieStore.Get(r, os.Getenv("SESSION"))
 	if err != nil {
 		H.errorResponse(w)
 		return
 	}
+	// 限制大小
+	r.Body = http.MaxBytesReader(w, r.Body, 8<<20)
+	err = r.ParseMultipartForm(1 << 20)
+
+	if err != nil {
+		session.AddFlash("传输数据超出8M", "Error")
+		SaveSession(session, w, r)
+		http.Redirect(w, r, "/admin/users", http.StatusSeeOther)
+		return
+	}
+	vars := mux.Vars(r)
 
 	req := models.User{}
 	id := vars["id"]
@@ -308,7 +318,7 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fileUrl, err := UploadFile(r, os.Getenv("AVATAR_PATH"))
+	fileUrl, err := UploadFile(w, r, os.Getenv("AVATAR_PATH"))
 
 	// 检查是否上传文件， 忽略 err == http.ErrMissingFile 的处理
 	if err != nil && !errors.Is(err, http.ErrMissingFile) {

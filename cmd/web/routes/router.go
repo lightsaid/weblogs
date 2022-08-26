@@ -81,12 +81,48 @@ var adminPageRoutes = []Router{
 		Method:       http.MethodGet,
 		AuthRequired: true,
 	},
+	{
+		Path:         "/admin/attrs",
+		Handler:      handlers.CreateAttribute,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/attrs/{id:[0-9]+}",
+		Handler:      handlers.UpdateAttribute,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/attrs/{id:[0-9]+}",
+		Handler:      handlers.DeleteAttribute,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/category",
+		Handler:      handlers.CreateCategories,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/category/{id:[0-9]+}",
+		Handler:      handlers.UpdateCategories,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/categories/{parent_id:[0-9]+}",
+		Handler:      handlers.ShowAdminCategories,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
 }
 
 var blogRoutes = []Router{
 	{
 		Path:         "/",
-		Handler:      handlers.ShowBlogFront,
+		Handler:      nil,
 		Method:       http.MethodGet,
 		AuthRequired: true,
 	},
@@ -96,105 +132,12 @@ var blogRoutes = []Router{
 var userRoutes = []Router{}
 
 // 文章路由
-var postRoutes = []Router{
-	{
-		Path:         "/posts",
-		Handler:      handlers.GetPosts,
-		Method:       http.MethodGet,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/posts",
-		Handler:      handlers.CreatePost,
-		Method:       http.MethodPost,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/posts/{id:[0-9]+}",
-		Handler:      handlers.GetPost,
-		Method:       http.MethodGet,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/posts/{id:[0-9]+}",
-		Handler:      handlers.UpdatePost,
-		Method:       http.MethodPut,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/posts/{id:[0-9]+}",
-		Handler:      handlers.DeletePost,
-		Method:       http.MethodDelete,
-		AuthRequired: true,
-	},
-}
+var postRoutes = []Router{}
 
 // 分类路由
-var cateRoutes = []Router{
-	{
-		Path:         "/categories",
-		Handler:      handlers.GetCategories,
-		Method:       http.MethodGet,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/categories",
-		Handler:      handlers.CreateCategory,
-		Method:       http.MethodPost,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/categories/{id:[0-9]+}",
-		Handler:      handlers.GetCategory,
-		Method:       http.MethodGet,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/categories/{id:[0-9]+}",
-		Handler:      handlers.UpdateCategory,
-		Method:       http.MethodPut,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/categories/{id:[0-9]+}",
-		Handler:      handlers.DeleteCategory,
-		Method:       http.MethodDelete,
-		AuthRequired: true,
-	},
-}
+var cateRoutes = []Router{}
 
 // 属性路由
-var attrRoutes = []Router{
-	{
-		Path:         "/attrs",
-		Handler:      handlers.GetAttributes,
-		Method:       http.MethodGet,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/attrs",
-		Handler:      handlers.CreateAttribute,
-		Method:       http.MethodPost,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/attrs/{id:[0-9]+}",
-		Handler:      handlers.GetAttributes,
-		Method:       http.MethodGet,
-		AuthRequired: false,
-	},
-	{
-		Path:         "/attrs/{id:[0-9]+}",
-		Handler:      handlers.UpdateAttribute,
-		Method:       http.MethodPut,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/categories/{id:[0-9]+}",
-		Handler:      handlers.DeleteCategory,
-		Method:       http.MethodDelete,
-		AuthRequired: true,
-	},
-}
+var attrRoutes = []Router{}
 
 // 评论路由

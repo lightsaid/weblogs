@@ -22,6 +22,7 @@ type Menubar struct {
 	AttributeList bool
 	PostList      bool
 	UserList      bool
+	Categories    bool
 }
 
 // NewTemplateData 初始化一个TemplateData, 提供模板数据

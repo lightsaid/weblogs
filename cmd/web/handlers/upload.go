@@ -11,7 +11,8 @@ import (
 )
 
 // UploadFile 上传文件，path 是存放上传文件基础路径
-func UploadFile(r *http.Request, path string) (url string, err error) {
+func UploadFile(w http.ResponseWriter, r *http.Request, path string) (url string, err error) {
+
 	file, header, err := r.FormFile("file")
 	if err != nil {
 		return

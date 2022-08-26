@@ -44,7 +44,7 @@ type Category struct {
 type Attribute struct {
 	ID     int    `db:"id" json:"id"`
 	UserID int    `db:"user_id" json:"user_id"`
-	Kind   int    `db:"kind" json:"kind"`
+	Kind   string `db:"kind" json:"kind"`
 	Name   string `db:"name" json:"name"`
 }
 

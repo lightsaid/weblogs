@@ -12,6 +12,18 @@ type Repository interface {
 	UpdateUser(models.User) error
 	DeleteUser(id int) error
 
+	// Attributes 模块
+	InsertAttrs(attr *models.Attribute) (*models.Attribute, error)
+	GetAttributes() ([]*models.Attribute, error)
+	UpdateAttributes(a *models.Attribute) error
+	DeleteAttribute(id int) error
+
+	// Categories 模块
+	InsertCategories(cate *models.Category) (*models.Category, error)
+	GetCategories(parent_id int) ([]*models.Category, error)
+	UpdateCategories(a *models.Category) error
+	DeleteCategories(id int) error
+
 	// Post 模块
 	InsertPost(Post models.Post) (int, error)
 	GetPost(id int) (models.Post, error)

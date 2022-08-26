@@ -2,22 +2,34 @@
 
 {{define "css"}}
 <link rel="stylesheet" href="/static/css/card-layout.css">
+<style>
+    .upload {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        opacity: 0;
+        z-index: 3;
+    }
 </style>
 
 {{end}}
 
 {{define "content"}}
-{{$attrs := index .Data "attrs" }}
+{{$categories := index .Data "categories" }}
+{{$parent_id := index .Data "parent_id"}}
 <div class="container">
     <div class="card mb-5 mb-lg-10">
         <div class="card-header">
             <div class="card-title d-flex flex-column justify-content-center">
-                <h4>属性管理</h4>
+                <h4>分类管理</h4>
             </div>
             <div class="card-toolbar">
                 <button type="button" class="btn btn-sm btn-primary my-1" data-bs-toggle="modal"
-                    data-bs-target="#addMoal" onclick="addAttr()">添加</button>
+                    data-bs-target="#addMoal" onclick="addCategories()">添加</button>
             </div>
+
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -25,21 +37,29 @@
                     <thead>
                         <tr>
                             <th scope="col">#ID</th>
-                            <th scope="col">种类</th>
                             <th scope="col">名字</th>
+                            <!-- <th scope="col">Thumb</th> -->
                             <th scope="col">#操作</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{range $attrs}}
+                        {{range $categories}}
                         <tr>
                             <td>{{.ID}}</td>
                             <td>{{.Name}}</td>
-                            <td>{{getAttrKind .Kind}}</td>
+                            <!-- <td>
+                                {{with .Thumb}}
+                                <img src="{{imageURL .}}" alt="">
+                                {{end}}
+                            </td> -->
                             <td>
+                                <a type="button" class="btn btn-link" href="/admin/categories/{{.ID}}">查看子级</a>
                                 <button type="button" class="btn btn-link" data-bs-toggle="modal"
                                     data-bs-target="#addMoal"
-                                    onclick='editAttr("{{.ID}}","{{.Kind}}","{{.Name}}")'>编辑</button>
+                                    onclick='addChild("{{.ID}}","{{.Name}}","{{.Thumb}}")'>添加子级</button>
+                                <button type="button" class="btn btn-link" data-bs-toggle="modal"
+                                    data-bs-target="#addMoal"
+                                    onclick='edit("{{.ID}}","{{.Name}}","{{.Thumb}}")'>编辑</button>
                                 <button type="button" onclick="deleteAttr('{{.ID}}')"
                                     class="btn btn-link text-danger">删除</button>
                             </td>
@@ -49,6 +69,7 @@
                 </table>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -57,7 +78,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addMoalLabel">添加属性</h5>
+                <h5 class="modal-title" id="addMoalLabel">添加分类</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -67,13 +88,14 @@
                         <label for="name" class="form-label mb-1 small">名 字:</label>
                         <input type="name" name="name" id="name" class="form-control">
                     </div>
-                    <div class="p-3">
-                        <label for="kind" class="form-label mb-1 small">种类:</label>
-                        <select class="form-select form-control" name="kind" aria-label="">
-                            <option value="T">标签 - Tag</option>
-                            <option value="M">标记 - Mark</option>
-                        </select>
-                    </div>
+                    <input type="text" name="parent_id" hidden value="{{$parent_id}}">
+
+                    <!-- <div class="p-3" style="position: relative;">
+                        <label for="thumb" class="form-label mb-1 small">Thumb:</label>
+                        <input type="text" hidden name="thumb">
+                        <input type="file" name="file" id="file" accept="image/*" class="form-control upload">
+                        <img src="" name="thumb" id="thumb" alt="" width="48" height="48" class="rounded-circle me-2">
+                    </div> -->
                     <button class="btn btn-lg btn-primary p-0" style="width:0; height:0; border: none;" type="submit"
                         id="submit"></button>
                 </form>
@@ -96,21 +118,34 @@
         btnEle.click()
     }
 
-    function addAttr() {
+    function addCategories() {
         var form = document.querySelector("form")
-        form.action = "/admin/attrs"
+        console.log("{{.Data.parent_id}}")
+        form.elements.parent_id = "{{.Data.parent_id}}"
+        form.action = "/admin/category"
     }
 
-    function editAttr(id, kind, name) {
+    function edit(id, name, thumb) {
         var form = document.querySelector("form")
         form.elements.name.value = name
-        form.elements.kind.value = kind
-        form.action = "/admin/attrs/" + id
+        // form.elements.thumb.value = thumb
+        form.action = "/admin/category/" + id
+        // document.getElementById("thumb").src = thumb
     }
 
-    var attrID = null
+    function addChild(id, name, thumb) {
+        var form = document.querySelector("form")
+        form.elements.name.value = name
+        form.elements.parent_id.value = id
+        // form.elements.thumb.value = thumb
+        console.log(form.elements.parent_id.value)
+        form.action = "/admin/category"
+        // document.getElementById("thumb").src = thumb
+    }
+
+    var cateID = null
     function deleteAttr(id) {
-        attrID = id
+        cateID = id
         Swal.fire({
             title: '你确定要删除么?',
             text: "",
@@ -123,11 +158,11 @@
         }).then((result) => {
             if (result.value) {
                 var aEle = document.createElement("a")
-                aEle.href = "/admin/attrs/" + id
+                aEle.href = "/admin/categories/" + id
                 aEle.click()
             }
         })
-        attrID = null
+        cateID = null
     }
 </script>
 {{end}}

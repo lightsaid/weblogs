@@ -40,9 +40,10 @@ func New(use bool, store *sessions.CookieStore) *TemplateData {
 }
 
 var functions = template.FuncMap{
-	"imageURL":  imageURL,
-	"ifAdminF":  ifAdminF,
-	"getActive": getActive,
+	"imageURL":    imageURL,
+	"ifAdminF":    ifAdminF,
+	"getActive":   getActive,
+	"getAttrKind": getAttrKind,
 }
 
 func imageURL(url string) string {
@@ -72,6 +73,13 @@ func getActive(active int) string {
 	default:
 		return fmt.Sprintf("未知%d", active)
 	}
+}
+
+func getAttrKind(kind string) string {
+	if kind == "T" {
+		return "标签(Tag)"
+	}
+	return "标记(Mark)"
 }
 
 func (t TemplateData) AddBaseData(td *models.TemplateData, r *http.Request, w http.ResponseWriter) *models.TemplateData {

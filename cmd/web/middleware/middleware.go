@@ -84,7 +84,6 @@ func RateLimit(rate int) func(next http.Handler) http.Handler {
 			lm, ok := lif.(ratelimit.Limiter)
 			if !ok {
 				http.Error(w, "internal middleware error: typecast failed", http.StatusInternalServerError)
-
 				return
 			}
 

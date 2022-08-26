@@ -18,8 +18,6 @@ func CreateDefaultAvatar() string {
 
 func (s *Service) Register(arg CreateUserRequest) (models.User, error) {
 	user, err := s.Repository.InsertUser(arg.Email, arg.Username, arg.Password, arg.Avatar)
-	// TODO: 处理错误
-
 	return user, err
 }
 
