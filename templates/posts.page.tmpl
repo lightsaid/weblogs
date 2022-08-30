@@ -7,7 +7,7 @@
 {{end}}
 
 {{define "content"}}
-{{$users := index .Data "users" }}
+{{$posts := index .Data "posts" }}
 <div class="container">
     <div class="card mb-5 mb-lg-10">
         <div class="card-header">
@@ -24,23 +24,21 @@
                     <thead>
                         <tr>
                             <th scope="col">#ID</th>
-                            <th scope="col">用户名</th>
-                            <th scope="col">邮箱</th>
-                            <th scope="col">头像</th>
-                            <th scope="col">管理员</th>
-                            <th scope="col">状态</th>
+                            <th scope="col">作者</th>
+                            <th scope="col">标题</th>
+                            <th scope="col">内容</th>
+                            <th scope="col">缩略图</th>
                             <th scope="col">#操作</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{range $users}}
+                        {{range $posts}}
                         <tr>
                             <td>{{.ID}}</td>
-                            <td>{{.Username}}</td>
-                            <td>{{.Email}}</td>
-                            <td><img src="{{.Avatar}}" alt="头像"></td>
-                            <td>{{.IfAdmin}}</td>
-                            <td>{{.Active}}</td>
+                            <td>{{.Author}}</td>
+                            <td>{{.Title}}</td>
+                            <td>{{.Content}}</td>
+                            <td><img src="{{.Thumb}}" alt=""></td>
                             <td>
                                 <button type="button" class="btn btn-link">编辑</button>
                                 <button type="button" class="btn btn-link text-danger">删除</button>
@@ -49,6 +47,12 @@
                         {{end}}
                     </tbody>
                 </table>
+
+                <!-- <form action="/admin/posts" method="post">
+                    <input type="text" name="" id="">
+                    {{.Data.csrfField}}
+                    <button type="submit">提交</button>
+                </form> -->
             </div>
         </div>
     </div>

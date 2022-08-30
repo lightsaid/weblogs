@@ -13,6 +13,7 @@ import (
 	"go.uber.org/ratelimit"
 	"go.uber.org/zap"
 	"lightsaid.com/weblogs/cmd/web/handlers"
+	"lightsaid.com/weblogs/internal/models"
 	"lightsaid.com/weblogs/internal/service"
 )
 
@@ -57,12 +58,59 @@ func AuthMiddleware(next http.HandlerFunc) http.HandlerFunc {
 			http.Redirect(w, r, "/admin/login", http.StatusSeeOther)
 			return
 		}
-		// 存到 context 更方便取
-		ctx := context.WithValue(r.Context(), "userinfo", userinfo.(service.SessionUser))
-		r = r.WithContext(ctx)
+
+		var user models.User
+		info, ok := userinfo.(service.SessionUser)
+		if ok {
+			user, _ = handlers.H.Repo.GetUser(info.UserID)
+			fmt.Println("当前访问后台用户：", user)
+		}
+		if user.IfAdmin == 1 {
+			// 存到 context 更方便取
+			ctx := context.WithValue(r.Context(), "userinfo", userinfo.(service.SessionUser))
+			r = r.WithContext(ctx)
+			next.ServeHTTP(w, r)
+		} else {
+			// 没有登录
+			session.AddFlash("您不是管理员", "Warning")
+			http.Redirect(w, r, "/", http.StatusSeeOther)
+			return
+		}
+
+	})
+}
+
+func SettingUserinfo(next http.HandlerFunc) http.HandlerFunc {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		var session *sessions.Session
+		var err error
+		if session, err = handlers.H.CookieStore.Get(r, os.Getenv("SESSION")); err != nil {
+			handlers.ServerError(w, errors.New("get session error"))
+			return
+		}
+		userinfo, exists := session.Values["userinfo"]
+		if exists {
+			// 存到 context 更方便取
+			ctx := context.WithValue(r.Context(), "userinfo", userinfo.(service.SessionUser))
+			r = r.WithContext(ctx)
+		}
 		next.ServeHTTP(w, r)
 	})
 }
+
+// EditorRedirect editor.md编辑器内部资源引用重定向
+// func EditorRedirect(next http.Handler) http.Handler {
+// 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+// 		var path = r.URL.Path
+// 		if strings.HasPrefix(path, "/lib/") || strings.HasPrefix(path, "/plugins/") {
+// 			url := fmt.Sprintf("%s%s", "/static/editor.md", path)
+// 			fmt.Println("editor.md >>> ", url)
+// 			http.Redirect(w, r, url, http.StatusMovedPermanently)
+// 		} else {
+// 			next.ServeHTTP(w, r)
+// 		}
+// 	})
+// }
 
 func RateLimit(rate int) func(next http.Handler) http.Handler {
 	var lmap sync.Map

@@ -30,7 +30,7 @@ create table posts(
     readings int not null default 0, -- 查看人数
     comments int not null default 0, -- 评论数
     likes int not null default 0, -- 喜欢数
-    active int not null check(active in (-1, 0)) default 0, -- 状态 (-1:删除 | 0:正常)
+    active int not null check(active in (-1, 0, 1)) default 0, -- 状态 (-1:删除 | 0:正常 | 暂存)
     created_at text not null default (datetime('now', 'localtime')),
     updated_at text not null default (datetime('now', 'localtime')),
     foreign key(user_id) references users(id),
@@ -129,6 +129,8 @@ select * from users;
 select * from attributes;
 
 select * from categories;
+
+SELECT * from posts;
 
 delete from users where id in (11, 12, 13);
 DELETE FROM attributes WHERE id in (1)

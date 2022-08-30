@@ -1,6 +1,7 @@
 package dbrepo
 
 import (
+	"errors"
 	"fmt"
 
 	"lightsaid.com/weblogs/internal/models"
@@ -41,18 +42,27 @@ func (repo *databaseRepo) UpdateCategories(a *models.Category) error {
 	return nil
 }
 
+func (repo *databaseRepo) GetCategoriesById(id int) (*models.Category, error) {
+	var cate models.Category
+	query := `select id, user_id, parent_id, if_parent, name, thumb from categories where id = $1;`
+
+	err := repo.DB.Get(&cate, query, id)
+
+	return &cate, err
+}
+
 func (repo *databaseRepo) DeleteCategories(id int) error {
-	// query := `delete from attributes where id =$1;`
-	// result, err := repo.DB.Exec(query, id)
-	// if err != nil {
-	// 	return err
-	// }
-	// row, err := result.RowsAffected()
-	// if err != nil {
-	// 	return err
-	// }
-	// if row <= 0 {
-	// 	return errors.New("数据不存在，删除失败")
-	// }
+	query := `delete from categories where id =$1;`
+	result, err := repo.DB.Exec(query, id)
+	if err != nil {
+		return err
+	}
+	row, err := result.RowsAffected()
+	if err != nil {
+		return err
+	}
+	if row <= 0 {
+		return errors.New("数据不存在，删除失败")
+	}
 	return nil
 }

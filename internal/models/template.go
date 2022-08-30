@@ -18,11 +18,17 @@ type TemplateData struct {
 
 // Menubar 菜单
 type Menubar struct {
+	// 后台
 	Home          bool
 	AttributeList bool
 	PostList      bool
 	UserList      bool
 	Categories    bool
+
+	// 前台
+	Desktop bool // 首页
+	Column  bool // 专栏
+	About   bool // 关于
 }
 
 // NewTemplateData 初始化一个TemplateData, 提供模板数据

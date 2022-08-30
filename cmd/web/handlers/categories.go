@@ -32,8 +32,12 @@ func ShowAdminCategories(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, fmt.Sprintf("/admin/categories/%d", id), http.StatusSeeOther)
 		return
 	}
+
+	parent_cate, _ := H.Repo.GetCategoriesById(id)
+
 	td.Data["categories"] = cates
 	td.Data["parent_id"] = parent_id
+	td.Data["parent"] = parent_cate
 	H.Template.Render(w, r, "categories.page.tmpl", &td)
 }
 
@@ -169,5 +173,34 @@ func UpdateCategories(w http.ResponseWriter, r *http.Request) {
 }
 
 func DeleteCategories(w http.ResponseWriter, r *http.Request) {
+	session := GetSession(w, r)
+	var vars = mux.Vars(r)
 
+	p_idStr := vars["parent_id"]
+	parent_id, err := strconv.Atoi(p_idStr)
+	if err != nil {
+		ServerError(w, err)
+		return
+	}
+
+	idStr := vars["id"]
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		session.AddFlash("id不正确", "Error")
+		session.Save(r, w)
+		http.Redirect(w, r, fmt.Sprintf("/admin/categories/%d", parent_id), http.StatusSeeOther)
+		return
+	}
+	err = H.Repo.DeleteCategories(id)
+	if err != nil {
+		zap.S().Error(err)
+		session.AddFlash("删除出错", "Error")
+		session.Save(r, w)
+		http.Redirect(w, r, fmt.Sprintf("/admin/categories/%d", parent_id), http.StatusSeeOther)
+		return
+	}
+
+	session.AddFlash("删除成功", "Success")
+	session.Save(r, w)
+	http.Redirect(w, r, fmt.Sprintf("/admin/categories/%d", parent_id), http.StatusSeeOther)
 }

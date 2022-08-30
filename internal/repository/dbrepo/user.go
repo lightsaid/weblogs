@@ -18,8 +18,10 @@ func (repo *databaseRepo) InsertUser(email, username, password, avatar string) (
 }
 
 func (repo *databaseRepo) GetUser(id int) (models.User, error) {
-	var user models.User
-	return user, nil
+	query := `select id, email, password, username, avatar, if_admin, active from users where id=$1 limit 1;`
+	user := models.User{}
+	err := repo.DB.Get(&user, query, id)
+	return user, err
 }
 
 func (repo *databaseRepo) GetUserByEmial(email string) (models.User, error) {

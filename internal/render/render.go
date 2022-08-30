@@ -87,6 +87,7 @@ func (t TemplateData) AddBaseData(td *models.TemplateData, r *http.Request, w ht
 	td.RunMode = os.Getenv("RUNMODE")
 
 	userinfo := r.Context().Value("userinfo")
+	zap.S().Info("userinfo>>> ", userinfo)
 	if info, ok := userinfo.(service.SessionUser); ok {
 		td.Data["userinfo"] = info
 	}

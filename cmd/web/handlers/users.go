@@ -182,7 +182,6 @@ func PostLogin(w http.ResponseWriter, r *http.Request) {
 	userinfo := service.SessionUser{
 		UserID:   user.ID,
 		Username: user.Username,
-		Avatar:   *user.Avatar,
 	}
 	session.Values["userinfo"] = userinfo
 	session.AddFlash("登录成功！", "Success")
@@ -196,12 +195,13 @@ func PostLogin(w http.ResponseWriter, r *http.Request) {
 
 	}
 
-	// NOTE: 此处不合理，不应该是后台重定向，而是前端做跳转
-	if user.IfAdmin == 1 {
-		http.Redirect(w, r, "/admin/index", http.StatusSeeOther)
-	} else {
-		// TODO:
-	}
+	// if user.IfAdmin == 1 {
+	// 	http.Redirect(w, r, "/admin/index", http.StatusSeeOther)
+	// } else {
+	// 	http.Redirect(w, r, "/", http.StatusSeeOther)
+	// }
+
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
 func Logout(w http.ResponseWriter, r *http.Request) {

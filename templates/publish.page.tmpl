@@ -1,0 +1,284 @@
+{{template "blank" .}}
+
+{{define "css"}}
+<link href="/static/css/index.css" rel="stylesheet">
+<link href="/static/editor.md/css/style.css" rel="stylesheet">
+<link href="/static/editor.md/css/editormd.min.css" rel="stylesheet">
+
+<style>
+    .btns button,
+    .btn {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .field {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .modal-body {
+        text-align: left;
+    }
+
+    .children {
+        padding-left: 8px;
+    }
+
+    .children .list-group-item {
+        border: none !important;
+    }
+
+    .attr-group {
+        flex-direction: row !important;
+    }
+
+    .attr-group .list-group-item {
+        border: none !important;
+    }
+</style>
+{{end}}
+
+{{define "content"}}
+<div class="container-fluid">
+    <div id="layout">
+        <header style="padding: 10px 0; display: flex; justify-content: space-between;">
+            <h1>编写博文</h1>
+            <a href="/">返回首页</a>
+        </header>
+        <div class="btns">
+            <form action="#" method="post" class="d-flex">
+                {{.Data.csrfField}}
+                <input type="text" hidden name="content">
+                <input type="checkbox" hidden name="categories">
+                <input type="checkbox" hidden name="attrs">
+                <div class="form-body d-flex">
+                    <div class="form-item d-flex">
+                        <label for="title" style="width:36px;" class="d-flex align-items-center">标题</label>
+                        <input type="text" id="title" style="width: 260px;" name="titile" class="field form-control">
+                    </div>
+                </div>
+                <button type="button" class="btn" id="ccc" data-bs-toggle="modal" style="margin-left: 4px;"
+                    data-bs-target="#categoryModal">
+                    选择分类
+                </button>
+                <button type="button" class="btn" id="aaa" style="margin-left: 4px;" data-bs-toggle="modal"
+                    data-bs-target="#attrModal">选择属性</button>
+                <div class="form-btn" style="margin-left: auto;">
+                    <button id="get-md-btn">Get Markdown</button>
+                    <button id="get-html-btn">Get HTML</button>
+                    <button id="preview-btn">预&nbsp;览</button>
+                    <button id="example-btn">例&nbsp;子</button>
+                    <button id="storage-btn" type="submit">暂&nbsp;存</button>
+                    <button id="publish-btn" type="submit">发&nbsp;布</button>
+                </div>
+            </form>
+        </div>
+        <div id="test-editormd"></div>
+    </div>
+
+    <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="categoryModalLabel">选择分类</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                            <label class="form-check-label stretched-link" for="firstCheckbox">First checkbox</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                            <ul class="list-group children">
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label stretched-link" for="firstCheckbox">First
+                                        checkbox</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                    <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                    <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="attrModal" tabindex="-1" aria-labelledby="attrModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="attrModalLabel">选择属性</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group row attr-group">
+                        <li class="list-group-item col-6">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                            <label class="form-check-label" for="firstCheckbox">First
+                                checkbox</label>
+                        </li>
+                        <li class="list-group-item col-6">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                        </li>
+                        <li class="list-group-item col-6">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+{{end}}
+
+{{define "js"}}
+<script type="text/javascript" src="/static/editor.md/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/static/editor.md/editormd.min.js"></script>
+<script type="text/javascript">
+    var testEditor;
+    $(function () {
+        $.get('/static/editor.md/examples/test.md', function (md) {
+            testEditor = editormd("test-editormd", {
+                width: "90%",
+                height: 740,
+                path: '/static/editor.md/lib/',
+                theme: "white",
+                previewTheme: "white",
+                // theme 目录下找文件
+                editorTheme: "paraiso-light",
+                markdown: md,
+                codeFold: true,
+                //syncScrolling : false,
+                saveHTMLToTextarea: true,    // 保存 HTML 到 Textarea
+                searchReplace: true,
+                //watch : false,                // 关闭实时预览
+                htmlDecode: "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启    
+                //toolbar  : false,             //关闭工具栏
+                //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+                emoji: true,
+                taskList: true,
+                tocm: true,         // Using [TOCM]
+                tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+                flowChart: true,             // 开启流程图支持，默认关闭
+                sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+                //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+                //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+                //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+                //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+                //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+                imageUpload: true,
+                imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL: "./php/upload.php",
+                onload: function () {
+                    console.log('onload', this);
+                    //this.fullscreen();
+                    //this.unwatch();
+                    //this.watch().fullscreen();
+
+                    //this.setMarkdown("#PHP");
+                    //this.width("100%");
+                    //this.height(480);
+                    //this.resize("100%", 640);
+                }
+            });
+        });
+
+
+
+        $("#get-md-btn").bind('click', function () {
+            alert("在控制台输出");
+            console.log(testEditor.getMarkdown())
+            return false
+        });
+
+        $("#get-html-btn").bind('click', function () {
+            alert("在控制台输出");
+            console.log(testEditor.getHTML())
+            return false
+
+        });
+
+        $("#preview-btn").bind('click', function () {
+            testEditor.previewing();
+            return false
+
+        });
+
+        $("#example-btn").click(function () {
+            var aTag = document.createElement("a")
+            aTag.href = "/admin/demo"
+            aTag.target = "_blank"
+            aTag.click()
+            return false
+
+        });
+
+        $("#storage-btn").click(function () {
+            console.log(11)
+            return false
+
+        })
+
+        $("#publish-btn").click(function () {
+            console.log(22)
+            return false
+
+        })
+
+
+        $("#ccc").on("click", function () {
+            $("#categoryModal").css({ "display": "block", "opacity": 1, "background": "rgba(0,0,0,.4)" })
+        })
+
+        $("#aaa").on("click", function () {
+            $("#attrModal").css({ "display": "block", "opacity": 1, "background": "rgba(0,0,0,.4)" })
+        })
+
+        $(".btn-close").on("click", function () {
+            $("#categoryModal").css({ "display": "none", "opacity": 0, "background": "none" })
+            $("#attrModal").css({ "display": "none", "opacity": 0, "background": "none" })
+        })
+
+
+
+
+
+
+
+
+
+
+    });
+
+</script>
+
+
+{{end}}

@@ -112,8 +112,45 @@ var adminPageRoutes = []Router{
 		AuthRequired: true,
 	},
 	{
+		Path:         "/admin/category/{parent_id:[0-9]+}/{id:[0-9]+}",
+		Handler:      handlers.DeleteCategories,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
 		Path:         "/admin/categories/{parent_id:[0-9]+}",
 		Handler:      handlers.ShowAdminCategories,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/posts",
+		Handler:      handlers.CreatePost,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/json_post",
+		Handler:      handlers.CreateJsonPost,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/posts",
+		Handler:      handlers.GetPosts,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+
+	{
+		Path:         "/admin/demo",
+		Handler:      handlers.ShowDemo,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/admin/publish",
+		Handler:      handlers.ShowPublishPost,
 		Method:       http.MethodGet,
 		AuthRequired: true,
 	},
@@ -122,9 +159,21 @@ var adminPageRoutes = []Router{
 var blogRoutes = []Router{
 	{
 		Path:         "/",
-		Handler:      nil,
+		Handler:      handlers.ShowDesktop,
 		Method:       http.MethodGet,
-		AuthRequired: true,
+		AuthRequired: false,
+	},
+	{
+		Path:         "/column",
+		Handler:      handlers.ShowColumn,
+		Method:       http.MethodGet,
+		AuthRequired: false,
+	},
+	{
+		Path:         "/about",
+		Handler:      handlers.ShowAbout,
+		Method:       http.MethodGet,
+		AuthRequired: false,
 	},
 }
 

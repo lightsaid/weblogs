@@ -16,12 +16,15 @@ func New() *mux.Router {
 
 	csrfMiddleware := csrf.Protect([]byte(os.Getenv("CSRF_SECRET")))
 
+	// r.Use(middleware.EditorRedirect)
+
 	// 静态资源访问
 	fileHandler := http.StripPrefix("/static/", http.FileServer(http.Dir(os.Getenv("STATIC_PATH"))))
 	r.PathPrefix("/static/").Handler(fileHandler)
 
 	r.Use(middleware.LogMiddlewate)
 	r.Use(csrfMiddleware)
+	r.Use(middleware.RateLimit(30))
 
 	return setupRoutes(r)
 }
@@ -41,7 +44,7 @@ func setupRoutes(r *mux.Router) *mux.Router {
 		if route.AuthRequired {
 			r.HandleFunc(route.Path, middleware.MultipleMiddleware(route.Handler, middleware.AuthMiddleware)).Methods(route.Method)
 		} else {
-			r.HandleFunc(route.Path, route.Handler).Methods(route.Method)
+			r.HandleFunc(route.Path, middleware.MultipleMiddleware(route.Handler, middleware.SettingUserinfo)).Methods(route.Method)
 		}
 	}
 	return r

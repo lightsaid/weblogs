@@ -24,7 +24,7 @@ type Post struct {
 	Thumb     *string `db:"thumb" json:"thumb"`
 	Readings  int     `db:"readings" json:"readings"`
 	Comments  int     `db:"comments" json:"comments"`
-	Likes     int     `db:"links" json:"links"`
+	Likes     int     `db:"likes" json:"likes"`
 	Active    int     `db:"active" json:"active"`
 	CreatedAt string  `db:"created_at" json:"created_at"`
 	UpdatedAt string  `db:"updated_at" json:"updated_at"`
