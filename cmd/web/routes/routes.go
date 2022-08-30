@@ -14,7 +14,7 @@ func New() *mux.Router {
 	// TODO:
 	// r.Host("www.example.com")
 
-	csrfMiddleware := csrf.Protect([]byte(os.Getenv("CSRF_SECRET")))
+	csrfMiddleware := csrf.Protect([]byte(os.Getenv("CSRF_SECRET")), csrf.Secure(false), csrf.Path("/"))
 
 	// r.Use(middleware.EditorRedirect)
 
