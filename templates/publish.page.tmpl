@@ -85,41 +85,41 @@
 
     <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content" style="min-width: 700px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="categoryModalLabel">选择分类</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <ul class="list-group">
+                <div class="modal-body" style="max-height: 75vh; overflow: scroll;">
 
-                        {{range $v := $categories}}
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="{{$v.Category.ID}}" id="{{$v.Category.ID}}">
-                            <label class="form-check-label stretched-link" for="{{$v.Category.ID}}">{{$v.Category.Name}}</label>
-                        </li>
-                        {{end}}
+                    <!-- NOTE: 使用 template.FuncMap 渲染-->
+                    {{renderCheckboxCategories  $categories}}
 
-                        <!-- <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
-                            <ul class="list-group children">
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                                    <label class="form-check-label stretched-link" for="firstCheckbox">First
-                                        checkbox</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                                    <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                                    <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
-                                </li>
-                            </ul>
-                        </li> -->
-                    </ul>
+                    <!-- <ul class="list-group"> 
+                         NOTE:  手动渲染模板
+                         一级分类 
+                         {{range $v := $categories}}
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="{{$v.Category.ID}}" id="{{$v.Category.ID}}">
+                                <label class="form-check-label stretched-link" for="{{$v.Category.ID}}">{{$v.Category.Name}}</label>
+
+                                二级分类
+                                {{$length := len $v.Children}}
+                                {{if gt $length 0}}
+
+                                    <ul class="list-group children">
+                                        {{range $vv := $v.Children}}
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="{{$vv.Category.ID}}" id="{{$vv.Category.ID}}">
+                                            <label class="form-check-label stretched-link" for="{{$vv.Category.ID}}">{{$vv.Category.Name}}</label>
+                                        </li>
+                                        {{end}}
+                                    </ul>
+                                {{end}}
+                            </li>
+                        {{end}} 
+                    </ul> -->
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn">保存</button>
@@ -267,6 +267,9 @@
         })
 
     });
+
+
+
 
 </script>
 

@@ -32,17 +32,21 @@ func getLevelCategories(repo repository.Repository, id int, categories *[]*Level
 		var item = &LevelCategories{Category: c, Children: children}
 		// NOTE:
 		*categories = append(*categories, item)
-		zap.S().Info("c.IfParent >>> ", c.IfParent, c)
+
 		if c.IfParent > 0 {
-			child_cates, err := repo.GetCategories(c.ID)
-			zap.S().Info("child_cates >>> ", child_cates)
-			if err != nil {
-				return err
-			}
-			for _, c := range child_cates {
-				var children []*LevelCategories
-				item.Children = append(item.Children, &LevelCategories{Category: c, Children: children})
-			}
+			// 递归获取子分类
+			getLevelCategories(repo, c.ID, &item.Children)
+
+			// 获取二级分类
+			// child_cates, err := repo.GetCategories(c.ID)
+			// zap.S().Info("child_cates >>> ", child_cates)
+			// if err != nil {
+			// 	return err
+			// }
+			// for _, c := range child_cates {
+			// 	var children []*LevelCategories
+			// 	item.Children = append(item.Children, &LevelCategories{Category: c, Children: children})
+			// }
 		}
 	}
 

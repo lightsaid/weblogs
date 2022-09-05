@@ -40,46 +40,11 @@ func New(use bool, store *sessions.CookieStore) *TemplateData {
 }
 
 var functions = template.FuncMap{
-	"imageURL":    imageURL,
-	"ifAdminF":    ifAdminF,
-	"getActive":   getActive,
-	"getAttrKind": getAttrKind,
-}
-
-func imageURL(url string) string {
-	if len(url) > 2 && url[0] == '.' {
-		prefix := os.Getenv("ASSETS_PREFIX")
-		return fmt.Sprintf("%s%s", prefix, url[1:])
-	}
-	return url
-}
-
-func ifAdminF(status int) string {
-	if status == 1 {
-		return "是"
-	}
-	return "否"
-}
-
-func getActive(active int) string {
-	// 状态 (-1:删除0:正常|1:活跃)
-	switch active {
-	case -1:
-		return "已删除"
-	case 0:
-		return "正常"
-	case 1:
-		return "活跃"
-	default:
-		return fmt.Sprintf("未知%d", active)
-	}
-}
-
-func getAttrKind(kind string) string {
-	if kind == "T" {
-		return "标签(Tag)"
-	}
-	return "标记(Mark)"
+	"imageURL":                 imageURL,
+	"ifAdminF":                 ifAdminF,
+	"getActive":                getActive,
+	"getAttrKind":              getAttrKind,
+	"renderCheckboxCategories": renderCheckboxCategories,
 }
 
 func (t TemplateData) AddBaseData(td *models.TemplateData, r *http.Request, w http.ResponseWriter) *models.TemplateData {
