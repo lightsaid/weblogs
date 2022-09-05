@@ -87,7 +87,7 @@ func (t TemplateData) AddBaseData(td *models.TemplateData, r *http.Request, w ht
 	td.RunMode = os.Getenv("RUNMODE")
 
 	userinfo := r.Context().Value("userinfo")
-	zap.S().Info("userinfo>>> ", userinfo)
+	// zap.S().Info("userinfo>>> ", userinfo)
 	if info, ok := userinfo.(service.SessionUser); ok {
 		td.Data["userinfo"] = info
 	}
@@ -169,7 +169,7 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 		return nil, err
 	}
 
-	zap.S().Info("matchs=>> ", matches)
+	// zap.S().Info("matchs=>> ", matches)
 
 	if len(matches) <= 0 {
 		err = errors.New("没有匹配到模板文件")

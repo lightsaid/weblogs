@@ -52,13 +52,16 @@ func ShowPublishPost(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		td.Error = "获取属性出错"
 	}
+	// td.Success = "获取属性成功"
 	td.Data["attrs"] = attrs
 
-	// cates, err := H.Repo.GetCategories(0)
+	// 获取分类
+	categories, err := H.Repo.GetLevelCategories()
 	if err != nil {
 		td.Error = "获取分类出错"
 	}
-
+	td.Data["categories"] = categories
+	zap.S().Info("分类获取>>> ", categories)
 	H.Template.Render(w, r, "publish.page.tmpl", &td)
 }
 

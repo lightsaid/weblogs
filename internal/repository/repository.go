@@ -19,7 +19,7 @@ type Repository interface {
 	DeleteAttribute(id int) error
 
 	// Categories 模块
-	InsertCategories(cate *models.Category) (*models.Category, error)
+	InsertCategories(cate *models.Category, parentID int) (*models.Category, error)
 	GetCategories(parent_id int) ([]*models.Category, error)
 	UpdateCategories(a *models.Category) error
 	DeleteCategories(id int) error

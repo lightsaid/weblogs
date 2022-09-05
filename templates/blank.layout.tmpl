@@ -27,7 +27,31 @@
 
   {{block "content" .}}
 
+
   {{end}}
+
+  <!-- Bootstrap core JS -->
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/sweetalert2.minjs"></script>
+
+  <script>
+      var $$ = window
+      // 配置
+      $$.RunMode = "{{.RunMode}}"
+
+      // "{{with .Success}}"
+      // $$.showMsg("{{.}}", 'success')
+      // "{{end}}"
+
+      // "{{with .Warning}}"
+      // $$.showMsg("{{.}}", 'warning')
+      // "{{end}}"
+
+      // "{{with .Error}}"
+      // $$.showMsg("{{.}}", 'error')
+      // "{{end}}"
+
+  </script>
 
 
   {{block "js" .}}

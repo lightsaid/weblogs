@@ -1,18 +1,109 @@
 package dbrepo
 
 import (
+	"context"
 	"errors"
 	"fmt"
+	"time"
 
+	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
 )
 
-func (repo *databaseRepo) InsertCategories(cate *models.Category) (*models.Category, error) {
-	query := `insert into categories(user_id, parent_id, if_parent, name, thumb)
+func (repo *databaseRepo) InsertCategories(cate *models.Category, parentID int) (*models.Category, error) {
+	// 插入分类 SQL
+	insertSQL := `insert into categories(user_id, parent_id, if_parent, name, thumb)
 				values($1, $2, $3, $4, $5) returning *`
+
+	if parentID <= 0 {
+		var c models.Category
+		err := repo.DB.Get(&c, insertSQL, cate.UserID, cate.ParentID, cate.IfParent, cate.Name, cate.Thumb)
+		if err != nil {
+			return nil, err
+		}
+		return &c, nil
+	}
+
+	// 查找父类 SQL
+	querySQL := `select id, user_id, parent_id, if_parent, name, thumb from categories where id = $1;`
+
+	// 更新父类if_parent=1
+	updateSQL := `update categories set if_parent=1 where id=$1`
+
 	var c models.Category
-	err := repo.DB.Get(&c, query, cate.UserID, cate.ParentID, cate.IfParent, cate.Name, cate.Thumb)
-	return cate, err
+	var parent_cate models.Category
+	var err error
+
+	// NOTE: 开启sqlx事务
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	// 事务开始
+	// NOTE: BeginTx() 返回的时 sql.Tx 非 sqlx.TX
+	// tx, err := repo.DB.BeginTx(ctx, nil)
+
+	// 使用 sqlx.Tx 操作更加简便
+	tx := repo.DB.MustBeginTx(ctx, nil)
+	// 插入分类
+	if err = tx.Get(&c, insertSQL, cate.UserID, cate.ParentID, cate.IfParent, cate.Name, cate.Thumb); err != nil {
+		zap.S().Error("tx.Get error: ", err)
+		err = tx.Rollback()
+		if err != nil {
+			zap.S().Panic("tx.Rollback error: ", err)
+			return nil, err
+		}
+		return nil, err
+	}
+
+	if err = tx.Get(&parent_cate, querySQL, parentID); err != nil {
+		zap.S().Error("tx.Get error: ", err)
+		err = tx.Rollback()
+		if err != nil {
+			zap.S().Error("tx.Rollback error: ", err)
+			return nil, err
+		}
+		return nil, err
+	}
+
+	// 父类 if_parent 字段已修改
+	if parent_cate.IfParent > 0 {
+		err = tx.Commit()
+		if err != nil {
+			zap.S().Error("tx.Commit error: ", err)
+			return nil, err
+		}
+		return &c, nil
+	}
+
+	// 父类 if_parent 字段未修改，下面开始修改
+	result, err := tx.Exec(updateSQL, parentID)
+	if err != nil {
+		err = tx.Rollback()
+		if err != nil {
+			zap.S().Error("tx.Rollback error: ", err)
+			return nil, err
+		}
+		return nil, err
+	}
+
+	if row, err := result.RowsAffected(); err != nil {
+		err = tx.Rollback()
+		if err != nil {
+			zap.S().Error("tx.Rollback error: ", err)
+			return nil, err
+		}
+		return nil, err
+	} else {
+		if row > 0 {
+			err = tx.Commit()
+			if err != nil {
+				zap.S().Error("tx.Commit error: ", err)
+				return nil, err
+			}
+			return &c, nil
+		}
+		return &c, errors.New("更新父类 if_parent 字段影响行数为0")
+	}
 }
 
 func (repo *databaseRepo) GetCategories(parent_id int) ([]*models.Category, error) {

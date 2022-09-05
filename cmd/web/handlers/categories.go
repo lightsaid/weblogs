@@ -33,6 +33,7 @@ func ShowAdminCategories(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// 获取 cates 的父类
 	parent_cate, _ := H.Repo.GetCategoriesById(id)
 
 	td.Data["categories"] = cates
@@ -60,10 +61,6 @@ func CreateCategories(w http.ResponseWriter, r *http.Request) {
 	thumb := r.Form.Get("thumb")
 	req.Thumb = &thumb
 
-	if *req.ParentID > 0 {
-		req.IfParent = 1
-	}
-
 	userinfo := r.Context().Value("userinfo")
 	info, ok := userinfo.(service.SessionUser)
 	if !ok || info.UserID <= 0 {
@@ -84,7 +81,14 @@ func CreateCategories(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	_, err = H.Repo.InsertCategories(&req)
+	// if *req.ParentID > 0 {
+	// 	// NOTE: 不是顶级父类, 因此需要查找父类，更改父类IfParent=1
+	// 交由 InsertCategories 实现
+
+	// }
+
+	// 添加资
+	_, err = H.Repo.InsertCategories(&req, parent_id)
 	if err != nil {
 		zap.S().Error(err)
 		if err != nil && strings.Contains(strings.ToLower(err.Error()), "unique") {
@@ -191,6 +195,25 @@ func DeleteCategories(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, fmt.Sprintf("/admin/categories/%d", parent_id), http.StatusSeeOther)
 		return
 	}
+
+	// NOTE: 检测是否有子类，有则不允许删除
+	cates, err := H.Repo.GetCategories(id)
+	if err != nil {
+		zap.S().Error(err)
+		session.AddFlash("删除出错", "Error")
+		session.Save(r, w)
+		http.Redirect(w, r, fmt.Sprintf("/admin/categories/%d", parent_id), http.StatusSeeOther)
+		return
+	}
+
+	if len(cates) > 0 {
+		zap.S().Error(err)
+		session.AddFlash("存在子类不允许删除，请先删除子类", "Error")
+		session.Save(r, w)
+		http.Redirect(w, r, fmt.Sprintf("/admin/categories/%d", parent_id), http.StatusSeeOther)
+		return
+	}
+
 	err = H.Repo.DeleteCategories(id)
 	if err != nil {
 		zap.S().Error(err)

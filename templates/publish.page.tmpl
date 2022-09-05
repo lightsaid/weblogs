@@ -40,11 +40,16 @@
 {{end}}
 
 {{define "content"}}
+<!-- 定义变量 -->
+{{$attrs := index .Data "attrs"}}
+{{$categories := index .Data "categories"}}
+
 <div class="container-fluid">
     <div id="layout">
         <header style="padding: 10px 0; display: flex; justify-content: space-between;">
             <h1>编写博文</h1>
             <a href="/">返回首页</a>
+            <div style="color:red;">{{.Data}}</div>
         </header>
         <div class="btns">
             <form action="#" method="post" class="d-flex">
@@ -55,7 +60,7 @@
                 <div class="form-body d-flex">
                     <div class="form-item d-flex">
                         <label for="title" style="width:36px;" class="d-flex align-items-center">标题</label>
-                        <input type="text" id="title" style="width: 260px;" name="titile" class="field form-control">
+                        <input type="text" id="title" style="width: 400px;" name="titile" class="field form-control">
                     </div>
                 </div>
                 <button type="button" class="btn" id="ccc" data-bs-toggle="modal" style="margin-left: 4px;"
@@ -77,6 +82,7 @@
         <div id="test-editormd"></div>
     </div>
 
+
     <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-centered">
             <div class="modal-content">
@@ -86,11 +92,15 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
+
+                        {{range $v := $categories}}
                         <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                            <label class="form-check-label stretched-link" for="firstCheckbox">First checkbox</label>
+                            <input class="form-check-input me-1" type="checkbox" value="{{$v.Category.ID}}" id="{{$v.Category.ID}}">
+                            <label class="form-check-label stretched-link" for="{{$v.Category.ID}}">{{$v.Category.Name}}</label>
                         </li>
-                        <li class="list-group-item">
+                        {{end}}
+
+                        <!-- <li class="list-group-item">
                             <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
                             <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
                             <ul class="list-group children">
@@ -108,11 +118,7 @@
                                     <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -131,19 +137,12 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-group row attr-group">
-                        <li class="list-group-item col-6">
-                            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                            <label class="form-check-label" for="firstCheckbox">First
-                                checkbox</label>
-                        </li>
-                        <li class="list-group-item col-6">
-                            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
-                        </li>
-                        <li class="list-group-item col-6">
-                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
-                        </li>
+                        {{range $attrs}}
+                            <li class="list-group-item col-6">
+                                <input class="form-check-input me-1" type="checkbox" value="{{.ID}}" id="firstCheckbox">
+                                <label class="form-check-label" for="firstCheckbox">{{.Name}} - {{getAttrKind .Kind}}</label>
+                            </li>
+                        {{end}}
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -266,15 +265,6 @@
             $("#categoryModal").css({ "display": "none", "opacity": 0, "background": "none" })
             $("#attrModal").css({ "display": "none", "opacity": 0, "background": "none" })
         })
-
-
-
-
-
-
-
-
-
 
     });
 

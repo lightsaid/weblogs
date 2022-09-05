@@ -24,7 +24,7 @@
     <div class="card mb-5 mb-lg-10">
         <div class="card-header">
             <div class="card-title d-flex flex-column justify-content-center">
-                <h4>分类管理{{with $parent}}- <span class="text-danger">{{.Name}}</span>{{end}}</h4>
+                <h4>分类管理{{with $parent}} {{with .Name}} - {{end}}<span class="text-danger">{{.Name}}</span>{{end}}</h4>
             </div>
             <div class="card-toolbar">
                 <button type="button" class="btn btn-sm btn-primary my-1" data-bs-toggle="modal"

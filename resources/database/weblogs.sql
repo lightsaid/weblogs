@@ -43,7 +43,7 @@ create table categories(
     id integer not null primary key autoincrement,
     user_id integer not null,
     parent_id integer default 0,
-    if_parent integer not null check(if_parent in (0, 1)) default 0, -- (自身是否是父类)是否含有子级 0 没有, 1有
+    if_parent integer not null check(if_parent in (0, 1)) default 0, -- (自身是否是父类)是否含有子级: 0没有, 1有
     name varchar(20) not null,
     thumb text, --icon/缩略图
     foreign key (user_id) references users(id)
@@ -134,3 +134,4 @@ SELECT * from posts;
 
 delete from users where id in (11, 12, 13);
 DELETE FROM attributes WHERE id in (1)
+DELETE from categories where id in (7,8)
