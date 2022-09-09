@@ -40,8 +40,10 @@ func getActive(active int) string {
 func getAttrKind(kind string) string {
 	if kind == "T" {
 		return "标签(Tag)"
+	} else if kind == "M" {
+		return "标记(Mark)"
 	}
-	return "标记(Mark)"
+	return "来源(From)"
 }
 
 // 从二级开始递归元素
@@ -51,7 +53,7 @@ func recursionCategory(categories []*service.LevelCategories) string {
 
 	for _, v := range categories {
 		html += fmt.Sprintf(`<li class="list-group-item">
-		<input class="form-check-input me-1" type="checkbox" value="%d" id="%d">
+		<input class="form-check-input me-1" name="categories" type="checkbox" value="%d" id="%d">
 		<label class="form-check-label stretched-link" for="%d">%s</label>`,
 			v.Category.ID, v.Category.ID, v.Category.ID, v.Category.Name)
 		if len(v.Children) > 0 {
@@ -75,7 +77,7 @@ func renderCheckboxCategories(categories []*service.LevelCategories) template.HT
 	// 遍历一级分类
 	for _, v := range categories {
 		html += fmt.Sprintf(`<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="%d" id="%d">
+				<input class="form-check-input me-1" name="categories" type="checkbox" value="%d" id="%d">
 				<label class="form-check-label stretched-link" for="%d">%s</label>`,
 			v.Category.ID, v.Category.ID, v.Category.ID, v.Category.Name)
 		if len(v.Children) > 0 {
@@ -97,7 +99,7 @@ func renderCheckboxCategories(categories []*service.LevelCategories) template.HT
 	/*
 		{{range $v := $categories}}
 			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="{{$v.Category.ID}}" id="{{$v.Category.ID}}">
+				<input class="form-check-input me-1" name="categories" type="checkbox" value="{{$v.Category.ID}}" id="{{$v.Category.ID}}">
 				<label class="form-check-label stretched-link" for="{{$v.Category.ID}}">{{$v.Category.Name}}</label>
 
 				<!-- 二级分类 -->
@@ -107,7 +109,7 @@ func renderCheckboxCategories(categories []*service.LevelCategories) template.HT
 					<ul class="list-group children">
 						{{range $vv := $v.Children}}
 						<li class="list-group-item">
-							<input class="form-check-input me-1" type="checkbox" value="{{$vv.Category.ID}}" id="{{$vv.Category.ID}}">
+							<input class="form-check-input me-1" name="categories" type="checkbox" value="{{$vv.Category.ID}}" id="{{$vv.Category.ID}}">
 							<label class="form-check-label stretched-link" for="{{$vv.Category.ID}}">{{$vv.Category.Name}}</label>
 						</li>
 						{{end}}

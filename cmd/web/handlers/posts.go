@@ -9,6 +9,7 @@ import (
 	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
 	"lightsaid.com/weblogs/internal/service"
+	"lightsaid.com/weblogs/internal/validator"
 )
 
 var (
@@ -74,32 +75,58 @@ func CreatePost(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/admin/login", http.StatusSeeOther)
 		return
 	}
-	p := models.Post{
-		UserId:  info.UserID,
-		Author:  info.Username,
-		Title:   "post",
-		Content: "测试测试测试",
-	}
-	post, err := H.Repo.InsertPost(p)
+
+	var jsonResponse service.JSONResponse
+	var req service.CreatePostRequest
+	err := H.readJSON(w, r, &req)
 	if err != nil {
-		session.AddFlash("添加失败", "Error")
-		session.Save(r, w)
-		http.Redirect(w, r, "/admin/posts", http.StatusSeeOther)
+		zap.S().Error(err)
+		H.errorJSONResponse(w)
 		return
 	}
-	fmt.Println("new post >>> ", post)
+	zap.S().Info("创建文章参数：", req)
+	jsvalid, err := validator.NewJsonValidator(req)
+	if err != nil {
+		zap.S().Error(err)
+		H.errorJSONResponse(w)
+		return
+	}
+	jsvalid.Required("title", "content")
+	if !jsvalid.Valid() {
+		msg := fmt.Sprintf("%s, %s", jsvalid.Errors.Get("title"), jsvalid.Errors.Get("content"))
+		if len(msg) < 5 {
+			msg = "验证步通过"
+		}
+		jsonResponse.Message = msg
+		jsonResponse.Error = true
+		H.writeJSON(w, http.StatusBadRequest, jsonResponse)
+		return
+	}
 
-	session.AddFlash("添加成功", "Success")
-	session.Save(r, w)
-	http.Redirect(w, r, "/admin/posts", http.StatusSeeOther)
-}
+	req.Thumb = service.GetDedaultPostThumb()
 
-func CreateJsonPost(w http.ResponseWriter, r *http.Request) {
+	// 组织数据
+	post := models.Post{
+		UserId:  info.UserID,
+		Author:  info.Username,
+		Title:   req.Title,
+		Content: req.Content,
+		Thumb:   &req.Thumb,
+	}
 
-	// H.readJSON()
-}
+	// TODO: 设置分类，设置属性
 
-func GetPosts(w http.ResponseWriter, r *http.Request) {
+	newPost, err := H.Repo.InsertPost(post)
+	if err != nil {
+		zap.S().Error(err)
+		jsonResponse.Error = true
+		jsonResponse.Message = "添加出错"
+		return
+	}
+
+	jsonResponse.Error = false
+	jsonResponse.Data = newPost
+	_ = H.writeJSON(w, http.StatusOK, jsonResponse)
 
 }
 

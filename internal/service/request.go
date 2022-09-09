@@ -24,3 +24,11 @@ type SessionUser struct {
 	Username string
 	Avatar   string
 }
+
+type CreatePostRequest struct {
+	Title      string   `json:"title"`
+	Content    string   `json:"content"`
+	Attrs      []string `json:"attrs"`
+	Categories []string `json:"categories"`
+	Thumb      string   `json:"thumb"`
+}

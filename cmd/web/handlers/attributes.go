@@ -69,7 +69,7 @@ func CreateAttribute(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	session.AddFlash("添加成功", "Error")
+	session.AddFlash("添加成功", "Success")
 	session.Save(r, w)
 	http.Redirect(w, r, "/admin/attrs", http.StatusSeeOther)
 }

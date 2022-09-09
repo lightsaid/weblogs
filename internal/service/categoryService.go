@@ -1,6 +1,8 @@
 package service
 
 import (
+	"sync"
+
 	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
 	"lightsaid.com/weblogs/internal/repository"
@@ -20,6 +22,8 @@ func (s *Service) GetLevelCategories() ([]*LevelCategories, error) {
 
 	return categories, err
 }
+
+var wg sync.WaitGroup
 
 func getLevelCategories(repo repository.Repository, id int, categories *[]*LevelCategories) error {
 	cates, err := repo.GetCategories(id)

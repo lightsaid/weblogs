@@ -182,6 +182,7 @@ func PostLogin(w http.ResponseWriter, r *http.Request) {
 	userinfo := service.SessionUser{
 		UserID:   user.ID,
 		Username: user.Username,
+		Avatar:   *user.Avatar,
 	}
 	session.Values["userinfo"] = userinfo
 	session.AddFlash("登录成功！", "Success")
@@ -211,7 +212,7 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 		H.errorResponse(w)
 		return
 	}
-	session.Values = make(map[interface{}]interface{})
+	session.Options.MaxAge = -1
 	session.Save(r, w)
 	http.Redirect(w, r, "/admin/login", http.StatusSeeOther)
 }
@@ -318,7 +319,7 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fileUrl, err := UploadFile(w, r, os.Getenv("AVATAR_PATH"))
+	fileUrl, err := UploadFile(w, r, os.Getenv("UPLOAD_PATH"))
 
 	// 检查是否上传文件， 忽略 err == http.ErrMissingFile 的处理
 	if err != nil && !errors.Is(err, http.ErrMissingFile) {

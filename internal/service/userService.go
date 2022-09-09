@@ -13,7 +13,7 @@ func CreateDefaultUsername() string {
 }
 
 func CreateDefaultAvatar() string {
-	return fmt.Sprintf("%s/static/avatar/%d.png", os.Getenv("ASSETS_PREFIX"), utils.RandomInt(1, 5))
+	return fmt.Sprintf("./static/avatar/%d.jpeg", utils.RandomInt(1, 5))
 }
 
 func (s *Service) Register(arg CreateUserRequest) (models.User, error) {

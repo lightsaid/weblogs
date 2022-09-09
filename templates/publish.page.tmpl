@@ -52,15 +52,16 @@
             <div style="color:red;">{{.Data}}</div>
         </header>
         <div class="btns">
-            <form action="#" method="post" class="d-flex">
+            <form id="publish-form" action="/posts" method="post" class="d-flex">
                 {{.Data.csrfField}}
                 <input type="text" hidden name="content">
                 <input type="checkbox" hidden name="categories">
                 <input type="checkbox" hidden name="attrs">
+                <input type="text" hidden name="thumb">
                 <div class="form-body d-flex">
                     <div class="form-item d-flex">
                         <label for="title" style="width:36px;" class="d-flex align-items-center">标题</label>
-                        <input type="text" id="title" style="width: 400px;" name="titile" class="field form-control">
+                        <input type="text" id="title" style="width: 400px;" name="title" class="field form-control">
                     </div>
                 </div>
                 <button type="button" class="btn" id="ccc" data-bs-toggle="modal" style="margin-left: 4px;"
@@ -74,8 +75,8 @@
                     <button id="get-html-btn">Get HTML</button>
                     <button id="preview-btn">预&nbsp;览</button>
                     <button id="example-btn">例&nbsp;子</button>
-                    <button id="storage-btn" type="submit">暂&nbsp;存</button>
-                    <button id="publish-btn" type="submit">发&nbsp;布</button>
+                    <button id="storage-btn" type="button">暂&nbsp;存</button>
+                    <button id="publish-btn" type="button">发&nbsp;布</button>
                 </div>
             </form>
         </div>
@@ -100,7 +101,7 @@
                          一级分类 
                          {{range $v := $categories}}
                             <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="{{$v.Category.ID}}" id="{{$v.Category.ID}}">
+                                <input class="form-check-input me-1" name="categories" type="checkbox" value="{{$v.Category.ID}}" id="{{$v.Category.ID}}">
                                 <label class="form-check-label stretched-link" for="{{$v.Category.ID}}">{{$v.Category.Name}}</label>
 
                                 二级分类
@@ -110,7 +111,7 @@
                                     <ul class="list-group children">
                                         {{range $vv := $v.Children}}
                                         <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value="{{$vv.Category.ID}}" id="{{$vv.Category.ID}}">
+                                            <input class="form-check-input me-1" name="categories" type="checkbox" value="{{$vv.Category.ID}}" id="{{$vv.Category.ID}}">
                                             <label class="form-check-label stretched-link" for="{{$vv.Category.ID}}">{{$vv.Category.Name}}</label>
                                         </li>
                                         {{end}}
@@ -122,7 +123,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn">保存</button>
+                    <button type="button" id="categories-btn" class="btn">保存</button>
                 </div>
             </div>
         </div>
@@ -139,14 +140,14 @@
                     <ul class="list-group row attr-group">
                         {{range $attrs}}
                             <li class="list-group-item col-6">
-                                <input class="form-check-input me-1" type="checkbox" value="{{.ID}}" id="firstCheckbox">
-                                <label class="form-check-label" for="firstCheckbox">{{.Name}} - {{getAttrKind .Kind}}</label>
+                                <input class="form-check-input me-1" name="attrs" type="checkbox" value="{{.ID}}" id="{{.ID}}">
+                                <label class="form-check-label" for="{{.ID}}">{{.Name}} - {{getAttrKind .Kind}}</label>
                             </li>
                         {{end}}
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn">保存</button>
+                    <button type="button" id="attrs-btn" class="btn">保存</button>
                 </div>
             </div>
         </div>
@@ -161,6 +162,7 @@
 {{define "js"}}
 <script type="text/javascript" src="/static/editor.md/lib/jquery.min.js"></script>
 <script type="text/javascript" src="/static/editor.md/editormd.min.js"></script>
+<script type="text/javascript" src="/static/js/request.js"></script>
 <script type="text/javascript">
     var testEditor;
     $(function () {
@@ -210,8 +212,6 @@
             });
         });
 
-
-
         $("#get-md-btn").bind('click', function () {
             alert("在控制台输出");
             console.log(testEditor.getMarkdown())
@@ -233,22 +233,46 @@
 
         $("#example-btn").click(function () {
             var aTag = document.createElement("a")
-            aTag.href = "/admin/demo"
+            aTag.href = "/demo"
             aTag.target = "_blank"
             aTag.click()
             return false
 
         });
 
+        var attrs = []
+        var categories = []
         $("#storage-btn").click(function () {
             console.log(11)
             return false
 
         })
 
-        $("#publish-btn").click(function () {
-            console.log(22)
-            return false
+        $("#publish-btn").click(function (event) {
+            
+            let title = $('input[name="title"]').val()
+            let content = testEditor.getMarkdown()
+            let csrfToken = $('input[name="gorilla.csrf.Token"]').val()
+
+            // TODO: 提示处理
+
+            // NOTE: 这个操作复杂发送ajax请求合适，如果使用传统Form表单发送，则会刷新页面，要对DOM做数据会显，很是麻烦。
+          
+            let headers = new Headers()
+            console.log(csrfToken)
+            headers.append("X-CSRF-Token", csrfToken)
+            let options = {
+                headers: headers,
+                body: {
+                    title: title,
+                    attrs: attrs,
+                    categories: categories,
+                    content: content
+                }
+            }
+            request("/posts", options).then(function(res){
+                console.log(res)
+            })
 
         })
 
@@ -264,6 +288,36 @@
         $(".btn-close").on("click", function () {
             $("#categoryModal").css({ "display": "none", "opacity": 0, "background": "none" })
             $("#attrModal").css({ "display": "none", "opacity": 0, "background": "none" })
+        })
+
+        $("#attrs-btn").on("click", function(){
+            let arrs = []
+            $('input[name="attrs"]').each(function(){
+                if($(this).is(":checked")){
+                    console.log($(this).val(), " is checked.");
+                    let value = $(this).val()
+                    arrs.push(value)
+                }
+            })
+            attrs = arrs
+            $(".btn-close").each(function(){
+                $(this).click()
+            })
+        })
+
+        $("#categories-btn").on("click", function(){
+            let arrs = []
+            $('input[name="categories"]').each(function(){
+                if($(this).is(":checked")){
+                    console.log($(this).val(), " is checked.");
+                    let value = $(this).val()
+                    arrs.push(value)
+                }
+            })
+            categories = arrs
+            $(".btn-close").each(function(){
+                $(this).click()
+            })
         })
 
     });

@@ -73,7 +73,7 @@ func setupSession() *sessions.CookieStore {
 	store.Options.SameSite = http.SameSiteLaxMode
 	// Secure cookie 仅通过 HTTPS 协议加密发送到服务器。请注意，不安全站点（http:）无法使用 Secure 指令设置 cookies。
 	store.Options.Secure = secure
-	store.Options.MaxAge = 24 * 60 * 60 // 最长时间24小时
+	store.Options.MaxAge = 3 * 60 * 60 // 单位秒
 	// store.Options.MaxAge = 10 // 10 秒测试
 	return store
 }

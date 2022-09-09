@@ -43,7 +43,7 @@ var adminPageRoutes = []Router{
 		Path:         "/admin/logout",
 		Handler:      handlers.Logout,
 		Method:       http.MethodGet,
-		AuthRequired: true,
+		AuthRequired: false,
 	},
 	{
 		Path:         "/admin/index",
@@ -69,12 +69,7 @@ var adminPageRoutes = []Router{
 		Method:       http.MethodGet,
 		AuthRequired: true,
 	},
-	{
-		Path:         "/admin/posts",
-		Handler:      handlers.ShowAdminPosts,
-		Method:       http.MethodGet,
-		AuthRequired: true,
-	},
+
 	{
 		Path:         "/admin/attrs",
 		Handler:      handlers.ShowAdminAttrs,
@@ -125,32 +120,7 @@ var adminPageRoutes = []Router{
 	},
 	{
 		Path:         "/admin/posts",
-		Handler:      handlers.CreatePost,
-		Method:       http.MethodPost,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/admin/json_post",
-		Handler:      handlers.CreateJsonPost,
-		Method:       http.MethodPost,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/admin/posts",
-		Handler:      handlers.GetPosts,
-		Method:       http.MethodGet,
-		AuthRequired: true,
-	},
-
-	{
-		Path:         "/admin/demo",
-		Handler:      handlers.ShowDemo,
-		Method:       http.MethodGet,
-		AuthRequired: true,
-	},
-	{
-		Path:         "/admin/publish",
-		Handler:      handlers.ShowPublishPost,
+		Handler:      handlers.ShowAdminPosts,
 		Method:       http.MethodGet,
 		AuthRequired: true,
 	},
@@ -162,6 +132,24 @@ var blogRoutes = []Router{
 		Handler:      handlers.ShowDesktop,
 		Method:       http.MethodGet,
 		AuthRequired: false,
+	},
+	{
+		Path:         "/publish",
+		Handler:      handlers.ShowPublishPost,
+		Method:       http.MethodGet,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/posts",
+		Handler:      handlers.CreatePost,
+		Method:       http.MethodPost,
+		AuthRequired: true,
+	},
+	{
+		Path:         "/demo",
+		Handler:      handlers.ShowDemo,
+		Method:       http.MethodGet,
+		AuthRequired: true,
 	},
 	{
 		Path:         "/column",

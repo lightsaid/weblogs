@@ -11,6 +11,7 @@ import (
 
 	"github.com/gorilla/sessions"
 	"go.uber.org/zap"
+	"lightsaid.com/weblogs/internal/service"
 )
 
 func (app *AppHandler) readJSON(w http.ResponseWriter, r *http.Request, data interface{}) error {
@@ -33,6 +34,20 @@ func (app *AppHandler) readJSON(w http.ResponseWriter, r *http.Request, data int
 	return nil
 }
 
+func (app *AppHandler) writeJSON(w http.ResponseWriter, status int, data any, headers ...http.Header) error {
+
+	if len(headers) > 0 {
+		for k, v := range headers[0] {
+			w.Header()[k] = v
+		}
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(status)
+
+	return json.NewEncoder(w).Encode(data)
+
+}
+
 func (app *AppHandler) errorResponse(w http.ResponseWriter, msg ...string) {
 	w.WriteHeader(http.StatusInternalServerError)
 	message := "服务内部错误"
@@ -40,6 +55,23 @@ func (app *AppHandler) errorResponse(w http.ResponseWriter, msg ...string) {
 		message = msg[0]
 	}
 	w.Write([]byte(message))
+}
+
+func (app *AppHandler) errorJSONResponse(w http.ResponseWriter, msg ...string) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusInternalServerError)
+
+	message := "服务内部错误"
+
+	if len(msg) > 0 {
+		message = msg[0]
+	}
+
+	jsonData := service.JSONResponse{
+		Message: message,
+		Error:   true,
+	}
+	_ = app.writeJSON(w, http.StatusInternalServerError, jsonData)
 }
 
 func ServerError(w http.ResponseWriter, err error) {

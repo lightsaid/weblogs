@@ -23,7 +23,7 @@
 {{$userinfo := index .Data "userinfo" }}
 {{$user := index .Data "user"}}
 
-<body style="background: url(/static/images/pexels-pixabay-219906.jpg) no-repeat fixed center;">
+<body style="background: url(/static/images/pexels-home-background-6.jpg) no-repeat fixed center;">
 
   <!-- 导航 -->
   <header class="p-2 bg-header text-black fixed-top">
@@ -57,12 +57,12 @@
               <div class="dropdown">
                 <button class="btn btn-sm btn-white dropdown-toggle user-meun" type="button" id="dropdownMenuButton"
                   data-bs-toggle="dropdown" aria-expanded="false">
-                  <img class="img-fluid avatar" src="/static/images/pexels-daniel-ap-795693.jpg" alt="">
-                  轻言ls
+                  <img class="img-fluid avatar" src="{{imageURL $userinfo.Avatar}}" alt="">
+                  {{$userinfo.Username}}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li>
-                    <a class="dropdown-item" href="admin/publish">
+                    <a class="dropdown-item" href="/publish">
                       <svg t="1647238615745" class="icon" viewBox="0 0 1024 1024" version="1.1"
                         xmlns="http://www.w3.org/2000/svg" p-id="11580" width="16" height="16">
                         <path

@@ -66,7 +66,7 @@ drop table if exists "attributes";
 create table attributes(
     id integer not null primary key autoincrement,
     user_id integer not null,
-    kind varchar(1) not null check(kind in ('T','M')), -- T: 标签tag, M:标记mark
+    kind varchar(1) not null check(kind in ('T','M', 'F')), -- T: 标签tag, M:标记mark
     name varchar(20) not null,
     foreign key (user_id) references users(id)
 );
@@ -115,8 +115,8 @@ SELECT username, email, active, datetime(created_at), date(updated_at) from user
 
 select * from users limit 1;
 
--- 测试 SQLite3 是否支持 returning 关键字 
-update users set if_admin=1, active=1 where id=8 returning *;
+-- 测试 SQLite3 是否支持 returning 关键字,具体看版本
+update users set if_admin=1, active=1 where id=1 returning *;
 
 INSERT into users(email, username, password, created_at, updated_at) 
 	values('xzz@qq.com','xzz', 'abc123', datetime('now', 'localtime'), datetime('now', 'localtime')) 
@@ -131,6 +131,8 @@ select * from attributes;
 select * from categories;
 
 SELECT * from posts;
+
+DELETE from posts;
 
 delete from users where id in (11, 12, 13);
 DELETE FROM attributes WHERE id in (1)
