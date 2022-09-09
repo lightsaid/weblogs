@@ -124,8 +124,46 @@ func CreatePost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// 添加mapping
+	var attr_list []interface{}
+	for _, v := range req.Attrs {
+		id, _ := strconv.Atoi(v)
+		if id > 0 {
+			attr_list = append(attr_list, models.PAMapping{PostID: newPost.ID, AttrID: id})
+		}
+	}
+
+	var cate_list []interface{}
+	for _, v := range req.Categories {
+		id, _ := strconv.Atoi(v)
+		if id > 0 {
+			cate_list = append(cate_list, models.PCMapping{PostID: newPost.ID, CateID: id})
+		}
+	}
+
+	if len(attr_list) > 0 {
+		err = H.Repo.InserManyPA(attr_list)
+		if err != nil {
+			zap.S().Error(err)
+			jsonResponse.Error = true
+			jsonResponse.Message = "添加文章成功，添加属性出错"
+			return
+		}
+	}
+
+	if len(cate_list) > 0 {
+		err = H.Repo.InserManyPC(cate_list)
+		if err != nil {
+			zap.S().Error(err)
+			jsonResponse.Error = true
+			jsonResponse.Message = "添加文章成功，添加属性出错"
+			return
+		}
+	}
+
 	jsonResponse.Error = false
 	jsonResponse.Data = newPost
+	jsonResponse.Message = "创建文章成功"
 	_ = H.writeJSON(w, http.StatusOK, jsonResponse)
 
 }

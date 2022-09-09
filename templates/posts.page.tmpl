@@ -26,7 +26,7 @@
                             <th scope="col">#ID</th>
                             <th scope="col">作者</th>
                             <th scope="col">标题</th>
-                            <th scope="col">内容</th>
+                            <!-- <th scope="col">内容</th> -->
                             <th scope="col">缩略图</th>
                             <th scope="col">#操作</th>
                         </tr>
@@ -36,8 +36,8 @@
                         <tr>
                             <td>{{.ID}}</td>
                             <td>{{.Author}}</td>
-                            <td>{{.Title}}</td>
-                            <td>{{.Content}}</td>
+                            <td title=""{{.Title}}>{{.Title}}</td>
+                            <!-- <td>{{.Content}}</td> -->
                             <td><img src="{{.Thumb}}" alt=""></td>
                             <td>
                                 <button type="button" class="btn btn-link">编辑</button>

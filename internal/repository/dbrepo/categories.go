@@ -115,6 +115,32 @@ func (repo *databaseRepo) GetCategories(parent_id int) ([]*models.Category, erro
 	return cates, err
 }
 
+func (repo *databaseRepo) GetCategoriesByIds(ids []int) ([]*models.Category, error) {
+	var cates []*models.Category
+	query := `select id, user_id, parent_id, if_parent, name, thumb from categories where id in (`
+	var idstr string
+	for i := 0; i < len(ids); i++ {
+		idstr += fmt.Sprintf("%d,", ids[i])
+	}
+	idstr = idstr[:len(ids)-1] + ")"
+	query += idstr
+
+	fmt.Println("get cate query >>>> ", query)
+
+	err := repo.DB.Select(&cates, query)
+
+	return cates, err
+}
+
+func (repo *databaseRepo) GetCategoriesByUserID(parent_id int, userID int) ([]*models.Category, error) {
+	var cates []*models.Category
+	query := `select id, user_id, parent_id, if_parent, name, thumb from categories where user_id =$1 and parent_id = $2;`
+
+	err := repo.DB.Select(&cates, query, userID, parent_id)
+
+	return cates, err
+}
+
 func (repo *databaseRepo) UpdateCategories(a *models.Category) error {
 	query := `update categories set name=$1, thumb=$2 where id=$3`
 

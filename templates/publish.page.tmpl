@@ -131,19 +131,43 @@
 
     <div class="modal fade" id="attrModal" tabindex="-1" aria-labelledby="attrModalLabel" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content" style="min-width: 700px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="attrModalLabel">选择属性</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="max-height: 75vh; overflow: scroll;">
                     <ul class="list-group row attr-group">
+                        <li style="font-size: 1rem; color: #2470dc;">选择Mark</li>
                         {{range $attrs}}
-                            <li class="list-group-item col-6">
-                                <input class="form-check-input me-1" name="attrs" type="checkbox" value="{{.ID}}" id="{{.ID}}">
-                                <label class="form-check-label" for="{{.ID}}">{{.Name}} - {{getAttrKind .Kind}}</label>
-                            </li>
+                            {{if eq .Kind "M"}}
+                                <li class="list-group-item col-6">
+                                    <input class="form-check-input me-1" name="mark" type="radio" value="{{.ID}}" id="{{.ID}}">
+                                    <label class="form-check-label" for="{{.ID}}">{{.Name}} - {{getAttrKind .Kind}}</label>
+                                </li>
+                            {{end}}
                         {{end}}
+                      
+                        <li style="font-size: 1rem; color: #2470dc;">选择From</li>
+                        {{range $attrs}}
+                            {{if eq .Kind "F"}}
+                                <li class="list-group-item col-6">
+                                    <input class="form-check-input me-1" name="from" type="radio" value="{{.ID}}" id="{{.ID}}">
+                                    <label class="form-check-label" for="{{.ID}}">{{.Name}} - {{getAttrKind .Kind}}</label>
+                                </li>
+                            {{end}}
+                        {{end}}
+
+                        <li style="font-size: 1rem; color: #2470dc;">选择Tag</li>
+                            {{range $attrs}}
+                            {{if eq .Kind "T"}}
+                                <li class="list-group-item col-6">
+                                    <input class="form-check-input me-1" name="tags" type="checkbox" value="{{.ID}}" id="{{.ID}}">
+                                    <label class="form-check-label" for="{{.ID}}">{{.Name}} - {{getAttrKind .Kind}}</label>
+                                </li>
+                            {{end}}
+                        {{end}}
+                          
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -272,6 +296,19 @@
             }
             request("/posts", options).then(function(res){
                 console.log(res)
+                if (res.error){
+                    Swal.fire(
+                        '',
+                        res.message,
+                        'error'
+                    )
+                }else{
+                    Swal.fire(
+                        '',
+                        res.message,
+                        'success'
+                    )
+                }
             })
 
         })
@@ -292,7 +329,7 @@
 
         $("#attrs-btn").on("click", function(){
             let arrs = []
-            $('input[name="attrs"]').each(function(){
+            $('input[name="mark"],input[name="from"],input[name="tags"]').each(function(){
                 if($(this).is(":checked")){
                     console.log($(this).val(), " is checked.");
                     let value = $(this).val()

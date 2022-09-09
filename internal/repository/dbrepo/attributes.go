@@ -24,6 +24,33 @@ func (repo *databaseRepo) GetAttributes() ([]*models.Attribute, error) {
 	return attrs, err
 }
 
+func (repo *databaseRepo) GetAttributesByIds(ids []int) ([]*models.Attribute, error) {
+	var attrs []*models.Attribute
+
+	query := `select id, user_id, kind, name from attributes where id in (`
+	var idstr string
+	for i := 0; i < len(ids); i++ {
+		idstr += fmt.Sprintf("%d,", ids[i])
+	}
+	idstr = idstr[:len(ids)-1] + ")"
+	query += idstr
+
+	fmt.Println("get attrs query >>>> ", query)
+
+	err := repo.DB.Select(&attrs, query)
+
+	return attrs, err
+}
+
+func (repo *databaseRepo) GetAttributesByUserID(id int) ([]*models.Attribute, error) {
+	var attrs []*models.Attribute
+	query := `select id, user_id, kind, name from attributes where user_id=$1;`
+
+	err := repo.DB.Select(&attrs, query, id)
+
+	return attrs, err
+}
+
 func (repo *databaseRepo) UpdateAttributes(a *models.Attribute) error {
 	query := `update attributes set name=$1, kind=$2, user_id=$3 where id=$4`
 

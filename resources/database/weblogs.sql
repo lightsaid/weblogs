@@ -127,6 +127,8 @@ select id, email, username, avatar, if_admin, active from users order by created
 select * from users;
 
 select * from attributes;
+select * from attributes where id in ("1",2,3,-1);
+
 
 select * from categories;
 
@@ -137,3 +139,9 @@ DELETE from posts;
 delete from users where id in (11, 12, 13);
 DELETE FROM attributes WHERE id in (1)
 DELETE from categories where id in (7,8)
+
+SELECT * FROM pc_mapping;
+SELECT * FROM pa_mapping;
+
+DELETE from pc_mapping;
+DELETE from pa_mapping;

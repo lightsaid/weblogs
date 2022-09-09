@@ -1,5 +1,7 @@
 package models
 
+import "database/sql/driver"
+
 // User 用户
 type User struct {
 	ID       int     `db:"id" json:"id"`
@@ -69,4 +71,26 @@ type Like struct {
 	Kind      int    `db:"kind" json:"kind"`
 	UserID    int    `db:"user_id" json:"user_id"`
 	PCID      int    `db:"pc_id" json:"pc_id"` // 文章ID或者评论ID
+}
+
+type PCMapping struct {
+	ID     int `db:"id" json:"id"`
+	PostID int `db:"post_id" json:"post_id"`
+	CateID int `db:"cate_id" json:"cate_id"`
+}
+
+type PAMapping struct {
+	ID     int `db:"id" json:"id"`
+	PostID int `db:"post_id" json:"post_id"`
+	AttrID int `db:"attr_id" json:"attr_id"`
+}
+
+// 实现 sqlx.In 批量插入需要的方法
+func (p PCMapping) Value() (driver.Value, error) {
+	return []interface{}{p.PostID, p.CateID}, nil
+}
+
+// 实现 sqlx.In 批量插入需要的方法
+func (p PAMapping) Value() (driver.Value, error) {
+	return []interface{}{p.PostID, p.AttrID}, nil
 }

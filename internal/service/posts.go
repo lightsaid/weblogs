@@ -2,9 +2,15 @@ package service
 
 import (
 	"fmt"
-	"os"
+
+	"lightsaid.com/weblogs/pkg/utils"
 )
 
 func GetDedaultPostThumb() string {
-	return fmt.Sprintf("%s", os.Getenv("ASSETS_PREFIX"))
+
+	index := utils.RandomInt(1, 12)
+
+	url := fmt.Sprintf("./static/images/pexels-post-cover-%d.jpg", index)
+
+	return url
 }
