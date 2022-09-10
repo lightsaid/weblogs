@@ -106,6 +106,15 @@ func (repo *databaseRepo) InsertCategories(cate *models.Category, parentID int) 
 	}
 }
 
+func (repo *databaseRepo) GetCategoriesNoParentID(limit int, offese int) ([]*models.Category, error) {
+	var cates []*models.Category
+	query := `select id, user_id, parent_id, if_parent, name, thumb from categories limit $1 offset $2;`
+
+	err := repo.DB.Select(&cates, query, limit, offese)
+
+	return cates, err
+}
+
 func (repo *databaseRepo) GetCategories(parent_id int) ([]*models.Category, error) {
 	var cates []*models.Category
 	query := `select id, user_id, parent_id, if_parent, name, thumb from categories where parent_id = $1;`
@@ -120,9 +129,12 @@ func (repo *databaseRepo) GetCategoriesByIds(ids []int) ([]*models.Category, err
 	query := `select id, user_id, parent_id, if_parent, name, thumb from categories where id in (`
 	var idstr string
 	for i := 0; i < len(ids); i++ {
-		idstr += fmt.Sprintf("%d,", ids[i])
+		idstr += fmt.Sprintf("%d", ids[i])
+		if i != len(ids)-1 {
+			idstr += ","
+		}
 	}
-	idstr = idstr[:len(ids)-1] + ")"
+	idstr = idstr + ")"
 	query += idstr
 
 	fmt.Println("get cate query >>>> ", query)
@@ -182,4 +194,29 @@ func (repo *databaseRepo) DeleteCategories(id int) error {
 		return errors.New("数据不存在，删除失败")
 	}
 	return nil
+}
+
+func (repo *databaseRepo) GetCategoriesByPostID(postId int) ([]*models.Category, error) {
+
+	query := `select id, post_id, cate_id from pc_mapping where post_id=$1;`
+	pcmappings := []models.PCMapping{}
+
+	err := repo.DB.Select(&pcmappings, query, postId)
+	if err != nil {
+		return nil, err
+	}
+	var cates []*models.Category
+	if len(pcmappings) > 0 {
+		ids := []int{}
+		for _, v := range pcmappings {
+			ids = append(ids, v.CateID)
+		}
+
+		cates, err = repo.GetCategoriesByIds(ids)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	return cates, nil
 }

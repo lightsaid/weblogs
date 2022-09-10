@@ -19,6 +19,7 @@ type Repository interface {
 	UpdateAttributes(a *models.Attribute) error
 	DeleteAttribute(id int) error
 	GetAttributesByIds(ids []int) ([]*models.Attribute, error)
+	GetAttributesByPostID(postId int) ([]*models.Attribute, error)
 
 	// Categories 模块
 	InsertCategories(cate *models.Category, parentID int) (*models.Category, error)
@@ -28,6 +29,8 @@ type Repository interface {
 	DeleteCategories(id int) error
 	GetCategoriesById(id int) (*models.Category, error)
 	GetCategoriesByIds(ids []int) ([]*models.Category, error)
+	GetCategoriesByPostID(postId int) ([]*models.Category, error)
+	GetCategoriesNoParentID(limit int, offese int) ([]*models.Category, error)
 
 	// Post 模块
 	InsertPost(post models.Post) (*models.Post, error)

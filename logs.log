@@ -24198,3 +24198,2629 @@ Blog之旅
 2022-09-10T03:55:06.565+0800	INFO	handlers/posts.go:87	创建文章参数：{Blog之旅 # Weblogs
 Blog之旅
  [10 11 1 2 3 4] [1 4] }
+2022-09-10T04:00:34.218+0800	INFO	app/app.go:89	Serve>> &{0xc0000f91e0 sqlite3 false 0xc00015ff80}
+2022-09-10T04:00:36.587+0800	INFO	middleware/middleware.go:42	GET/publish
+2022-09-10T04:00:36.589+0800	INFO	service/categoryService.go:30	cates >>> [0xc0001d75c0 0xc0001d7600 0xc0001d7640]
+2022-09-10T04:00:36.589+0800	INFO	service/categoryService.go:30	cates >>> [0xc0001d7680]
+2022-09-10T04:00:36.590+0800	INFO	service/categoryService.go:30	cates >>> [0xc0001d76c0]
+2022-09-10T04:00:36.590+0800	INFO	handlers/posts.go:65	分类获取>>> [0xc0000d25e0 0xc0000d2620 0xc0000d2660]
+2022-09-10T04:00:36.672+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:00:36.685+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-09-10T04:00:36.693+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T04:00:36.693+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T04:00:36.693+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-09-10T04:00:36.693+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-09-10T04:00:36.696+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-09-10T04:00:36.699+0800	INFO	middleware/middleware.go:42	GET/static/js/sweetalert2.minjs
+2022-09-10T04:00:36.707+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-09-10T04:00:36.726+0800	INFO	middleware/middleware.go:42	GET/static/js/common.js
+2022-09-10T04:00:36.770+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:00:36.954+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-09-10T04:00:37.050+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.css
+2022-09-10T04:00:37.051+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/fold/foldgutter.css
+2022-09-10T04:00:37.052+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/dialog/dialog.css
+2022-09-10T04:00:37.052+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/search/matchesonscrollbar.css
+2022-09-10T04:00:37.054+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.js
+2022-09-10T04:00:37.058+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/images/loading@2x.gif
+2022-09-10T04:00:37.177+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/modes.min.js
+2022-09-10T04:00:37.247+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addons.min.js
+2022-09-10T04:00:37.266+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/theme/paraiso-light.css
+2022-09-10T04:00:37.317+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-09-10T04:00:37.320+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0
+2022-09-10T04:00:37.506+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-09-10T04:00:37.528+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-09-10T04:00:37.724+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-09-10T04:00:37.763+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-09-10T04:00:37.774+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-09-10T04:00:37.782+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-09-10T04:00:37.887+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/editormd-logo.woff?-5y8q6h
+2022-09-10T04:00:42.124+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T04:00:42.176+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:00:42.177+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T04:00:42.177+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T04:00:42.245+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T04:00:42.246+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T04:00:42.247+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T04:00:42.247+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T04:00:42.357+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:00:42.357+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T04:00:42.382+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T04:00:42.399+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T04:01:11.721+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T04:01:11.758+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:01:11.760+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T04:01:11.760+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T04:01:11.831+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T04:01:11.831+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T04:01:11.833+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T04:01:11.834+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T04:01:11.842+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T04:01:11.859+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:01:11.960+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T04:01:11.960+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T04:02:01.664+0800	INFO	middleware/middleware.go:42	GET/publish
+2022-09-10T04:02:01.665+0800	INFO	service/categoryService.go:30	cates >>> [0xc000220280 0xc0002202c0 0xc000220300]
+2022-09-10T04:02:01.666+0800	INFO	service/categoryService.go:30	cates >>> [0xc000220340]
+2022-09-10T04:02:01.667+0800	INFO	service/categoryService.go:30	cates >>> [0xc000220380]
+2022-09-10T04:02:01.667+0800	INFO	handlers/posts.go:65	分类获取>>> [0xc0005ca320 0xc0005ca360 0xc0005ca3a0]
+2022-09-10T04:02:01.740+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:02:01.743+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-09-10T04:02:01.744+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T04:02:01.744+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-09-10T04:02:01.744+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T04:02:01.749+0800	INFO	middleware/middleware.go:42	GET/static/js/common.js
+2022-09-10T04:02:01.777+0800	INFO	middleware/middleware.go:42	GET/static/js/sweetalert2.minjs
+2022-09-10T04:02:01.779+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-09-10T04:02:01.780+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-09-10T04:02:01.782+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-09-10T04:02:01.853+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:02:01.891+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-09-10T04:02:01.976+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.css
+2022-09-10T04:02:01.980+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/dialog/dialog.css
+2022-09-10T04:02:01.980+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/search/matchesonscrollbar.css
+2022-09-10T04:02:01.980+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/fold/foldgutter.css
+2022-09-10T04:02:01.991+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.js
+2022-09-10T04:02:01.991+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/images/loading@2x.gif
+2022-09-10T04:02:02.018+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/modes.min.js
+2022-09-10T04:02:02.042+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addons.min.js
+2022-09-10T04:02:02.051+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/theme/paraiso-light.css
+2022-09-10T04:02:02.101+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-09-10T04:02:02.106+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0
+2022-09-10T04:02:02.242+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-09-10T04:02:02.257+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-09-10T04:02:02.284+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-09-10T04:02:02.303+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-09-10T04:02:02.312+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-09-10T04:02:02.326+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-09-10T04:02:02.435+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/editormd-logo.woff?-5y8q6h
+2022-09-10T04:02:14.206+0800	INFO	middleware/middleware.go:42	GET/publish
+2022-09-10T04:02:14.207+0800	INFO	service/categoryService.go:30	cates >>> [0xc000220880 0xc0002208c0 0xc000220900]
+2022-09-10T04:02:14.207+0800	INFO	service/categoryService.go:30	cates >>> [0xc000220940]
+2022-09-10T04:02:14.207+0800	INFO	service/categoryService.go:30	cates >>> [0xc000220980]
+2022-09-10T04:02:14.207+0800	INFO	handlers/posts.go:65	分类获取>>> [0xc0002d25e0 0xc0002d2620 0xc0002d2660]
+2022-09-10T04:02:14.249+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:02:14.251+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T04:02:14.251+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-09-10T04:02:14.251+0800	INFO	middleware/middleware.go:42	GET/static/js/sweetalert2.minjs
+2022-09-10T04:02:14.251+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T04:02:14.252+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-09-10T04:02:14.256+0800	INFO	middleware/middleware.go:42	GET/static/js/common.js
+2022-09-10T04:02:14.259+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-09-10T04:02:14.260+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-09-10T04:02:14.260+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-09-10T04:02:14.382+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:02:14.385+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-09-10T04:02:14.420+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.css
+2022-09-10T04:02:14.421+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/dialog/dialog.css
+2022-09-10T04:02:14.421+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/search/matchesonscrollbar.css
+2022-09-10T04:02:14.421+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/fold/foldgutter.css
+2022-09-10T04:02:14.426+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.js
+2022-09-10T04:02:14.431+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/images/loading@2x.gif
+2022-09-10T04:02:14.473+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/modes.min.js
+2022-09-10T04:02:14.535+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addons.min.js
+2022-09-10T04:02:14.559+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/theme/paraiso-light.css
+2022-09-10T04:02:14.750+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-09-10T04:02:14.750+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0
+2022-09-10T04:02:14.884+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-09-10T04:02:14.898+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-09-10T04:02:14.913+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-09-10T04:02:14.923+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-09-10T04:02:14.930+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-09-10T04:02:14.937+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-09-10T04:02:15.048+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/editormd-logo.woff?-5y8q6h
+2022-09-10T04:02:39.626+0800	INFO	middleware/middleware.go:42	POST/posts
+2022-09-10T04:02:39.626+0800	INFO	handlers/posts.go:87	创建文章参数：{Markdown 富文本编辑器 # Editor.md
+
+![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+
+**目录 (Table of Contents)**
+
+[TOCM]
+
+[TOC]
+
+# Heading 1
+## Heading 2               
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+# Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+## Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+### Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+#### Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
+##### Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+###### Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+
+#### 标题（用底线的形式）Heading (underline)
+
+This is an H1
+=============
+
+This is an H2
+-------------
+
+### 字符效果和横线等
+                
+----
+
+~~删除线~~ <s>删除线（开启识别HTML标签时）</s>
+*斜体字*      _斜体字_
+**粗体**  __粗体__
+***粗斜体*** ___粗斜体___
+
+上标：X<sub>2</sub>，下标：O<sup>2</sup>
+
+**缩写(同HTML的abbr标签)**
+
+> 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
+
+The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
+
+### 引用 Blockquotes
+
+> 引用文本 Blockquotes
+
+引用的行内混合 Blockquotes
+                    
+> 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](http://localhost/)。
+
+### 锚点与链接 Links
+
+[普通链接](http://localhost/)
+
+[普通链接带标题](http://localhost/ "普通链接带标题")
+
+直接链接：<https://github.com>
+
+[锚点链接][anchor-id] 
+
+[anchor-id]: http://www.this-anchor-link.com/
+
+[mailto:test.test@gmail.com](mailto:test.test@gmail.com)
+
+GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
+
+> @pandao
+
+### 多语言代码高亮 Codes
+
+#### 行内代码 Inline code
+
+执行命令：`npm install marked`
+
+#### 缩进风格
+
+即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
+
+    <?php
+        echo "Hello world!";
+    ?>
+    
+预格式化文本：
+
+    | First Header  | Second Header |
+    | ------------- | ------------- |
+    | Content Cell  | Content Cell  |
+    | Content Cell  | Content Cell  |
+
+#### JS代码　
+
+```javascript
+function test() {
+	console.log("Hello world!");
+}
+ 
+(function(){
+    var box = function() {
+        return box.fn.init();
+    };
+
+    box.prototype = box.fn = {
+        init : function(){
+            console.log('box.init()');
+
+			return this;
+        },
+
+		add : function(str) {
+			alert("add", str);
+
+			return this;
+		},
+
+		remove : function(str) {
+			alert("remove", str);
+
+			return this;
+		}
+    };
+    
+    box.fn.init.prototype = box.fn;
+    
+    window.box =box;
+})();
+
+var testBox = box();
+testBox.add("jQuery").remove("jQuery");
+```
+
+#### HTML 代码 HTML codes
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charest="utf-8" />
+        <meta name="keywords" content="Editor.md, Markdown, Editor" />
+        <title>Hello world!</title>
+        <style type="text/css">
+            body{font-size:14px;color:#444;font-family: "Microsoft Yahei", Tahoma, "Hiragino Sans GB", Arial;background:#fff;}
+            ul{list-style: none;}
+            img{border:none;vertical-align: middle;}
+        </style>
+    </head>
+    <body>
+        <h1 class="text-xxl">Hello world!</h1>
+        <p class="text-green">Plain text</p>
+    </body>
+</html>
+```
+
+### 图片 Images
+
+Image:
+
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+
+> Follow your heart.
+
+![](https://pandao.github.io/editor.md/examples/images/8.jpg)
+
+> 图为：厦门白城沙滩
+
+图片加链接 (Image + Link)：
+
+[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/images/7.jpg "李健首张专辑《似水流年》封面")
+
+> 图为：李健首张专辑《似水流年》封面
+                
+----
+
+### 列表 Lists
+
+#### 无序列表（减号）Unordered Lists (-)
+                
+- 列表一
+- 列表二
+- 列表三
+     
+#### 无序列表（星号）Unordered Lists (*)
+
+* 列表一
+* 列表二
+* 列表三
+
+#### 无序列表（加号和嵌套）Unordered Lists (+)
+                
++ 列表一
++ 列表二
+    + 列表二-1
+    + 列表二-2
+    + 列表二-3
++ 列表三
+    * 列表一
+    * 列表二
+    * 列表三
+
+#### 有序列表 Ordered Lists (-)
+                
+1. 第一行
+2. 第二行
+3. 第三行
+
+#### GFM task list
+
+- [x] GFM task list 1
+- [x] GFM task list 2
+- [ ] GFM task list 3
+    - [ ] GFM task list 3-1
+    - [ ] GFM task list 3-2
+    - [ ] GFM task list 3-3
+- [ ] GFM task list 4
+    - [ ] GFM task list 4-1
+    - [ ] GFM task list 4-2
+                
+----
+                    
+### 绘制表格 Tables
+
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机      | $1600   |   5     |
+| 手机        |   $12   |   12   |
+| 管线        |    $1    |  234  |
+                    
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell 
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+| Function name | Description                    |
+| ------------- | ------------------------------ |
+| `help()`      | Display the help window.       |
+| `destroy()`   | **Destroy your computer!**     |
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+
+| Item      | Value |
+| --------- | -----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
+                
+----
+
+#### 特殊符号 HTML Entities Codes
+
+&copy; &  &uml; &trade; &iexcl; &pound;
+&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
+
+X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
+
+18&ordm;C  &quot;  &apos;
+
+[========]
+
+### Emoji表情 :smiley:
+
+> Blockquotes :star:
+
+#### GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
+
+- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
+- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
+- [x] [ ] :smiley: this is a complete item :smiley:;
+- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao; 
+- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
+    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
+    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
+ 
+#### 反斜杠 Escape
+
+\*literal asterisks\*
+
+[========]
+            
+### 科学公式 TeX(KaTeX)
+
+$$E=mc^2$$
+
+行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
+
+$$x > y$$
+
+$$\(\sqrt{3x-1}+(1+x)^2\)$$
+                    
+$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+
+多行公式：
+
+```math
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
+```
+
+```katex
+\displaystyle 
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        } 
+    }
+```
+
+```latex
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+```
+
+### 分页符 Page break
+
+> Print Test: Ctrl + P
+
+[========]
+
+### 绘制流程图 Flowchart
+
+```flow
+st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+[========]
+                    
+### 绘制序列图 Sequence Diagram
+                    
+```seq
+Andrew->China: Says Hello 
+Note right of China: China thinks\nabout it 
+China-->Andrew: How are you? 
+Andrew->>China: I am good thanks!
+```
+
+### End [] [] }
+2022-09-10T04:03:17.873+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T04:03:17.927+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:03:17.937+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T04:03:17.942+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T04:03:18.014+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T04:03:18.019+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T04:03:18.010+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T04:03:18.026+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T04:03:18.028+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:03:18.029+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T04:03:18.172+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T04:03:19.952+0800	INFO	middleware/middleware.go:42	GET/admin/index
+2022-09-10T04:03:19.996+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:03:19.996+0800	INFO	middleware/middleware.go:42	GET/static/css/alert.css
+2022-09-10T04:03:19.999+0800	INFO	middleware/middleware.go:42	GET/static/css/card-layout.css
+2022-09-10T04:03:20.061+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T04:03:20.062+0800	INFO	middleware/middleware.go:42	GET/static/js/common.js
+2022-09-10T04:03:20.062+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-09-10T04:03:20.063+0800	INFO	middleware/middleware.go:42	GET/static/js/sweetalert2.minjs
+2022-09-10T04:03:20.064+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T04:03:20.088+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:03:20.143+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T04:03:21.788+0800	INFO	middleware/middleware.go:42	GET/admin/posts
+2022-09-10T04:03:21.821+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:03:21.822+0800	INFO	middleware/middleware.go:42	GET/static/css/card-layout.css
+2022-09-10T04:03:21.822+0800	INFO	middleware/middleware.go:42	GET/static/css/alert.css
+2022-09-10T04:03:21.894+0800	INFO	middleware/middleware.go:42	GET/static/js/common.js
+2022-09-10T04:03:21.894+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T04:03:21.896+0800	INFO	middleware/middleware.go:42	GET/static/js/sweetalert2.minjs
+2022-09-10T04:03:21.895+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-09-10T04:03:21.897+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T04:03:21.907+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:03:21.962+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T04:06:44.674+0800	INFO	app/app.go:89	Serve>> &{0xc0000eb110 sqlite3 false 0xc000155f80}
+2022-09-10T04:06:46.123+0800	INFO	middleware/middleware.go:42	GET/admin/posts
+2022-09-10T04:06:46.182+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:06:46.186+0800	INFO	middleware/middleware.go:42	GET/static/css/alert.css
+2022-09-10T04:06:46.196+0800	INFO	middleware/middleware.go:42	GET/static/css/card-layout.css
+2022-09-10T04:06:46.253+0800	INFO	middleware/middleware.go:42	GET/static/js/common.js
+2022-09-10T04:06:46.254+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-09-10T04:06:46.256+0800	INFO	middleware/middleware.go:42	GET/static/js/sweetalert2.minjs
+2022-09-10T04:06:46.256+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T04:06:46.253+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T04:06:46.272+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:06:46.402+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T04:15:57.354+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T04:15:57.448+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T04:15:57.456+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T04:15:57.456+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T04:15:57.518+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T04:15:57.518+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T04:15:57.520+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T04:15:57.518+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T04:15:57.530+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T04:15:57.541+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T04:15:57.556+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T04:15:57.587+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T04:54:17.384+0800	INFO	app/app.go:89	Serve>> &{0xc0000cb110 sqlite3 false 0xc000131f80}
+2022-09-10T04:56:05.774+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T04:56:05.775+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:29.366+0800	INFO	app/app.go:89	Serve>> &{0xc0000f0f70 sqlite3 false 0xc000157f80}
+2022-09-10T05:00:31.931+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:31.932+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:31.935+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:31.965+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:31.967+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:31.999+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:33.061+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:33.062+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:33.063+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:33.064+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:33.069+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:33.070+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:38.084+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:38.085+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:38.090+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:38.090+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:00:38.092+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:00:38.093+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:01:08.108+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:01:08.109+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:01:08.110+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:01:08.110+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:01:08.112+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:01:08.112+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:02:08.131+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:02:08.132+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:02:08.133+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:02:08.133+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:02:08.136+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:02:08.136+0800	ERROR	handlers/desktop.go:42	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:42
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:04:15.929+0800	INFO	app/app.go:89	Serve>> &{0xc00017ed00 sqlite3 false 0xc0001d5f80}
+2022-09-10T05:04:19.228+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:04:19.230+0800	ERROR	handlers/desktop.go:44	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:04:19.233+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:04:19.264+0800	ERROR	handlers/desktop.go:44	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:04:19.266+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:04:19.297+0800	ERROR	handlers/desktop.go:44	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:06:04.635+0800	INFO	app/app.go:89	Serve>> &{0xc0001511e0 sqlite3 false 0xc0001b1f80}
+2022-09-10T05:06:07.466+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:06:07.467+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:06:07.470+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:06:07.502+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:06:07.504+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:06:07.535+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:06:24.115+0800	INFO	app/app.go:89	Serve>> &{0xc000170f70 sqlite3 false 0xc0001d5f80}
+2022-09-10T05:06:26.593+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:06:26.598+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:06:26.602+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:06:26.630+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:06:26.631+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:06:26.665+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:07:00.127+0800	INFO	app/app.go:89	Serve>> &{0xc0000eb110 sqlite3 false 0xc000155f80}
+2022-09-10T05:11:01.525+0800	INFO	app/app.go:89	Serve>> &{0xc0000f0d00 sqlite3 false 0xc000155f80}
+2022-09-10T05:11:03.823+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:11:03.827+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:11:03.830+0800	ERROR	handlers/desktop.go:45	no such column: id
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:45
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:11:03.922+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:11:03.935+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:11:03.937+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:11:04.015+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:11:04.020+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:11:04.020+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:11:04.021+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:11:04.040+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:11:04.048+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:11:04.202+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:11:04.209+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:13:09.082+0800	INFO	app/app.go:89	Serve>> &{0xc0000eb110 sqlite3 false 0xc000155f80}
+2022-09-10T05:13:11.135+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:13:11.190+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:13:11.197+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:13:11.204+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:13:11.264+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:13:11.264+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:13:11.264+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:13:11.265+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:13:11.293+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:13:11.329+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:13:11.394+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:16:42.331+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:16:42.382+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:16:42.387+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:16:42.397+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:16:42.455+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:16:42.455+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:16:42.455+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:16:42.456+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:16:42.463+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:16:42.476+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:16:42.513+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:25:36.306+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:36.312+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:36.318+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:36.334+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:36.340+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:36.345+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:37.390+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:37.399+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:37.402+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:37.412+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:37.415+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:37.425+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:42.446+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:42.455+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:42.459+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:42.474+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:25:42.478+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:25:42.487+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:26:12.504+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:26:12.512+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:26:12.514+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:26:12.527+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:26:12.529+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:26:12.547+0800	PANIC	render/render.go:151	template: index.page.tmpl:10: bad character U+005B '['
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:151
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:88
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:27:04.422+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:27:04.438+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:11:12: executing "content" at <index $response "Posts">: error calling index: index of untyped nil
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:78
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:29:30.542+0800	INFO	app/app.go:89	Serve>> &{0xc0000eb450 sqlite3 false 0xc000157f80}
+2022-09-10T05:29:32.596+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:29:32.618+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:11:12: executing "content" at <index $response "Posts">: error calling index: can't index item of type service.DesktopResponse
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:76
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:32:06.813+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:32:06.826+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:42:30: executing "content" at <.Name>: can't evaluate field Name in type []*models.Category
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:76
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:32:16.452+0800	INFO	app/app.go:89	Serve>> &{0xc0000eb040 sqlite3 false 0xc000155f80}
+2022-09-10T05:32:18.541+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:32:18.557+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:42:30: executing "content" at <.Name>: can't evaluate field Name in type []*models.Category
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:76
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:36:08.692+0800	INFO	app/app.go:89	Serve>> &{0xc0000f11e0 sqlite3 false 0xc000155f80}
+2022-09-10T05:36:10.745+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:36:10.772+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:42:30: executing "content" at <.Name>: can't evaluate field Name in type []*models.Category
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:86
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:38:55.271+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:38:55.296+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:42:30: executing "content" at <.Name>: can't evaluate field Name in type []*models.Category
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:86
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:39:28.195+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:39:28.223+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:42:35: executing "content" at <.Name>: can't evaluate field Name in type []*models.Category
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:86
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:40:12.042+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:40:12.060+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:56:34: executing "content" at <.Kind>: can't evaluate field Kind in type []*models.Attribute
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:86
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:40:18.860+0800	INFO	app/app.go:89	Serve>> &{0xc00016b1e0 sqlite3 false 0xc0001d5f80}
+2022-09-10T05:40:20.394+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:40:20.415+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:56:34: executing "content" at <.Kind>: can't evaluate field Kind in type []*models.Attribute
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:86
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:44:03.788+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:44:03.815+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:94:68: executing "content" at <.Post.Title>: can't evaluate field Post in type []service.DesktopPost
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:86
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:44:05.344+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:44:05.356+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:94:68: executing "content" at <.Post.Title>: can't evaluate field Post in type []service.DesktopPost
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:86
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:44:51.882+0800	INFO	app/app.go:89	Serve>> &{0xc0000f12b0 sqlite3 false 0xc000155f80}
+2022-09-10T05:44:52.760+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:44:52.777+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:94:68: executing "content" at <.Post.Title>: can't evaluate field Post in type []service.DesktopPost
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:87
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:45:15.386+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:45:15.448+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:45:15.450+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:45:15.457+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:45:15.515+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:45:15.518+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:45:15.519+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:45:15.520+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:45:15.529+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:45:15.639+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:45:15.744+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:47:02.929+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:47:02.991+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:47:02.993+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:47:02.995+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:47:03.055+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:47:03.056+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:47:03.056+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:47:03.057+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:47:03.067+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:47:03.083+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:47:03.097+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:47:05.819+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:47:05.849+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:47:05.849+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:47:05.850+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:47:05.924+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:47:05.924+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:47:05.925+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:47:05.927+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:47:05.932+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:47:05.947+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:47:05.966+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:47:52.298+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:47:52.342+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:47:52.342+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:47:52.345+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:47:52.403+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:47:52.403+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:47:52.404+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:47:52.406+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:47:52.411+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:47:52.427+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:47:52.439+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:47:54.976+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:47:55.010+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:47:55.010+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:47:55.011+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:47:55.079+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:47:55.079+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:47:55.079+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:47:55.082+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:47:55.088+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:47:55.099+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:47:55.114+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-09-10T05:47:55.116+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:49:25.879+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:49:25.894+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:107:61: executing "content" at <.Thumb>: can't evaluate field Thumb in type service.DesktopPost
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:87
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:49:52.472+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:49:52.521+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:49:52.522+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:49:52.523+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:49:52.583+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:49:52.584+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:49:52.584+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:49:52.592+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T05:49:52.593+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:49:52.594+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T05:49:52.602+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:49:52.624+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:51:49.262+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:51:49.345+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:51:49.346+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:51:49.346+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:51:49.419+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:51:49.420+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:51:49.420+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T05:51:49.420+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:51:49.424+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T05:51:49.426+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:51:49.439+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:51:49.476+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:52:02.894+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:52:02.932+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:52:02.932+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:52:02.932+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:52:03.008+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:52:03.008+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:52:03.008+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:52:03.009+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T05:52:03.009+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T05:52:03.018+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:52:03.027+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:52:03.038+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:53:22.486+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:53:22.501+0800	ERROR	render/render.go:113	解析模板发生错误template: index.page.tmpl:134:53: executing "content" at <.Post.Attributes>: can't evaluate field Attributes in type models.Post
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:113
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:87
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:55:02.205+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:55:02.267+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:55:02.269+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:55:02.269+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:55:02.330+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:55:02.332+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:55:02.332+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:55:02.332+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T05:55:02.332+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T05:55:02.337+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:55:02.355+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:55:02.367+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:55:12.156+0800	INFO	middleware/middleware.go:42	GET/publish
+2022-09-10T05:55:12.158+0800	INFO	service/categoryService.go:30	cates >>> [0xc0005a0fc0 0xc0005a1000 0xc0005a1080]
+2022-09-10T05:55:12.158+0800	INFO	service/categoryService.go:30	cates >>> [0xc0005a1140]
+2022-09-10T05:55:12.158+0800	INFO	service/categoryService.go:30	cates >>> [0xc0005a1200]
+2022-09-10T05:55:12.159+0800	INFO	handlers/posts.go:65	分类获取>>> [0xc0000ca960 0xc0000ca9c0 0xc0000caa20]
+2022-09-10T05:55:12.200+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:55:12.206+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-09-10T05:55:12.207+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:55:12.206+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:55:12.207+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-09-10T05:55:12.261+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-09-10T05:55:12.261+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-09-10T05:55:12.261+0800	INFO	middleware/middleware.go:42	GET/static/js/sweetalert2.minjs
+2022-09-10T05:55:12.261+0800	INFO	middleware/middleware.go:42	GET/static/js/common.js
+2022-09-10T05:55:12.265+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-09-10T05:55:12.326+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:55:12.377+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-09-10T05:55:12.439+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.css
+2022-09-10T05:55:12.440+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/search/matchesonscrollbar.css
+2022-09-10T05:55:12.440+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/fold/foldgutter.css
+2022-09-10T05:55:12.441+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addon/dialog/dialog.css
+2022-09-10T05:55:12.441+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/codemirror.min.js
+2022-09-10T05:55:12.457+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/images/loading@2x.gif
+2022-09-10T05:55:12.486+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/modes.min.js
+2022-09-10T05:55:12.507+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/addons.min.js
+2022-09-10T05:55:12.517+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/codemirror/theme/paraiso-light.css
+2022-09-10T05:55:12.624+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-09-10T05:55:12.630+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0
+2022-09-10T05:55:12.767+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-09-10T05:55:12.782+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-09-10T05:55:12.797+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-09-10T05:55:12.805+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-09-10T05:55:12.815+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-09-10T05:55:12.822+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-09-10T05:55:12.916+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/editormd-logo.woff?-5y8q6h
+2022-09-10T05:55:47.594+0800	INFO	middleware/middleware.go:42	POST/posts
+2022-09-10T05:55:47.595+0800	INFO	handlers/posts.go:87	创建文章参数：{编写博文 cess说  [7 11 2] [1 4] }
+2022-09-10T05:55:55.553+0800	INFO	middleware/middleware.go:42	POST/posts
+2022-09-10T05:55:55.553+0800	INFO	handlers/posts.go:87	创建文章参数：{编写博文 cess说 编写博文 cess说编写博文 cess说编写博文 cess说编写博文 cess说 [7 11 2] [1 4] }
+2022-09-10T05:56:02.161+0800	INFO	middleware/middleware.go:42	POST/posts
+2022-09-10T05:56:02.162+0800	INFO	handlers/posts.go:87	创建文章参数：{编写博文 cess说 编写博文 cess说编写博文 cess说编写博文 cess说编写博文 cess说 [7 11 2 3] [1 4] }
+2022-09-10T05:56:10.442+0800	INFO	middleware/middleware.go:42	POST/posts
+2022-09-10T05:56:10.442+0800	INFO	handlers/posts.go:87	创建文章参数：{编写博文 cess说222 编写博文 cess说编写博文 cess说编写博文 cess说编写博文 cess说 [7 11 1 2 3] [1 4] }
+2022-09-10T05:56:18.449+0800	INFO	middleware/middleware.go:42	POST/posts
+2022-09-10T05:56:18.450+0800	INFO	handlers/posts.go:87	创建文章参数：{编写博文 cess说2223333 编写博文 cess说编写博文 cess说编写博文 cess说编写博文 cess说 [7 11 1 2 3 4] [1 4] }
+2022-09-10T05:56:20.825+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:56:20.826+0800	ERROR	handlers/desktop.go:49	near ")": syntax error
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:56:20.904+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:56:20.905+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:56:20.909+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:56:20.963+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:56:20.964+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:56:20.966+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:56:20.968+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T05:56:20.968+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T05:56:20.970+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T05:56:20.972+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T05:56:20.981+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:56:20.997+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:56:21.048+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:57:06.386+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:57:06.399+0800	ERROR	handlers/desktop.go:49	near ")": syntax error
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:57:06.461+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:57:06.462+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:57:06.464+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:57:06.530+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:57:06.531+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T05:57:06.532+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T05:57:06.532+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T05:57:06.532+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:57:06.532+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:57:06.539+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:57:06.540+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T05:57:06.551+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:57:06.585+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:58:56.759+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T05:58:56.761+0800	ERROR	handlers/desktop.go:49	near ")": syntax error
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T05:58:56.830+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T05:58:56.834+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T05:58:56.835+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T05:58:56.893+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T05:58:56.893+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T05:58:56.897+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T05:58:56.897+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T05:58:56.917+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T05:58:56.943+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T05:58:56.943+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T05:58:56.945+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T05:58:56.945+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T05:58:56.945+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:01:36.660+0800	INFO	app/app.go:89	Serve>> &{0xc0000ff040 sqlite3 false 0xc000155f80}
+2022-09-10T06:01:40.015+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:01:40.017+0800	ERROR	handlers/desktop.go:49	near ")": syntax error
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T06:01:40.093+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:01:40.095+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:01:40.105+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:01:40.162+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:01:40.163+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:01:40.163+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:01:40.164+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:01:40.164+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:01:40.164+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:01:40.167+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:01:40.186+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:01:40.229+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:01:40.256+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:02:15.750+0800	INFO	app/app.go:89	Serve>> &{0xc00015cea0 sqlite3 false 0xc0001b1f80}
+2022-09-10T06:02:17.349+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:02:17.350+0800	ERROR	handlers/desktop.go:49	near ")": syntax error
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T06:02:17.412+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:02:17.412+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:02:17.421+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:02:17.475+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:02:17.477+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:02:17.477+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:02:17.478+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:02:17.478+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:02:17.478+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:02:17.487+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:02:17.525+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:02:17.562+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:02:17.585+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:05:14.449+0800	INFO	app/app.go:89	Serve>> &{0xc000100ea0 sqlite3 false 0xc000157f80}
+2022-09-10T06:05:16.278+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:05:16.280+0800	ERROR	handlers/desktop.go:49	near ")": syntax error
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T06:05:16.343+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:05:16.347+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:05:16.355+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:05:16.415+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:05:16.415+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:05:16.415+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:05:16.416+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:05:16.416+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:05:16.416+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:05:16.422+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:05:16.449+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:05:16.486+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:05:16.517+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:08:08.098+0800	INFO	app/app.go:89	Serve>> &{0xc0000f12b0 sqlite3 false 0xc000157f80}
+2022-09-10T06:08:10.718+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:08:10.786+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:08:10.787+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:08:10.800+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:08:10.857+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:08:10.858+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:08:10.858+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:08:10.859+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:08:10.860+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:08:10.861+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:08:10.862+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:08:10.894+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:08:10.923+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:08:10.954+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:12:57.360+0800	INFO	app/app.go:89	Serve>> &{0xc0000f0f70 sqlite3 false 0xc000157f80}
+2022-09-10T06:12:59.836+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:12:59.910+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:12:59.924+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:12:59.934+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:12:59.995+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:12:59.996+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:12:59.996+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:12:59.996+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:12:59.997+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:12:59.999+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:13:00.015+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:13:00.018+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:13:00.077+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:13:00.086+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:17:02.732+0800	INFO	app/app.go:89	Serve>> &{0xc0000f0ea0 sqlite3 false 0xc000155f80}
+2022-09-10T06:17:06.866+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:17:06.881+0800	ERROR	render/render.go:114	解析模板发生错误template: index.page.tmpl:93:79: executing "content" at <.Attributes>: wrong type for value; expected []models.Attribute; got []*models.Attribute
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:114
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T06:19:02.863+0800	INFO	app/app.go:89	Serve>> &{0xc0000d1040 sqlite3 false 0xc0001b1f80}
+2022-09-10T06:19:05.302+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:19:05.364+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:19:05.365+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:19:05.376+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:19:05.457+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:19:05.457+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:19:05.457+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:19:05.460+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:19:05.460+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:19:05.460+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:19:05.464+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:19:05.481+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:19:05.515+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:19:05.541+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:20:16.599+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:20:16.668+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:20:16.671+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:20:16.672+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:20:16.742+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:20:16.742+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:20:16.744+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:20:16.745+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:20:16.745+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:20:16.745+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:20:16.751+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:20:16.759+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:20:16.775+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:20:16.836+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:33:58.944+0800	INFO	app/app.go:89	Serve>> &{0xc0000f0ea0 sqlite3 false 0xc000155f80}
+2022-09-10T06:33:59.985+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:34:00.008+0800	ERROR	render/render.go:116	解析模板发生错误template: index.page.tmpl:98:53: executing "content" at <.Post.Created>: can't evaluate field Created in type models.Post
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/home/xqq/go/src/lightsaid.com/weblogs/internal/render/render.go:116
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/home/xqq/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2084
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/home/xqq/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-09-10T06:34:30.833+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:34:30.890+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:34:30.895+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:34:30.902+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:34:30.962+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:34:30.963+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:34:30.964+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:34:30.965+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:34:30.969+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:34:30.972+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:34:30.972+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:34:30.976+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:34:30.979+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:34:31.024+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:36:57.271+0800	INFO	app/app.go:89	Serve>> &{0xc0000d55f0 sqlite3 false 0xc000157f80}
+2022-09-10T06:36:58.891+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:36:58.956+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:36:58.970+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:36:58.971+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:36:59.030+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:36:59.032+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:36:59.032+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:36:59.032+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:36:59.032+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:36:59.033+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:36:59.041+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:36:59.062+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:36:59.099+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:36:59.128+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:37:51.988+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:37:52.057+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:37:52.060+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:37:52.061+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:37:52.126+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:37:52.126+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:37:52.126+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:37:52.127+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:37:52.128+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:37:52.128+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:37:52.135+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:37:52.139+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:37:52.145+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:37:52.176+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T06:38:05.844+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T06:38:05.895+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T06:38:05.896+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T06:38:05.896+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T06:38:05.975+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-09-10T06:38:05.975+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-09-10T06:38:05.978+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T06:38:05.978+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T06:38:05.979+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T06:38:05.979+0800	INFO	middleware/middleware.go:42	GET/static/upload/bad538c1-1141-472c-b35d-373886fc731fWechatIMG253.jpeg
+2022-09-10T06:38:05.982+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T06:38:05.985+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T06:38:05.996+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-09-10T06:38:06.039+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-09-10T12:53:19.589+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T12:53:19.696+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T12:53:19.705+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T12:53:19.711+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T12:53:19.770+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-11.jpg
+2022-09-10T12:53:19.770+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-7.jpg
+2022-09-10T12:53:19.771+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-9.jpg
+2022-09-10T12:53:19.772+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-post-cover-1.jpg
+2022-09-10T12:53:19.786+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-09-10T12:53:21.369+0800	INFO	middleware/middleware.go:42	GET/
+2022-09-10T12:53:21.435+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-09-10T12:53:21.437+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-09-10T12:53:21.438+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-09-10T13:05:42.152+0800	INFO	middleware/middleware.go:42	GET/

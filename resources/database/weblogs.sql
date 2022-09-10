@@ -132,7 +132,7 @@ select * from attributes where id in ("1",2,3,-1);
 
 select * from categories;
 
-SELECT * from posts;
+SELECT id, user_id, author, title , created_at from posts order by created_at desc LIMIT 2 OFFSET 0;
 
 DELETE from posts;
 
@@ -145,3 +145,5 @@ SELECT * FROM pa_mapping;
 
 DELETE from pc_mapping;
 DELETE from pa_mapping;
+
+select id, user_id, kind, name from attributes where id in (13,14,15,16,17,18)

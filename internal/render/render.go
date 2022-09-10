@@ -45,6 +45,9 @@ var functions = template.FuncMap{
 	"getActive":                getActive,
 	"getAttrKind":              getAttrKind,
 	"renderCheckboxCategories": renderCheckboxCategories,
+	"filterMark":               filterMark,
+	"filterFrom":               filterFrom,
+	"showPostCreatedAt":        showPostCreatedAt,
 }
 
 func (t TemplateData) AddBaseData(td *models.TemplateData, r *http.Request, w http.ResponseWriter) *models.TemplateData {

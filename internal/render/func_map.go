@@ -4,7 +4,10 @@ import (
 	"fmt"
 	"html/template"
 	"os"
+	"time"
 
+	"go.uber.org/zap"
+	"lightsaid.com/weblogs/internal/models"
 	"lightsaid.com/weblogs/internal/service"
 )
 
@@ -44,6 +47,47 @@ func getAttrKind(kind string) string {
 		return "标记(Mark)"
 	}
 	return "来源(From)"
+}
+
+func filterMark(attrs []*models.Attribute) string {
+	for i, _ := range attrs {
+		if attrs[i].Kind == "M" {
+			return attrs[i].Name
+		}
+	}
+	return "其他"
+}
+
+func filterFrom(attrs []*models.Attribute) string {
+	for i, _ := range attrs {
+		if attrs[i].Kind == "F" {
+			return attrs[i].Name
+		}
+	}
+	return "其他"
+}
+
+func showPostCreatedAt(created_at string) template.HTML {
+	var (
+		year  = 1970
+		month = 03
+		day   = 01
+	)
+	date, err := time.Parse("2006-01-02 15:04:05", created_at)
+	if err != nil {
+		zap.S().Error(err)
+	}
+
+	year = date.Year()
+	month = int(date.Month()) + 1
+	day = date.Day()
+
+	html := fmt.Sprintf(`<div class="date">
+		<p class="day fs-4 fw-bolder">%d</p>
+		<div class="year-month"><span class="month">%d月</span><span>%d</span></div>
+	</div>`, day, month, year)
+
+	return template.HTML(html)
 }
 
 // 从二级开始递归元素

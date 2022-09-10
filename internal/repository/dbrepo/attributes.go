@@ -30,9 +30,15 @@ func (repo *databaseRepo) GetAttributesByIds(ids []int) ([]*models.Attribute, er
 	query := `select id, user_id, kind, name from attributes where id in (`
 	var idstr string
 	for i := 0; i < len(ids); i++ {
-		idstr += fmt.Sprintf("%d,", ids[i])
+		idstr += fmt.Sprintf("%d", ids[i])
+		if i != len(ids)-1 {
+			idstr += ","
+		}
 	}
-	idstr = idstr[:len(ids)-1] + ")"
+	fmt.Println(">>>>>>> idstr 1", idstr)
+	idstr = idstr + ")"
+	fmt.Println(">>>>>>> idstr 2", idstr)
+
 	query += idstr
 
 	fmt.Println("get attrs query >>>> ", query)
@@ -83,4 +89,30 @@ func (repo *databaseRepo) DeleteAttribute(id int) error {
 		return errors.New("数据不存在，删除失败")
 	}
 	return nil
+}
+
+func (repo *databaseRepo) GetAttributesByPostID(postId int) ([]*models.Attribute, error) {
+
+	query := `select id, post_id, attr_id from pa_mapping where post_id=$1;`
+	pamappings := []models.PAMapping{}
+
+	err := repo.DB.Select(&pamappings, query, postId)
+	if err != nil {
+		return nil, err
+	}
+
+	var attrs []*models.Attribute
+	if len(pamappings) > 0 {
+		ids := []int{}
+		for _, v := range pamappings {
+			ids = append(ids, v.AttrID)
+		}
+
+		attrs, err = repo.GetAttributesByIds(ids)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	return attrs, err
 }

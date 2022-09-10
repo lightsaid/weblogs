@@ -53,7 +53,8 @@ func (repo *databaseRepo) GetPosts(pageSize, pageIndex int) ([]*models.Post, err
 		created_at, 
 		updated_at 
 		from posts 
-		limit $1 offset $2;`
+		order by created_at desc 
+		limit $1 offset $2; `
 
 	var posts []*models.Post
 
