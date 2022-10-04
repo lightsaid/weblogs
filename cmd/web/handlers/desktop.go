@@ -3,7 +3,9 @@ package handlers
 import (
 	"fmt"
 	"net/http"
+	"strconv"
 
+	"github.com/gorilla/mux"
 	"go.uber.org/zap"
 	"lightsaid.com/weblogs/internal/models"
 	"lightsaid.com/weblogs/internal/service"
@@ -98,4 +100,29 @@ func ShowAbout(w http.ResponseWriter, r *http.Request) {
 	td := models.NewTemplateData()
 	td.Menubar.About = true
 	H.Template.Render(w, r, "about.page.tmpl", &td)
+}
+
+func ShowDetails(w http.ResponseWriter, r *http.Request) {
+	td := models.NewTemplateData()
+	td.Menubar.Desktop = true
+	session := GetSession(w, r)
+
+	vars := mux.Vars(r)
+	postID := vars["id"]
+	id, err := strconv.Atoi(postID)
+	if err != nil {
+		session.AddFlash("获取文章详情出错", "Error")
+		SaveSession(session, w, r)
+		return
+	}
+
+	post, err := H.Repo.GetPost(id)
+	if err != nil {
+		session.AddFlash("获取文章详情出错", "Error")
+		SaveSession(session, w, r)
+		return
+	}
+	td.Data["post"] = post
+	H.Template.Render(w, r, "details.page.tmpl", &td)
+
 }

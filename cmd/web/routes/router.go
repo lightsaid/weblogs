@@ -163,6 +163,12 @@ var blogRoutes = []Router{
 		Method:       http.MethodGet,
 		AuthRequired: false,
 	},
+	{
+		Path:         "/details/{id:[0-9]+}",
+		Handler:      handlers.ShowDetails,
+		Method:       http.MethodGet,
+		AuthRequired: false,
+	},
 }
 
 // 用户路由

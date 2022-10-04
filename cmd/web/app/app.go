@@ -86,7 +86,6 @@ func Serve() {
 
 	// defer app.DB.Close()
 
-	zap.S().Info("Serve>> ", app.DB)
 	// 先实例化 handlers.AppHandler 再创建路由
 	handlers.New(app.DB, &app)
 

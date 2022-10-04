@@ -67,6 +67,16 @@ func filterFrom(attrs []*models.Attribute) string {
 	return "其他"
 }
 
+func filterTags(attrs []*models.Attribute) []*models.Attribute {
+	tags := []*models.Attribute{}
+	for i, attr := range attrs {
+		if attrs[i].Kind == "T" {
+			tags = append(tags, attr)
+		}
+	}
+	return tags
+}
+
 func showPostCreatedAt(created_at string) template.HTML {
 	var (
 		year  = 1970

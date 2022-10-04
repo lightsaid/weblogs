@@ -47,6 +47,7 @@ var functions = template.FuncMap{
 	"renderCheckboxCategories": renderCheckboxCategories,
 	"filterMark":               filterMark,
 	"filterFrom":               filterFrom,
+	"filterTags":               filterTags,
 	"showPostCreatedAt":        showPostCreatedAt,
 }
 

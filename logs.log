@@ -26824,3 +26824,1149 @@ net/http.(*conn).serve
 2022-09-10T12:53:21.437+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
 2022-09-10T12:53:21.438+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
 2022-09-10T13:05:42.152+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T11:29:33.224+0800	INFO	app/app.go:89	Serve>> &{0xc0001a44e0 sqlite3 false 0xc0001dfef0}
+2022-10-04T11:30:13.318+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T11:30:13.672+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T11:30:13.700+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T11:30:13.704+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T11:30:13.710+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T11:30:13.731+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T11:30:13.746+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T11:30:40.397+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T11:30:40.459+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T11:30:40.459+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T11:30:40.463+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T11:30:40.479+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T11:30:40.483+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T11:30:40.495+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T11:30:40.501+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T11:30:41.374+0800	INFO	middleware/middleware.go:42	GET/about
+2022-10-04T11:30:41.425+0800	INFO	middleware/middleware.go:42	GET/static/images/
+2022-10-04T11:30:44.688+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:10:23.211+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:10:23.389+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:10:23.393+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:10:23.393+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:10:23.440+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:10:23.441+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:10:23.458+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:10:27.156+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T12:10:27.199+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:10:27.271+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:10:28.315+0800	INFO	middleware/middleware.go:42	GET/about
+2022-10-04T12:10:28.375+0800	INFO	middleware/middleware.go:42	GET/static/images/
+2022-10-04T12:10:31.427+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:10:42.383+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:10:43.045+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:10:43.710+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:10:50.354+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:11:32.813+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:17:29.371+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:17:29.397+0800	ERROR	render/render.go:117	解析模板发生错误template: index.page.tmpl:136:98: executing "content" at <.Name>: wrong type for value; expected []*models.Attribute; got string
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:117
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:17:32.748+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:17:32.765+0800	ERROR	render/render.go:117	解析模板发生错误template: index.page.tmpl:136:98: executing "content" at <.Name>: wrong type for value; expected []*models.Attribute; got string
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:117
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:19:00.301+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:19:00.317+0800	ERROR	render/render.go:117	解析模板发生错误template: index.page.tmpl:137:88: executing "content" at <.Name>: can't evaluate field Name in type bool
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:117
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:19:18.475+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:19:18.496+0800	ERROR	render/render.go:117	解析模板发生错误template: index.page.tmpl:137:88: executing "content" at <.Name>: can't evaluate field Name in type bool
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:117
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:19:20.691+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:19:20.706+0800	ERROR	render/render.go:117	解析模板发生错误template: index.page.tmpl:137:88: executing "content" at <.Name>: can't evaluate field Name in type bool
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:117
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:20:06.897+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:20:07.126+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:20:07.137+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:20:07.137+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:20:07.188+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:20:07.188+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:20:07.245+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:27:46.671+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:27:46.886+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:27:46.898+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:27:46.899+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:27:46.918+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:27:46.919+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:27:46.979+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:28:19.313+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:19.325+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:19.355+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:19.365+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:19.432+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:19.444+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:19.504+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:19.535+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:19.575+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:19.592+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:20.964+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:20.979+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:21.011+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:21.017+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:21.045+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:21.058+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:22.057+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:22.071+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:22.096+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:22.103+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:22.125+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:22.139+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:27.196+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:27.205+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:27.228+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:27.237+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:27.265+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:27.270+0800	PANIC	render/render.go:155	template: index.page.tmpl:138: bad character U+0024 '$'
+lightsaid.com/weblogs/internal/render.CreateTemplateCache
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:155
+lightsaid.com/weblogs/internal/render.TemplateData.Render
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/internal/render/render.go:92
+lightsaid.com/weblogs/cmd/web/handlers.ShowDesktop
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/handlers/desktop.go:88
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.SettingUserinfo.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:135
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+lightsaid.com/weblogs/cmd/web/middleware.RateLimit.func1.1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/csrf.(*csrf).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/csrf@v1.7.1/csrf.go:307
+lightsaid.com/weblogs/cmd/web/middleware.LogMiddlewate.func1
+	/Users/lightsaid/go/src/lightsaid.com/weblogs/cmd/web/middleware/middleware.go:44
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2109
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/lightsaid/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:2947
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.19/libexec/src/net/http/server.go:1991
+2022-10-04T12:28:46.314+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:28:46.446+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:28:46.452+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:28:46.466+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:28:46.477+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:28:46.477+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:28:50.956+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:29:00.336+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:29:00.372+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:29:00.372+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:29:00.373+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:29:01.134+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:29:01.869+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:29:03.412+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:29:04.965+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:30:53.659+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:30:53.670+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:30:53.671+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:30:53.838+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:30:53.954+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:31:25.013+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:31:25.192+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:31:25.336+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:31:25.352+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:31:25.427+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:31:25.434+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:31:25.438+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:31:25.539+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:31:25.562+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:33:40.512+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T12:33:40.583+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:33:40.586+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:33:40.592+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:33:40.685+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:33:40.685+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:33:40.692+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:33:40.732+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:33:40.771+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:33:40.867+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:33:40.894+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:33:42.104+0800	INFO	middleware/middleware.go:42	GET/about
+2022-10-04T12:33:42.199+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:33:42.200+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:33:42.201+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:33:42.325+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:33:42.325+0800	INFO	middleware/middleware.go:42	GET/static/images/
+2022-10-04T12:33:42.325+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:33:42.375+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:33:42.386+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:33:44.883+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:33:44.940+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:33:44.940+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:33:44.940+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:33:45.001+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:33:45.002+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:33:45.024+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:33:45.045+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:33:47.104+0800	INFO	middleware/middleware.go:42	GET/about
+2022-10-04T12:33:47.143+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:33:47.144+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:33:47.145+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:33:47.212+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:33:47.212+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:33:47.212+0800	INFO	middleware/middleware.go:42	GET/static/images/
+2022-10-04T12:33:47.244+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:33:47.280+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:34:25.106+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T12:34:25.176+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:34:25.177+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:34:25.179+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:34:25.237+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:34:25.238+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:34:25.238+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:34:25.251+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:34:25.258+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:34:25.269+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:34:25.276+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:34:29.893+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:34:29.935+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:34:29.935+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:34:29.941+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:34:30.011+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:34:30.011+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:34:30.022+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:34:30.035+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:34:30.053+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:34:36.356+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T12:34:36.399+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:34:36.399+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:34:36.399+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:34:36.471+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:34:36.473+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:34:36.473+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:34:36.547+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:34:36.547+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:34:36.756+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:37:45.050+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:37:45.160+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:37:45.164+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:37:45.164+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:37:45.356+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:37:45.357+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:37:45.369+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:37:45.380+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:37:45.448+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:37:48.800+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:37:48.898+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:37:48.900+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:37:48.901+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:37:48.946+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:37:48.946+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:37:48.951+0800	INFO	middleware/middleware.go:42	GET/static/images/
+2022-10-04T12:37:48.966+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:37:49.024+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:39:12.791+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:39:15.898+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:39:17.822+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:39:34.635+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:39:34.716+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:39:34.727+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:39:34.727+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:39:34.819+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:39:34.819+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:39:34.837+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:39:34.837+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:39:34.852+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:39:36.756+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:39:36.800+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:39:36.800+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:39:36.800+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:39:36.874+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:39:36.874+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:39:36.886+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:39:36.901+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:39:36.946+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:39:38.528+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:40:21.871+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:40:21.976+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:40:22.029+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:40:22.034+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:40:22.068+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:40:22.101+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:40:22.116+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:40:22.373+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:40:22.403+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:40:24.935+0800	INFO	middleware/middleware.go:42	GET/about
+2022-10-04T12:40:24.992+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:40:24.993+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:40:24.995+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:40:25.048+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:40:25.049+0800	INFO	middleware/middleware.go:42	GET/static/images/
+2022-10-04T12:40:25.048+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:40:25.076+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:40:25.097+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:40:28.700+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T12:40:28.735+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:40:28.735+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:40:28.735+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:40:28.815+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:40:28.815+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:40:28.825+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:40:28.835+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:40:28.860+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:40:28.898+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:40:28.922+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:40:30.156+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:40:30.212+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:40:30.212+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:40:30.212+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:40:30.273+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:40:30.440+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:40:30.445+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:40:30.446+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:40:30.459+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:40:38.660+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:40:45.536+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:40:48.146+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:40:48.198+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:40:48.203+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:40:48.204+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:40:48.294+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:40:48.296+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:40:48.316+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:40:48.345+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:40:48.355+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:40:51.847+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T12:40:55.963+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:40:56.021+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:40:56.022+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:40:56.022+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:40:56.076+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:40:56.077+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:40:56.089+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:40:56.110+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:40:56.157+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:41:30.173+0800	INFO	middleware/middleware.go:42	GET/details/12
+2022-10-04T12:41:32.387+0800	INFO	middleware/middleware.go:42	GET/details/12
+2022-10-04T12:41:43.125+0800	INFO	middleware/middleware.go:42	GET/details/12
+2022-10-04T12:42:00.741+0800	INFO	middleware/middleware.go:42	GET/details/12
+2022-10-04T12:43:17.025+0800	INFO	middleware/middleware.go:42	GET/details/12
+2022-10-04T12:44:06.923+0800	INFO	middleware/middleware.go:42	GET/details/12
+2022-10-04T12:44:07.085+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:44:07.136+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:44:07.145+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:44:07.171+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:44:07.195+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:44:07.258+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:44:07.468+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:44:10.206+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:44:10.351+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:44:10.355+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:44:10.359+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:44:10.370+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:44:10.370+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:44:10.381+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:44:10.426+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:44:10.494+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:44:10.665+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T12:44:10.747+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:44:10.748+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:44:10.748+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:44:10.854+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:44:10.854+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:44:10.857+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:44:10.872+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:44:10.907+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:44:10.912+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:44:10.919+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:44:11.604+0800	INFO	middleware/middleware.go:42	GET/about
+2022-10-04T12:44:11.654+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:44:11.659+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:44:11.661+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:44:11.721+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:44:11.722+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:44:11.722+0800	INFO	middleware/middleware.go:42	GET/static/images/
+2022-10-04T12:44:11.736+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:44:11.755+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:44:12.437+0800	INFO	middleware/middleware.go:42	GET/column
+2022-10-04T12:44:12.468+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:44:12.468+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:44:12.468+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:44:12.560+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:44:12.566+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-daniel-ap-795693.jpg
+2022-10-04T12:44:12.566+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:44:12.576+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:44:12.621+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:44:12.647+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:44:13.114+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T12:44:13.241+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:44:13.247+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:44:13.254+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:44:13.802+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:44:13.802+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:44:13.879+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T12:44:13.955+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:44:14.298+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:44:15.916+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:44:15.976+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:44:15.976+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:44:15.976+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:44:16.115+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:44:16.115+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:44:16.208+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:44:16.218+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:58:21.397+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:58:21.633+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:58:21.638+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:58:21.638+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T12:58:21.639+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:58:21.639+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T12:58:21.769+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:58:21.772+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:58:21.982+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:58:22.016+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:58:28.726+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:58:28.768+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:58:28.768+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T12:58:28.768+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T12:58:28.768+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:58:28.768+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:58:28.850+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:58:28.850+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:58:28.864+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:58:28.885+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T12:59:27.957+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T12:59:28.026+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T12:59:28.029+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T12:59:28.029+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T12:59:28.031+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T12:59:28.035+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T12:59:28.094+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T12:59:28.094+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T12:59:28.095+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-10-04T12:59:28.096+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T12:59:28.096+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T12:59:28.112+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T12:59:28.156+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T13:01:07.180+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:01:07.278+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T13:01:07.284+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T13:01:07.284+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:01:07.284+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:01:07.285+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:01:07.353+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:01:07.354+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T13:01:07.354+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-10-04T13:01:07.355+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:01:07.355+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T13:01:07.374+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T13:01:07.438+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T13:01:07.450+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-10-04T13:01:07.723+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:01:07.786+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T13:01:07.786+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:01:07.787+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:01:07.787+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:01:07.787+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T13:01:07.894+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:01:07.895+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:01:07.895+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T13:01:07.896+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T13:01:07.896+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-10-04T13:01:07.914+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T13:01:07.948+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-10-04T13:01:07.949+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T13:03:12.397+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:03:12.480+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T13:03:12.487+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:03:12.487+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:03:12.487+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T13:03:12.491+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:03:12.576+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:03:12.576+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-10-04T13:03:12.576+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T13:03:12.576+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:03:12.578+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T13:03:12.648+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-10-04T13:03:12.725+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T13:03:12.741+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T13:03:23.282+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:03:23.320+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T13:03:23.320+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:03:23.320+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T13:03:23.320+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:03:23.320+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:03:23.397+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:03:23.397+0800	INFO	middleware/middleware.go:42	GET/static/js/request.js
+2022-10-04T13:03:23.397+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:03:23.398+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T13:03:23.398+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T13:03:23.435+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css.map
+2022-10-04T13:03:23.475+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-10-04T13:03:23.480+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js.map
+2022-10-04T13:13:41.868+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:13:42.005+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:13:42.006+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:13:42.008+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:13:42.008+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:13:42.009+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:13:42.009+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:13:42.027+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:13:42.029+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:13:42.030+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:13:42.030+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:13:42.031+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:13:42.031+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:14:25.662+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:14:25.778+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:14:25.790+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:14:25.792+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:14:25.801+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:14:25.801+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:14:25.801+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:14:25.804+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:14:25.811+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:14:25.816+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:14:25.834+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:14:25.835+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:14:25.835+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:14:59.279+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:14:59.382+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:14:59.388+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:14:59.388+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:14:59.396+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:14:59.397+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:14:59.402+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:14:59.402+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:14:59.409+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:14:59.412+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:14:59.414+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:14:59.415+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:14:59.420+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:14:59.503+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-10-04T13:14:59.662+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/editormd-logo.woff?-5y8q6h
+2022-10-04T13:14:59.664+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0
+2022-10-04T13:15:36.823+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:15:36.881+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:15:36.881+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:15:36.886+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:15:37.004+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/examples/test.md
+2022-10-04T13:24:48.947+0800	INFO	middleware/middleware.go:42	GET/details/15
+2022-10-04T13:24:49.011+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:24:49.012+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:24:49.015+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:25:07.269+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T13:25:07.426+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:25:07.426+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T13:25:07.431+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T13:25:07.499+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T13:25:07.499+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T13:25:07.526+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T13:25:14.201+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:25:14.241+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:25:14.258+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:25:14.259+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:25:14.268+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:25:14.282+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:25:14.282+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:25:14.283+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:25:14.283+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:25:14.284+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:25:14.285+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:25:14.302+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:25:14.303+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:26:01.484+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:26:01.564+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:26:01.570+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:26:01.570+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:26:01.571+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:26:01.583+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:26:01.584+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:26:01.584+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:26:01.588+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:26:01.593+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:26:01.599+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:26:01.599+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:26:01.599+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:26:16.376+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:26:16.411+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:26:16.411+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:26:16.411+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:26:16.413+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:26:16.416+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:26:16.416+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:26:16.417+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:26:16.417+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:26:16.417+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:26:16.429+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:26:16.432+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:26:16.433+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:26:19.268+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:26:19.307+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:26:19.308+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:26:19.309+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:26:19.310+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:26:19.310+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:26:19.311+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:26:19.318+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:26:19.320+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:26:19.324+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:26:19.324+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:26:19.327+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:26:19.327+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:26:59.357+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:26:59.431+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:26:59.432+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:26:59.433+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:26:59.444+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:26:59.445+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:26:59.445+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:26:59.453+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:26:59.454+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:26:59.457+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:26:59.465+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:26:59.465+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:26:59.467+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:27:22.026+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:27:22.092+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:27:22.098+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:27:22.098+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:27:22.104+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:27:22.108+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:27:22.116+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:27:22.124+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:27:22.125+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:27:22.125+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:27:22.129+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:27:22.132+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:27:22.136+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:27:56.395+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:27:56.488+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:27:56.502+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:27:56.502+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:27:56.526+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:27:56.540+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:27:56.540+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:27:56.630+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:27:56.630+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:27:56.631+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:27:56.631+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:28:21.441+0800	INFO	middleware/middleware.go:42	GET/details/11
+2022-10-04T13:28:21.518+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:28:21.530+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:28:21.531+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:28:21.534+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:28:21.550+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:28:21.550+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:28:21.551+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:28:21.557+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js
+2022-10-04T13:28:21.572+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:28:21.573+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:28:21.580+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:28:21.582+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:28:21.823+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/editormd-logo.woff?-5y8q6h
+2022-10-04T13:28:21.823+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/fonts/fontawesome-webfont.woff2?v=4.3.0
+2022-10-04T13:28:30.016+0800	INFO	middleware/middleware.go:42	GET/
+2022-10-04T13:28:30.110+0800	INFO	middleware/middleware.go:42	GET/static/css/bootstrap.min.css
+2022-10-04T13:28:30.110+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:28:30.110+0800	INFO	middleware/middleware.go:42	GET/static/css/public.css
+2022-10-04T13:28:30.157+0800	INFO	middleware/middleware.go:42	GET/static/js/bootstrap.bundle.min.js
+2022-10-04T13:28:30.157+0800	INFO	middleware/middleware.go:42	GET/static/images/logo.png
+2022-10-04T13:28:30.184+0800	INFO	middleware/middleware.go:42	GET/static/images/pexels-home-background-6.jpg
+2022-10-04T13:28:32.766+0800	INFO	middleware/middleware.go:42	GET/details/10
+2022-10-04T13:28:32.903+0800	INFO	middleware/middleware.go:42	GET/static/css/index.css
+2022-10-04T13:28:32.906+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/editormd.min.css
+2022-10-04T13:28:32.907+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/css/style.css
+2022-10-04T13:28:32.911+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/marked.min.js
+2022-10-04T13:28:32.911+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/prettify.min.js
+2022-10-04T13:28:32.914+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/raphael.min.js
+2022-10-04T13:28:32.918+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/flowchart.min.js
+2022-10-04T13:28:32.919+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/sequence-diagram.min.js
+2022-10-04T13:28:32.925+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.flowchart.min.js
+2022-10-04T13:28:32.928+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/jquery.min.js
+2022-10-04T13:28:32.931+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/editormd.min.js
+2022-10-04T13:28:32.932+0800	INFO	middleware/middleware.go:42	GET/static/editor.md/lib/underscore.min.js

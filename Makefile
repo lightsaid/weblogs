@@ -1,3 +1,3 @@
 ## start: 启动 cmd/web 程序
-start:
+run:
 	go run ./cmd/web
