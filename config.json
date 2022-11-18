@@ -1,0 +1,9 @@
+{
+    "mode": "dev",
+    "port": 5000,
+    "db_source":  "./resources/weblogs.db",
+    "log_output": "./resources/logs/blog.log",
+    "log_level": "debug",
+    "default_username_prefix" : "轻言_",
+    "domain": ""
+}

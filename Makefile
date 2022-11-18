@@ -1,3 +1,5 @@
-## start: 启动 cmd/web 程序
-run:
-	go run ./cmd/web
+dev:
+	go run main.go
+
+clean:
+	rm -rf ./resources/logs/*
