@@ -14,8 +14,9 @@ type User struct {
 	UserName string  `db:"username" json:"username"`
 	Password string  `db:"password" json:"password"`
 	Avatar   *string `db:"avatar" json:"avatar"`
-	Role     int     `db:"if_admin" json:"role"`
-	Active   int     `db:"active" json:"active"`
+	Role     int     `db:"role" json:"role"`
+	// 状态 (-1:删除|0:正常|1:活跃)
+	Active int `db:"active" json:"active"`
 	// sqlte3 会将 datetime 转字符串
 	CreatedAt string `db:"created_at" json:"created_at"`
 	UpdatedAt string `db:"updated_at" json:"updated_at"`

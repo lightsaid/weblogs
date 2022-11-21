@@ -47,11 +47,11 @@ func New(db *sqlx.DB, conf *configs.Config) *application {
 
 func (app *application) Serve() error {
 	var address = fmt.Sprintf("0.0.0.0:%d", app.Config.Port)
-	srv := http.Server{
+	srv := &http.Server{
 		Addr:         address,
 		Handler:      app.routes(),
-		ReadTimeout:  15 * time.Second,
-		WriteTimeout: 30 * time.Second,
+		ReadTimeout:  10 * time.Second,
+		WriteTimeout: 20 * time.Second,
 		IdleTimeout:  time.Minute,
 	}
 

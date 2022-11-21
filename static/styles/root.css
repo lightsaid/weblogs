@@ -10,17 +10,41 @@ body{
     line-height: 1.2;
 }
 
-
 :root{
     --main-color: #55acee;
+    --main-active-color: #1da1f2;
+    --link-color: #4595B5;
     --pane-padding: 5px 42px;
     --max-container: 1024px;
     --max-content: 1124px;
     --background: #FFFFFF;
     --canvas: #DAE0E6;
     --error-color: #f56c6c;
+    --sub-text-color: #53585c;
 }
 
+ul, li {
+    list-style: none;
+}
+
+.theme-btn {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.theme-btn:hover {
+    background-color: var(--main-active-color);
+    border-color: var(--main-active-color);
+}
+
+.theme-btn:active {
+    background-color: var(--main-active-color) !important;
+    border-color: var(--main-active-color) !important;
+}
+
+
+
+/* 
 toast{
     display: none;
     min-width: 40vw;
@@ -54,4 +78,4 @@ toast{
     font-size: 1rem;
     cursor: pointer;
     margin-left: 20px;
-}
+} */

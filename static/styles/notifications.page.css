@@ -1,0 +1,18 @@
+.gox-body-content{
+    position: relative;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    background: var(--background);
+    height: 100%;
+}
+
+h4.title{
+    display: inline-block;
+    padding: 0.5em 1rem;
+    font-weight: 400;
+}
+h4.title span{
+    font-size: 0.875rem;
+    background: var(--main-color);
+}

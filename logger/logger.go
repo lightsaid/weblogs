@@ -39,3 +39,8 @@ func InitLogger() {
 	}
 	logrus.SetLevel(logLevel)
 }
+
+// TODO:
+// func useHookEmail() {
+// logrus.AddHook()
+// }

@@ -2,8 +2,8 @@ package forms
 
 type errors map[string][]string
 
-// Add 根据字段添加错误信息
-func (e errors) Add(field, message string) {
+// Append 根据字段添加错误信息
+func (e errors) Append(field, message string) {
 	e[field] = append(e[field], message)
 }
 

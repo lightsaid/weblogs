@@ -1,47 +1,4 @@
-*{
-    color: #fed480;
-}
 
-.gox-header .navbar{
-    padding: 0;
-}
-
-.gox-header .logo{
-    height: 46px;
-}
-
-.gox-header .navbar-brand{
-    /* padding: 4px; */
-}
-
-.gox-header .active{
-    color: var(--main-color);
-}
-
-.gox-header-navbar{
-    max-width: 1200px;
-}
-
-.gox-body{
-    width: 1024px;
-    max-width: 1024px;
-    min-height: calc(100vh - 56px);
-    margin: 0 auto;
-    position: relative;
-    padding-top: 56px;
-}
-
-.gox-body::before{
-    display: block;
-    content: " ";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: var(--canvas);
-}
 
 .gox-body-container{
     display: grid;

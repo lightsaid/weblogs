@@ -3,9 +3,13 @@ package forms
 import (
 	"fmt"
 	"net/url"
+	"regexp"
 	"strings"
 	"unicode/utf8"
 )
+
+// 邮箱验证正则表达式
+var EmailRX = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
 
 // Form 自定义Form结构，匿名嵌套 url.Values，和存放验证不通过的Errors
 type Form struct {
@@ -31,7 +35,7 @@ func (f *Form) Required(fields ...string) {
 	for _, field := range fields {
 		value := f.Get(field)
 		if strings.TrimSpace(value) == "" {
-			f.Errors.Add(field, "此字段不能为空")
+			f.Errors.Append(field, "此字段不能为空")
 		}
 	}
 }
@@ -43,7 +47,7 @@ func (f *Form) MaxLength(field string, max int) {
 		return
 	}
 	if utf8.RuneCountInString(value) > max {
-		f.Errors.Add(field, fmt.Sprintf("字段长度不允许超出: %d", max))
+		f.Errors.Append(field, fmt.Sprintf("字段长度必须小于%d", max+1))
 	}
 }
 
@@ -54,6 +58,16 @@ func (f *Form) MinLength(field string, min int) {
 		return
 	}
 	if utf8.RuneCountInString(value) < min {
-		f.Errors.Add(field, fmt.Sprintf("字段长度必须大于等于: %d", min))
+		f.Errors.Append(field, fmt.Sprintf("字段长度必须大于%d", min-1))
+	}
+}
+
+func (f *Form) MatchesPattern(pattern *regexp.Regexp, field, msg string) {
+	value := f.Get(field)
+	if value == "" {
+		return
+	}
+	if !pattern.MatchString(value) {
+		f.Errors.Append(field, msg)
 	}
 }

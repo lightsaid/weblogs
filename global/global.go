@@ -5,3 +5,7 @@ import (
 )
 
 var Config *configs.Config
+
+type ContextKey string
+
+const KeyIsAuthenticated = ContextKey("isAuthenticated")

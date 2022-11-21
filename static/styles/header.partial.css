@@ -1,0 +1,116 @@
+.gox-header .navbar {
+    padding: 0;
+    border-bottom: 1px solid var(--canvas);
+}
+
+.gox-header .gox-header-navbar {
+    max-width: 1200px;
+}
+
+.gox-header .navbar-nav .nav-item {
+    position: relative;
+    padding: 4px 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.gox-header form {
+    width: 300px;
+    min-width: 200px;
+}
+
+.gox-header form .small {
+    font-size: 0.875em;
+    border-radius: 20px;
+}
+
+.gox-header .form-control:focus{
+    box-shadow: none !important;
+}
+
+.gox-header .navbar-nav .nav-item.active {
+    border-bottom-color: var(--main-color);
+    font-weight: 700;
+}
+
+.gox-header .navbar-nav .nav-item .nav-link {
+    font-size: 0.875rem;
+}
+
+.gox-header .navbar-nav .nav-item .nav-link i {
+    font-size: 1.125rem;
+}
+
+.gox-header .navbar-nav .nav-item .nav-link i {
+    margin-right: 7px;
+}
+
+.gox-header .navbar-nav .nav-item.active .nav-link i {
+    color: var(--main-color);
+}
+
+.gox-header .navbar-nav .nav-item .nav-link:hover {
+    color: var(--main-color);
+}
+
+.gox-header .navbar-nav .nav-item.bilibili i {
+    font-size: 1rem;
+}
+
+.gox-header .navbar-nav .nav-item.create a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    color: #fff;
+    background-color: var(--link-color);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.gox-header .navbar-nav .nav-item.create a:hover {
+    filter: brightness(0.9);
+    color: #fff !important;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    box-shadow: none !important;
+}
+
+.user-meun {
+    border: none !important;
+}
+
+.dropdown-toggle img {
+    margin-right: 5px;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.dropdown-menu .dropdown-item span {
+    display: inline-block;
+    padding-left: 6px;
+    font-size: 14px;
+}
+
+.dropdown-menu .dropdown-item.new-post span{
+    padding-left: 3px;
+}
+
+.dropdown-menu .dropdown-item i{
+    font-size: 1.1rem;
+}
+.dropdown-menu .dropdown-item i.icon-write{
+    font-size: 1.3rem;
+}

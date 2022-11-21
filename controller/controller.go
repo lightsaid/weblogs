@@ -19,6 +19,7 @@ const (
 	PartialPathPattern = "./templates/*.partial.gtpl"
 )
 
+// Controller 控制器，处理请求
 type Controller struct {
 	DB      *sqlx.DB
 	Models  data.Models
@@ -27,21 +28,12 @@ type Controller struct {
 	*Toolkit
 }
 
-func NewController(db *sqlx.DB) *Controller {
-	control := &Controller{
-		DB:      db,
-		Models:  data.NewModels(db),
-		Session: initSession(),
-	}
-	var err error
-	control.HTMLTemplate, err = NewHTMLTemplate()
-	if err != nil {
-		log.Fatal(err)
-	}
-	return control
-}
-
+// initSession 初始化 Session
 func initSession() *scs.SessionManager {
+	// 选择使用 alexedwards/scs/v2 而不是  Gorilla Sessions 的原因
+	// SCS 操作起来更方便，有比 Gorilla Sessions 更良好的接口
+	// SCS RenewToken() 可以更新会话，减少 session fixation attacks （https://owasp.org/www-community/attacks/Session_fixation）
+
 	// session设置
 	// 参考：
 	//   https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies
@@ -66,4 +58,28 @@ func initSession() *scs.SessionManager {
 	}
 
 	return sessionManager
+}
+
+// NewController 实例化一个控制器，提供给routes使用
+func NewController(db *sqlx.DB) *Controller {
+	control := &Controller{
+		DB:      db,
+		Models:  data.NewModels(db),
+		Session: initSession(),
+	}
+	var err error
+	control.HTMLTemplate, err = NewHTMLTemplate(control.Session)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return control
+}
+
+// IsAuthenticated 检查是否已登录(是否已认证，认证的说法更合理，认证包含了登录，还有用户有足够的权限)
+func (_this *Controller) IsAuthenticated(r *http.Request) bool {
+	isAuth, ok := r.Context().Value(global.KeyIsAuthenticated).(bool)
+	if !ok {
+		return false
+	}
+	return isAuth
 }

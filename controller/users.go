@@ -10,6 +10,7 @@ import (
 	"github.com/ory/nosurf"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/crypto/bcrypt"
+	"lightsaid.com/weblogs/data"
 	"lightsaid.com/weblogs/forms"
 	"lightsaid.com/weblogs/utils"
 )
@@ -77,46 +78,77 @@ func (_this *Controller) JSONRegister(w http.ResponseWriter, r *http.Request) {
 
 // PostLogin 登录
 func (_this *Controller) PostLogin(w http.ResponseWriter, r *http.Request) {
+	_this.Session.RenewToken(r.Context()) // 更新会话，有利于减少 session fixation attacks
 	var err error
-	log.Info("登录ing～")
+	var user = new(data.User)
+	var td = new(TemplateData)
 	defer func() {
 		if err != nil {
 			log.Error(err)
+			_this.Render(w, r, "login.page.gtpl", td)
+			return
 		}
+		_this.Session.Put(r.Context(), "user_id", user.ID)
+		_this.Session.Put(r.Context(), "success", "登录成功")
+		http.Redirect(w, r, "/", http.StatusSeeOther)
 	}()
 
-	r.ParseForm()
-	v := forms.New(r.PostForm)
+	err = r.ParseForm()
+	if err != nil {
+		err = fmt.Errorf("r.ParseForm() error: %w", err)
+		return
+	}
 
-	email := r.Form.Get("email")
-	password := r.Form.Get("password")
+	v := forms.New(r.PostForm)
+	td.Form = v
+
+	email := r.PostForm.Get("email")
+	password := r.PostForm.Get("password")
 
 	email = strings.TrimSpace(email)
 	password = strings.TrimSpace(password)
 
+	td.StringMap = make(map[string]string)
+	td.StringMap["email"] = email
+
 	v.Required("email", "password")
+	v.MatchesPattern(forms.EmailRX, "email", "邮箱地址不正确")
+	v.MinLength("password", 6)
+	v.MaxLength("password", 16)
 	if !v.Valid() {
-		err = fmt.Errorf("入参不正确: email: %v | password: %v", email, password)
+		err = fmt.Errorf("入参不正确: email: %v | password: %v, %v", email, password, v.Errors)
 		return
 	}
 
-	user, err := _this.Models.Users.GetByEmail(email)
+	log.Debugf("errors: %v, %v, %v, %d", v.Errors, email, password, len(password))
+
+	user, err = _this.Models.Users.GetByEmail(email)
 	if err != nil {
 		return
 	}
+
 	err = utils.VerifyPassword(password, user.Password)
 	if err != nil {
 		if errors.Is(err, bcrypt.ErrMismatchedHashAndPassword) {
-			err = fmt.Errorf("密码和邮箱不匹配 %w", err)
+			err = fmt.Errorf("邮箱和密码不匹配 %w", err)
 		} else if errors.Is(err, bcrypt.ErrHashTooShort) {
 			err = fmt.Errorf("密码过短: %w", err)
 		} else {
 			err = fmt.Errorf("密码未知错误 %w", err)
 		}
+		v.Errors.Append("password", "邮箱或密码不正确")
 		return
 	}
+}
 
-	_this.Session.Put(r.Context(), "user_id", user.ID)
-	_this.Session.Put(r.Context(), "success", "登录成功")
-	http.Redirect(w, r, "/", http.StatusSeeOther)
+// Logout 注销
+func (_this *Controller) Logout(w http.ResponseWriter, r *http.Request) {
+	_this.Session.Destroy(r.Context())
+	_this.Session.RenewToken(r.Context())
+
+	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
+}
+
+func (_this *Controller) UpdateUser(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "更新")
 }

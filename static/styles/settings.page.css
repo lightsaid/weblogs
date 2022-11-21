@@ -1,0 +1,83 @@
+.gox-body-content{
+    position: relative;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    background: var(--background);
+    height: 100%;
+}
+
+h4.title{
+    display: inline-block;
+    padding: 0.5em 1rem;
+    font-weight: 400;
+}
+h4.title span{
+    font-size: 0.875rem;
+    background: var(--main-color);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    margin-bottom: 0 !important;
+    color: var(--bs-nav-tabs-link-active-color);
+}
+
+.nav-tabs .nav-link.active{
+    color: var(--link-color);
+    border-bottom: 2px solid var(--link-color) !important;
+    font-weight: 500;
+}
+
+.form{
+    width: 50%;
+}
+
+.form .form-control{
+    color: var(--sub-text-color);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 3px 0.1rem var(--main-color);
+}
+
+.form .save-btn{
+   padding-left: 1.5em;
+   padding-right: 1.5em;
+   letter-spacing: 1px;
+}
+
+.form .profile-avatar .profile-avatar-container{
+    width: 120px;
+    position: relative;
+}
+
+.form .profile-avatar img{
+    object-fit: fill;
+    cursor: pointer;
+}
+
+
+.form .profile-avatar .upload-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(18%, -18%);
+    z-index: 3;
+    border-radius: 50%;
+    border: 1px solid var(--main-active-color);
+    background: var(--background);
+    cursor: pointer;
+}
+
+.form .profile-avatar .upload-icon i{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--main-color);
+}

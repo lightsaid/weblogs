@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"path/filepath"
 
+	"github.com/alexedwards/scs/v2"
 	"github.com/ory/nosurf"
 	"github.com/sirupsen/logrus"
 	"lightsaid.com/weblogs/forms"
@@ -15,26 +16,29 @@ import (
 )
 
 type HTMLTemplate struct {
-	cache map[string]*template.Template
+	cache   map[string]*template.Template
+	session *scs.SessionManager
 }
 
 type TemplateData struct {
-	StringMap map[string]string
-	DataMap   map[string]interface{}
-	Form      forms.Form
-	CSRFToken string
-	Error     string
-	Success   string
-	IsLogin   int
+	StringMap       map[string]string
+	DataMap         map[string]interface{}
+	Form            *forms.Form
+	CSRFToken       string
+	RequestPath     string
+	Error           string
+	Success         string
+	IsAuthenticated bool
 }
 
-func NewHTMLTemplate() (*HTMLTemplate, error) {
+func NewHTMLTemplate(session *scs.SessionManager) (*HTMLTemplate, error) {
 	data, err := createCache()
 	if err != nil {
 		return nil, err
 	}
 	t := &HTMLTemplate{
 		data,
+		session,
 	}
 
 	return t, nil
@@ -79,12 +83,13 @@ func createCache() (map[string]*template.Template, error) {
 	return cache, nil
 }
 
+// Render 渲染模板
 func (t *HTMLTemplate) Render(w http.ResponseWriter, r *http.Request, name string, data *TemplateData) {
 	var cache map[string]*template.Template
 	var err error
 
 	// 追加基础数据
-	data = t.appendTemplateData(w, r, data)
+	data = t.appendTemplateData(w, r, t.session, data)
 
 	// 获取模板
 	if global.Config.Mode == DevModeValue {
@@ -128,8 +133,12 @@ func (t *HTMLTemplate) ServerError(w http.ResponseWriter, err error) {
 }
 
 // appendTemplateData 追加默认数据
-func (t *HTMLTemplate) appendTemplateData(w http.ResponseWriter, r *http.Request, td *TemplateData) *TemplateData {
+func (t *HTMLTemplate) appendTemplateData(w http.ResponseWriter, r *http.Request, session *scs.SessionManager, td *TemplateData) *TemplateData {
+	if td == nil {
+		td = new(TemplateData)
+	}
+	td.RequestPath = r.URL.Path
 	td.CSRFToken = nosurf.Token(r)
-
+	td.IsAuthenticated = t.session.Exists(r.Context(), "user_id")
 	return td
 }

@@ -1,39 +1,107 @@
-.login-form{
-    width: 380px;
-    padding: 20px;
-    margin: 100px auto;
-    border: 1px solid rgba(0, 0, 0, .3);
-    box-shadow: 0 0 10px rgba(0 0 0 / 30%);
-    border-radius: 4px;
+
+body {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column !important;
+    display: flex !important;
+    background-color: #f5f5f5;
+    background: url(/static/images/login-background.jpg) no-repeat;
+    background-size: cover;
 }
-
-.form-item + .form-item{
-    margin-top: 30px;
-}
-
-.form-item label{
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-}
-
-.form-item input{
-    background-color: #fff;
-    padding: 6px 10px;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #1c1c1c;
-}
-
-
-.form-item .error{
+body::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: " ";
     position: absolute;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    color: var(--error-color);
-    padding-top: 7px;
-    padding-left: 105px;
+    background: rgba(0,0,0, .08);
+}
+
+#app{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-60%);
+}
+
+.p-left-15 {
+    padding-left: 4.5%;
+    color: #fff;
+}
+
+@media screen and (min-width: 960px) {
+    .p-left-15 {
+        padding-left: 15%;
+    }
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 30px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.form-signin .form-item{
+    position: relative;
+}
+
+.form-signin input.form-control {
+    font-size: 0.9375rem;
+    padding-left: 32px;
+}
+
+.form-signin .iconfont{
+    position: absolute;
+    top: 37px;
+    left: 12px;
+    font-size: 0.875rem;
+}
+
+.form-signin .form-check {
+    display: block;
+    min-height: auto;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+}
+
+.form-signin .form-text {
+    min-height: 17px;
+    font-size: 0.75rem;
+}
+
+.is-invalid + span{
+    color: rgb(var(--bs-danger-rgb));
+}
+
+.form-signin .checkbox label {
+    cursor: pointer !important;
+}
+
+.form-signin .btn-link {
+    float: right;
+    font-size: 0.875rem !important;
+}
+
+.form-signin .login-btn{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.form-signin .login-btn:active {
+    background-color: var(--main-active-color);
+    border-color: var(--main-active-color);
+}
+
+.form-check-input:checked{
+    background-color: var(--main-active-color);
+    border-color: var(--main-active-color);
+}
+.btn-link{
+    color: var(--main-color);
+}
+.btn-link:hover{
+    color: var(--main-active-color);
 }

@@ -84,6 +84,6 @@ select * from posts;
 
 select * from posts p join post_tags pt on p.id = pt.post_id where pt.tag_id = 1 limit 1 offset 0;
 
-
+select id, email, password, username, avatar, role, active from users where email="lightsaid@163.com" and active != -1 limit 1;
 
 

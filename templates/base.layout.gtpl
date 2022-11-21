@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>轻言博客</title>
+    <title>{{template "title" .}}</title>
     <link rel="shortcut icon" href="/static/images/default/shortcut.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles/font.css">
+    <link rel="stylesheet" href="/static/fonts/iconfont/iconfont.css">
     <link rel="stylesheet" href="/static/styles/root.css">
     {{block "style" .}} {{end}}
 </head>
 <body>
-    <!-- <div id="toast" class="toast">Toast</div> -->
-
     {{block "content" .}} {{end}}
-
-    {{block "javascript" .}} {{end}}
 
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -38,6 +37,10 @@
             }, 2000)
         }
     </script>
+
+    <script src="/static/scripts/jquery.min.js"></script>
+
+    {{block "javascript" .}} {{end}}
 
 </body>
 </html>
