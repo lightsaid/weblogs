@@ -79,11 +79,27 @@ insert into post_tags(post_id, tag_id) values(6, 4);
 
 select * from users;
 select * from tags;
-select * from posts;
+select * from posts order by updated_at desc;
 
+select count(*) as count from tags;
 
+select count(*) as count from tags;
 select * from posts p join post_tags pt on p.id = pt.post_id where pt.tag_id = 1 limit 1 offset 0;
 
+-- 统计 Tags
+select distinct 
+    pt.tag_id, 
+    t.name,
+    count(tag_id) as tag_count 
+from tags t 
+join post_tags pt
+where pt.tag_id = t.id
+group by pt.tag_id, t.name
+union
+select id as tag_id, name, 0 as tag_count from tags where tag_id not in (
+    select tag_id from post_tags
+);
+
+
+
 select id, email, password, username, avatar, role, active from users where email="lightsaid@163.com" and active != -1 limit 1;
-
-

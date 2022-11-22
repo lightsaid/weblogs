@@ -10,7 +10,7 @@ import (
 
 	"github.com/alexedwards/scs/v2"
 	"github.com/ory/nosurf"
-	"github.com/sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"lightsaid.com/weblogs/forms"
 	"lightsaid.com/weblogs/global"
 )
@@ -29,6 +29,7 @@ type TemplateData struct {
 	Error           string
 	Success         string
 	IsAuthenticated bool
+	ImageBaseUrl    string
 }
 
 func NewHTMLTemplate(session *scs.SessionManager) (*HTMLTemplate, error) {
@@ -79,7 +80,9 @@ func createCache() (map[string]*template.Template, error) {
 
 		cache[name] = ts
 	}
-
+	// for k, _ := range cache {
+	// 	log.Info(k)
+	// }
 	return cache, nil
 }
 
@@ -113,7 +116,7 @@ func (t *HTMLTemplate) Render(w http.ResponseWriter, r *http.Request, name strin
 	// 执行模板到指定 bytes.Buffer，感知错误
 	err = template.Execute(buf, data)
 	if err != nil {
-		logrus.Error("exectue template error: " + err.Error())
+		log.Error("exectue template error: " + err.Error())
 		w.Write([]byte("模板渲染错误"))
 		return
 	}
@@ -121,14 +124,14 @@ func (t *HTMLTemplate) Render(w http.ResponseWriter, r *http.Request, name strin
 	// 写入 http.ResponseWriter 流
 	_, err = buf.WriteTo(w)
 	if err != nil {
-		logrus.Error("write template error: " + err.Error())
+		log.Error("write template error: " + err.Error())
 		w.Write([]byte("写入模板错误"))
 		return
 	}
 }
 
 func (t *HTMLTemplate) ServerError(w http.ResponseWriter, err error) {
-	logrus.Errorf("server error: %v", err)
+	log.Errorf("server error: %v", err)
 	http.Error(w, "服务器发生错误，无法做出响应", http.StatusInternalServerError)
 }
 
@@ -139,6 +142,7 @@ func (t *HTMLTemplate) appendTemplateData(w http.ResponseWriter, r *http.Request
 	}
 	td.RequestPath = r.URL.Path
 	td.CSRFToken = nosurf.Token(r)
+	td.ImageBaseUrl = global.Config.ImageBaseUrl
 	td.IsAuthenticated = t.session.Exists(r.Context(), "user_id")
 	return td
 }

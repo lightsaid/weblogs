@@ -1,16 +1,16 @@
 {{template "desktop" .}}
 
-{{define "title"}}Notifications{{end}}
+{{define "desktop-title"}}Notifications{{end}}
 
-{{define "style"}}
+{{define "desktop-style"}}
 <link rel="stylesheet" href="/static/styles/notifications.page.css">
 {{end}}
 
-{{define "content"}}
+{{define "desktop-content"}}
 
 <div class="gox-body-content">
     <div class="container-fluid">
-        <h4 class="title position-relative">Notifications</h4>
+        <h4 class="title position-relative">Notifications Todo</h4>
     </div>
 </div>
 

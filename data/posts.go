@@ -26,7 +26,7 @@ type PostModel struct {
 	DB *sqlx.DB
 }
 
-func (repo *PostModel) InsertPost(post Post) error {
+func (repo *PostModel) Insert(post Post) error {
 	query := `insert into posts(user_id, author, title, content, thumb) values($1, $2, $3, $4, $5)`
 
 	result, err := repo.DB.Exec(query, post.UserId, post.Author, post.Title, post.Content, post.Thumb)
@@ -84,5 +84,8 @@ func (repo *PostModel) GetList(pageSize, pageIndex int) ([]*Post, error) {
 
 	var posts []*Post
 	err := repo.DB.Select(&posts, query, pageSize, pageIndex)
-	return posts, err
+	if err != nil {
+		return nil, fmt.Errorf("PostModel GetList error: %w", err)
+	}
+	return posts, nil
 }

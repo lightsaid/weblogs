@@ -18,5 +18,5 @@ func (t *Toolkit) GenDefaultUserName() string {
 
 // GenDefaultAvatar 返回一个随机默认头像
 func (t *Toolkit) GenDefaultAvatar() string {
-	return fmt.Sprintf("/static/images/default/%d.png", utils.RandomInt(1, 3))
+	return fmt.Sprintf("/static/images/default/avatar%d.png", utils.RandomInt(1, 3))
 }

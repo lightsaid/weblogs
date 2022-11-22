@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3780234 */
-  src: url('iconfont.woff2?t=1668993112390') format('woff2'),
-       url('iconfont.woff?t=1668993112390') format('woff'),
-       url('iconfont.ttf?t=1668993112390') format('truetype');
+  src: url('iconfont.woff2?t=1669081222959') format('woff2'),
+       url('iconfont.woff?t=1669081222959') format('woff'),
+       url('iconfont.ttf?t=1669081222959') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fasong:before {
+  content: "\100cf";
+}
+
+.icon-ziliao:before {
+  content: "\100d1";
 }
 
 .icon-tianjiatupian_huaban:before {

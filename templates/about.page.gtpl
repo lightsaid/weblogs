@@ -1,12 +1,12 @@
 {{template "desktop" .}}
 
-{{define "title"}}About Me{{end}}
+{{define "desktop-title"}}About Me{{end}}
 
-{{define "style"}}
+{{define "desktop-style"}}
 <link rel="stylesheet" href="/static/styles/about.page.css">
 {{end}}
 
-{{define "content"}}
+{{define "desktop-content"}}
 
 <div class="gox-body-content">
     <div class="container-fluid">

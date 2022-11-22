@@ -43,15 +43,17 @@ func (app *application) routes() http.Handler {
 	mux.Handle("/user/about", dynamicMw.ThenFunc(app.Controller.AboutPage)).Methods(http.MethodGet)
 
 	// Tags 相关 // TODO:
-	mux.Handle("/tag", requireAuthMw.ThenFunc(app.Controller.TagPage)).Methods(http.MethodGet)
-	mux.Handle("/tag/create", requireAuthMw.ThenFunc(nil)).Methods(http.MethodPost)
+	mux.Handle("/tag", dynamicMw.ThenFunc(app.Controller.TagPage)).Methods(http.MethodGet)
+	mux.Handle("/tag/create", requireAuthMw.ThenFunc(app.Controller.CreateTag)).Methods(http.MethodPost)
 	mux.Handle("/tag/delete/{id:[0-9]+}", requireAuthMw.ThenFunc(nil)).Methods(http.MethodGet)
 	mux.Handle("/tag/update/{id:[0-9]+}", requireAuthMw.ThenFunc(nil)).Methods(http.MethodPost)
 
 	// Posts 相关 // TODO:
 	postRouter := mux.PathPrefix("/post").Subrouter()
-	postRouter.Handle("/post", requireAuthMw.ThenFunc(app.Controller.CreatePostPage)).Methods(http.MethodPost)
-	postRouter.Handle("/create", requireAuthMw.ThenFunc(nil)).Methods(http.MethodPost)
+	// JSON 接口
+	postRouter.Handle("/create", requireAuthMw.ThenFunc(app.Controller.CreatePostPage)).Methods(http.MethodGet)
+	postRouter.Handle("/create", requireAuthMw.ThenFunc(app.Controller.CreatePost)).Methods(http.MethodPost)
+	postRouter.Handle("/detail/{id:[0-9]+}", dynamicMw.ThenFunc(app.Controller.PostDetail)).Methods(http.MethodGet)
 	postRouter.Handle("/update/{id:[0-9]+}", requireAuthMw.ThenFunc(nil)).Methods(http.MethodPost)
 	postRouter.Handle("/delete/{id:[0-9]+}", requireAuthMw.ThenFunc(nil)).Methods(http.MethodPost)
 

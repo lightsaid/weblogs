@@ -28,13 +28,13 @@ ul, li {
 }
 
 .theme-btn {
-    background-color: var(--main-color);
-    border-color: var(--main-color);
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
 }
 
 .theme-btn:hover {
-    background-color: var(--main-active-color);
-    border-color: var(--main-active-color);
+    background-color: var(--main-active-color) !important;
+    border-color: var(--main-active-color) !important;
 }
 
 .theme-btn:active {
@@ -42,6 +42,9 @@ ul, li {
     border-color: var(--main-active-color) !important;
 }
 
+.small {
+    font-size: 0.875rem !important;
+}
 
 
 /* 

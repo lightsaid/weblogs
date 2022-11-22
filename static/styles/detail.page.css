@@ -1,0 +1,31 @@
+.gox-body-container{
+    display: grid;
+    grid-template-columns: 640px 384px;
+    padding: 16px 20px;
+}
+
+.gox-body-content{
+    /* margin: 0 auto; */
+}
+
+.gox-body-slider{   
+    background: var(--background);
+}
+
+.gox-body-slider .sticky-top{
+    top: 72px;
+}
+
+.gox-body-slider .catalog {
+    /* height: 600px; */
+    /* overflow: scroll; */
+}
+
+.markdown-body ol, .markdown-body ul{
+    padding-left: 1em;
+}
+
+.table-contents{
+    /* height: 600px; */
+    /* overflow: scroll; */
+}

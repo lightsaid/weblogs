@@ -13,6 +13,13 @@ type Tag struct {
 	UserID int    `db:"user_id" json:"user_id"`
 }
 
+// 统计 tag 列表
+type TagList struct {
+	TagID    int    `db:"tag_id"`
+	Name     string `db:"name" json:"name"`
+	TagCount string `db:"tag_count" json:"tag_count"`
+}
+
 type TagModel struct {
 	DB *sqlx.DB
 }
@@ -40,5 +47,31 @@ func (m *TagModel) GetPostsByTagId(tagId int, pageSize, pageIndex int) ([]*Post,
 
 	var posts []*Post
 	err := m.DB.Select(&posts, query, tagId, pageSize, pageIndex)
-	return posts, err
+	if err != nil {
+		return nil, fmt.Errorf("GetPostsByTagId error: %w", err)
+	}
+	return posts, nil
+}
+
+func (m *TagModel) Statistics() ([]*TagList, error) {
+	query := `
+		select distinct 
+			pt.tag_id, 
+			t.name,
+			count(tag_id) as tag_count 
+		from tags t 
+		join post_tags pt
+		where pt.tag_id = t.id
+		group by pt.tag_id, t.name
+		union
+		select id as tag_id, name, 0 as tag_count from tags where tag_id not in (
+			select tag_id from post_tags
+		);`
+
+	tags := []*TagList{}
+	err := m.DB.Select(&tags, query)
+	if err != nil {
+		return tags, fmt.Errorf("Statistics() error: %w", err)
+	}
+	return tags, nil
 }

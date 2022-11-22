@@ -84,13 +84,13 @@ func (m *UserModel) Update(id int, user *User) error {
 	}
 	query := `
 		update users 
-		set username = $2
-			avatar = $3,
-			active = $4,
-			updated_at = $5
-		where id = $1`
+		set username = $1,
+			avatar = $2,
+			active = $3,
+			updated_at = $4
+		where id = $5`
 
-	result, err := m.DB.Exec(query, id, username, avatar, user.Active, update)
+	result, err := m.DB.Exec(query, username, *avatar, user.Active, update, id)
 	if err != nil {
 		return fmt.Errorf("update user error: %w", err)
 	}

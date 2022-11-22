@@ -16,6 +16,7 @@ type Config struct {
 	LogLevel              string `json:"log_level"`
 	DefaultUserNamePrefix string `json:"default_username_prefix"`
 	Domain                string `json:"domain"`
+	ImageBaseUrl          string `json:"image_base_url"`
 }
 
 func ReadConfig(path string) (*Config, error) {

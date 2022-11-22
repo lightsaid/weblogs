@@ -5,8 +5,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"strconv"
 	"strings"
 
+	"github.com/gorilla/mux"
 	"github.com/ory/nosurf"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/crypto/bcrypt"
@@ -150,5 +152,37 @@ func (_this *Controller) Logout(w http.ResponseWriter, r *http.Request) {
 }
 
 func (_this *Controller) UpdateUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "更新")
+	vars := mux.Vars(r)
+	qs := vars["id"]
+	id, err := strconv.Atoi(qs)
+	if err != nil {
+		// TODO:
+		log.Error(err)
+		return
+	}
+	user, err := _this.Models.Users.GetById(id)
+	if err != nil {
+		// TODO:
+		log.Error(err)
+		return
+	}
+
+	r.ParseForm()
+	form := forms.New(r.PostForm)
+	form.Required("username")
+
+	if !form.Valid() {
+		log.Debug(form.Get("username"))
+		return
+	}
+	user.UserName = form.Get("username")
+	// TODO: upload
+
+	newAvatar := _this.Toolkit.GenDefaultAvatar()
+	user.Avatar = &newAvatar
+	log.Println("user: ", user)
+	err = _this.Models.Users.Update(id, user)
+	if err != nil {
+		log.Error(err)
+	}
 }

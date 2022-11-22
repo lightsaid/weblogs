@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{template "title" .}}</title>
+    <title>{{template "desktop-title" .}}</title>
     <link rel="shortcut icon" href="/static/images/default/shortcut.png" type="image/x-icon">
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/styles/font.css">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/static/styles/root.css">
     <link rel="stylesheet" href="/static/styles/header.partial.css">
 
-    {{block "style" .}} {{end}}
+    {{block "desktop-style" .}} {{end}}
 
     <style>
         .gox-body {
@@ -42,16 +42,16 @@
 
 <body>
     <!-- Header 顶部导航栏 -->
-    {{template "header" .}}
+    {{template "desktop-header" .}}
 
     <div class="container-fluid gox-body">
-        {{block "content" .}} {{end}}
+        {{block "desktop-content" .}} {{end}}
     </div>
 
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/static/scripts/jquery.min.js"></script>
 
-    {{block "javascript" .}} {{end}}
+    {{block "desktop-javascript" .}} {{end}}
 
 </body>
 

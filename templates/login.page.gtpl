@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-item mb-1">
                         <label for="password" class="form-label small">密码：</label>
-                        <input type="password" name="password" class="form-control small  {{with .Form.Errors.Get "password"}} is-invalid {{end}}" id="password" aria-describedby="pwsdHelp">
+                        <input type="password" name="password" style="font-family:'iconfont';" class="form-control small  {{with .Form.Errors.Get "password"}} is-invalid {{end}}" id="password" aria-describedby="pwsdHelp">
                         <span class="icon iconfont icon-password"></span>
                         <div id="pwsdHelp" class="form-text text-danger">
                             {{with .Form.Errors.Get "password"}} {{.}} {{end}}

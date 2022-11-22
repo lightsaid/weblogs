@@ -16,7 +16,7 @@
 <body>
     {{block "content" .}} {{end}}
 
-    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <script>
         var toast = document.getElementById("toast")
         

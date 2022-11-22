@@ -50,10 +50,12 @@ h4.title span{
 
 .form .profile-avatar .profile-avatar-container{
     width: 120px;
+    height: 120px;
     position: relative;
 }
 
 .form .profile-avatar img{
+    width: 100%;
     object-fit: fill;
     cursor: pointer;
 }

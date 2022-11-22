@@ -6,6 +6,20 @@
   "description": "个人博客",
   "glyphs": [
     {
+      "icon_id": "29797981",
+      "name": "发送",
+      "font_class": "fasong",
+      "unicode": "100cf",
+      "unicode_decimal": 65743
+    },
+    {
+      "icon_id": "29798076",
+      "name": "资料",
+      "font_class": "ziliao",
+      "unicode": "100d1",
+      "unicode_decimal": 65745
+    },
+    {
       "icon_id": "12753044",
       "name": "添加图片",
       "font_class": "tianjiatupian_huaban",

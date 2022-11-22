@@ -17,6 +17,8 @@ const (
 	PagePathPattern    = "./templates/*.page.gtpl"
 	LayoutPathPattern  = "./templates/*.layout.gtpl"
 	PartialPathPattern = "./templates/*.partial.gtpl"
+
+	DefaultPageSize = 20
 )
 
 // Controller 控制器，处理请求

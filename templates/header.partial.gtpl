@@ -1,4 +1,4 @@
-{{define "header"}}
+{{define "desktop-header"}}
     <!-- Header 顶部导航栏组件 -->
     <div class="container-fluid gox-header">
         <nav class="navbar fixed-top navbar-expand navbar-light bg-light">
@@ -12,9 +12,11 @@
                         <li class="nav-item home  {{if eq .RequestPath "/"}}active{{end}}">
                             <a class="nav-link" aria-current="page" href="/"> <i class="iconfont icon-home-wifi-fill"></i>Home</a>
                         </li>
+                        {{if .IsAuthenticated}}
                         <li class="nav-item notifications {{if eq .RequestPath "/notification"}}active{{end}}">
                             <a class="nav-link" href="/notification"> <i class="iconfont icon-a-5Hzhenling"></i>Notifications</a>
                         </li>
+                        {{end}}
                         <li class="nav-item tags {{if eq .RequestPath "/tag"}}active{{end}}">
                             <a class="nav-link" href="/tag"> <i class="iconfont icon-tags"></i>Tags</a>
                         </li>
@@ -27,6 +29,7 @@
                         <input class="form-control me-2 small" type="search" placeholder="Search" aria-label="Search">
                     </form>
 
+                    {{if .IsAuthenticated}}
                     <li class="online">
                         <div class="dropdown">
                           <button class="btn btn-sm btn-white dropdown-toggle user-meun" type="button" id="dropdownMenuButton"
@@ -36,7 +39,7 @@
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li>
-                              <a class="dropdown-item new-post" href="">
+                              <a class="dropdown-item new-post" href="/post/create">
                                 <i class="iconfont icon-write"></i>
                                 <span>New Posts</span>
                               </a>
@@ -48,6 +51,12 @@
                               </a>
                             </li>
                             <li>
+                              <a class="dropdown-item" href="/user/settings">
+                                <i class="iconfont icon-ziliao"></i> 
+                                <span>Draft</span>
+                              </a>
+                            </li>
+                            <li>
                               <a class="dropdown-item" href="/user/logout">
                                 <i class="iconfont icon-tuichu"></i>
                                 <span>Log Out</span>
@@ -55,7 +64,8 @@
                             </li>
                           </ul>
                         </div>
-                      </li>
+                    </li>
+                    {{end}}
 
                     <!-- 外部链接 -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">

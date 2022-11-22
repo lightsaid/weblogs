@@ -39,7 +39,7 @@ func New(db *sqlx.DB, conf *configs.Config) *application {
 		Controller:   control,
 		IsProduction: isProd,
 		// “/register” 是JSON请求，不需要 NoSurf 中间处理，交由对应的controller处理
-		excludeURIs: []string{"/register"},
+		excludeURIs: []string{"/register", "/post/create"},
 	}
 
 	return &app
