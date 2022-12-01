@@ -40,7 +40,7 @@
     </style>
 </head>
 
-<body>
+<body data-bs-no-jquery="true">
     <!-- Header 顶部导航栏 -->
     {{template "desktop-header" .}}
 
@@ -48,8 +48,8 @@
         {{block "desktop-content" .}} {{end}}
     </div>
 
-    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/static/scripts/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     {{block "desktop-javascript" .}} {{end}}
 

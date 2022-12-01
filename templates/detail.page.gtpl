@@ -1,6 +1,7 @@
 {{template "desktop" .}}
 
-{{define "desktop-title"}}详情{{end}}
+
+{{define "desktop-title"}}{{$post := index .DataMap "post"}}{{$post.Title}}{{end}}
 
 {{define "desktop-style"}}
 <link rel="stylesheet" href="/static/node_modules/editor.md/css/editormd.min.css" />
@@ -22,7 +23,7 @@
         <div class="container-fluid sticky-top">
             <div id="sidebar">
                 <h3>目录</h3>
-                <div class="markdown-body editormd-preview-container" id="toc"></div>
+                <div class="markdown-body editormd-preview-container table-content" id="toc"></div>
             </div>
         </div>
     </div>

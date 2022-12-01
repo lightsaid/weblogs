@@ -10,6 +10,7 @@
 
 .gox-body-slider{   
     background: var(--background);
+    border-radius: 5px;
 }
 
 .gox-body-slider .sticky-top{
@@ -28,4 +29,12 @@
 .table-contents{
     /* height: 600px; */
     /* overflow: scroll; */
+}
+
+.editormd-html-preview, .editormd-preview-container{
+    border-radius: 5px;
+}
+
+.table-content{
+    padding: 0;
 }

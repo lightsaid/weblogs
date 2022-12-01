@@ -81,6 +81,7 @@ func (app *application) Authenticate(next http.Handler) http.Handler {
 		if !exists {
 			// 不存在，放行，交由 RequireAuth 判刑是否需要登录才能访问
 			next.ServeHTTP(w, r)
+			return
 		}
 		// 如果存在，则说明用户应该已经登录，为了更安全的，查询数据库，该用户是否还有资源访问的合法性
 		// （防止：登录后，用户被删了，权限更改了，Session 没有及时更新，还能访问）
@@ -92,6 +93,7 @@ func (app *application) Authenticate(next http.Handler) http.Handler {
 			return
 		} else if err != nil {
 			app.Controller.ServerError(w, err)
+			return
 		}
 		// 如果用户被删除
 		if user.Active == -1 {
